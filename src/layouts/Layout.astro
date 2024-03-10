@@ -7,10 +7,11 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="de">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
+		<meta name="description" content="Hautanalyse, Hydra-Face, Gold Microneedling, Face-Lifting, Strahlende Augen, Haarentfernung, Massagen, Maniküre, Shellac, medizinische Fachfusspflege, Nagelpilz, eingewachsene Nägel">
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
@@ -22,30 +23,889 @@ const { title } = Astro.props;
 </html>
 <style is:global>
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+		--color-background: hsla(268, 25%, 90%, 1);
+		--color-tile: hsla(268, 25%, 95%, 1);
+
+		box-sizing: border-box;
+		font-size: calc(0.7rem + 0.8vw);
 	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
+
+	*,
+	*::before,
+	*::after {
+		box-sizing: inherit;
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+
+	body {
+		margin: 0;
+		font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif;
+		text-align: center;
+		background-color: var(--color-background);
+	}
+
+	header {
+		background: url("../images/banner.jpg") no-repeat;
+		background-size: cover;
+		text-shadow: 0.1em 0.1em 0.1em #fff;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 1;
+
+		address {
+			font-size: .8rem;
+		}
+	}
+
+	.menu {
+		position: relative;
+		height: 100%;
+	}
+
+	.menu__home {
+		position: absolute;
+		top: -4.1em;
+		left: 1em;
+		border: 0;
+		background-color: transparent;
+		width: 3.2em;
+		height: 3.5em;
+		text-indent: 5em;
+		overflow: hidden;
+		cursor: pointer;
+		outline: none;
+	}
+
+	.menu__home::after {
+		position: absolute;
+		top: 0;
+		left: 0;
+		text-indent: 0;
+		content: url(../images/home.svg);
+		width: 3em;
+	}
+
+	.menu__toggle {
+		position: absolute;
+		top: -3.5em;
+		right: 1em;
+		border: 0;
+		background-color: transparent;
+		width: 2.7em;
+		height: 2.3em;
+		text-indent: 5em;
+		overflow: hidden;
+		transform: rotate(0deg);
+		transition: .5s ease-in-out;
+		cursor: pointer;
+		outline: none;
+	}
+
+	.menu__toggle span {
+		display: block;
+		position: absolute;
+		height: 0.5em;
+		width: 100%;
+		background: #000;
+		border-radius: 0.5em;
+		opacity: 1;
+		left: 0;
+		transform: rotate(0deg);
+		transition: .25s ease-in-out;
+	}
+
+	.menu__toggle span:nth-child(1) {
+		top: 0.1em;
+	}
+
+	.menu__toggle span:nth-child(2), .menu__toggle span:nth-child(3) {
+		top: 0.9em;
+	}
+
+	.menu__toggle span:nth-child(4) {
+		top: 1.7em;
+	}
+
+	.menu.is-open .menu__toggle span:nth-child(1) {
+		top: 0.9em;
+		width: 0%;
+		left: 50%;
+	}
+
+	.menu.is-open .menu__toggle span:nth-child(2) {
+		transform: rotate(45deg);
+	}
+
+	.menu.is-open .menu__toggle span:nth-child(3) {
+		transform: rotate(-45deg);
+	}
+
+	.menu.is-open .menu__toggle span:nth-child(4) {
+		top: 0.9em;
+		width: 0;
+		left: 50%;
+	}
+
+	.menu__dropdown {
+		display: none;
+		margin: 0;
+		height: 100%;
+	}
+
+	.menu.is-open .menu__dropdown {
+		display: block;
+	}
+
+	.menu__dropdown > ul {
+		height: calc(100% - var(--header-height));
+		overflow-y: auto;
+		list-style-type: none;
+		padding-left: 0;
+		margin: 0;
+		border: 2px solid var(--color-background);
+		border-top: none;
+	}
+
+	.menu__dropdown > ul > li + li {
+		border-top: 2px solid var(--color-background);
+	}
+
+	.menu__dropdown > ul > li > a {
+		text-decoration: none;
+		display: block;
+		padding: 0.5em 1em;
+		color: #000;
+		text-transform: uppercase;
+		font-size: 1rem;
+	}
+
+	.menu__dropdown > ul > div {
+		border-top: 2px solid var(--color-background);
+		border-bottom: 2px solid var(--color-background);
+		font-weight: bold;
+	}
+
+	.header-positioned {
+		background-position: 50% 50%;
+		height: 100%;
+	}
+
+	.header-container {
+		max-width: calc(100% - 110px);
+		margin: 0 auto;
+	}
+
+	.whatsapp-logo {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+
+		@media(max-width: 380px) {
+			top: 70px;
+			right: 5px;
+		}
+	}
+
+	.introduction {
+		max-width: 1200px;
+		margin: var(--header-height) auto 0;
+	}
+
+	footer {
+		margin-bottom: 0.5em;
+	}
+
+	h1, h2, h3, h4 {
+		text-transform: uppercase;
+		margin: 0;
+	}
+
+	.sub-heading {
+		font-size: 0.83em;
+	}
+
+	h1 {
+		padding: 0.3em 0 0;
+		font-size: 1.5em;
+	}
+
+	a {
+		cursor: pointer;
+	}
+
+	.underline {
+		text-decoration: underline;
+	}
+
+	h2 {
+		margin-top: 1em;
+	}
+
+	address {
+		font-style: normal;
+	}
+
+	.welcome {
+		font-size: 1.5em;
+		margin: 0.3em;
+	}
+
+	.img_pact {
+		width: 95%;
+		max-width: 500px;
+	}
+
+	.img_inside {
+		width: 95%;
+		max-width: 500px;
+	}
+
+	.img_map {
+		width: 95%;
+		max-width: 500px;
+		height: 400px;
+	}
+
+	.img_urlaub {
+		width: 95%;
+		max-width: 400px;
+	}
+
+	.img_fußpflege {
+		width: 95%;
+		max-width: 400px;
+		margin-top: 1em;
+	}
+
+	.img_hotstone {
+		width: 95%;
+		max-width: 350px;
+	}
+
+	.img_wegbeschreibung {
+		width: 95%;
+		max-width: 500px;
+		margin: 10px 0;
+	}
+
+	.img_wimpernwelle {
+		width: 95%;
+		max-width: 1000px;
+		margin-top: 10px;
+	}
+
+	.img_instagram {
+		width: 20px;
+		margin-right: 5px;
+	}
+
+	.hautanalyse-list {
+		list-style-image:url(../images/Gesichtsanalyse-Stern-Mini.webp);
+	}
+
+	.clearfix {
+		clear: right;
+	}
+
+	.tile {
+		border: 2px solid black;
+		margin: 0.2em;
+		padding: 0.2em;
+		background-color: var(--color-tile);
+	}
+
+	.side-padding {
+		padding: 0 0.2em;
+	}
+
+	.gesicht > h3 {
+		margin: 0.5em 0 0;
+	}
+
+	.gesicht > h4 {
+		font-size: 0.9em;
+	}
+
+	.gesicht > div {
+		display: inline-block;
+		opacity: 0.7;
+	}
+
+	.gesicht > ul {
+		list-style: none;
+		text-align: left;
+	}
+
+	.gesicht > ul > li > span {
+		float: right;
+	}
+
+	ul.checklist {
+		list-style: circle;
+	}
+
+	ul.checklist-x {
+		list-style: square;
+		text-align: left;
+		padding-left: 60px;
+	}
+
+	.duration:after {
+		content: "    •    ";
+	}
+
+	.subtext > div {
+		display: inline-block;
+		opacity: 0.7;
+	}
+
+	.item {
+		text-align: left;
+		display: flex;
+		justify-content: space-between;
+		font-size: 1em;
+		padding-left: 40px; // same as ul padding
+
+		> p {
+			display: inline-block;
+		}
+
+		> div {
+			margin-bottom: 0.7em;
+			align-self: flex-end;
+		}
+
+		> p > span {
+			opacity: 0.7;
+		}
+
+		> p > span::before {
+			content: "  •  ";
+		}
+	}
+
+	.no-wrap {
+		white-space:nowrap;
+	}
+
+	.max-width-700 {
+		width: 100%;
+		max-width: 700px;
+		margin: 0 auto;
+	}
+
+	.larger {
+		margin: 0;
+		font-size: 0.9em;
+		font-weight: bold;
+	}
+
+	.img_laser1 {
+		margin-bottom: 20px;
+		width: 95%;
+		max-width: 400px;
+	}
+
+	.img_laser2 {
+		max-width: 500px;
+		width: 95%;
+		margin: 0.5em;
+	}
+
+	.intro-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 10px;
+		max-width: 800px;
+		width: 75%;
+		margin-inline: auto;
+
+		img {
+			max-width: 100%;
+		}
+
+		img:first-of-type {
+			justify-self: end;
+		}
+	}
+
+	.intro-text {
+		text-transform: uppercase;
+		font-size: 1.3rem;
+		margin-block-start: 0;
+	}
+
+	.topics-grid {
+		display: grid;
+		grid-template-columns: repeat(50, 1fr);
+		grid-template-rows: repeat(42, 1fr);
+		max-width: 800px;
+		width: 95%;
+		margin-inline: auto;
+		margin-block-end: 20px;
+
+		img {
+			max-width: 100%;
+		}
+
+		&__willkommen {
+			grid-row: 1 / span 3;
+			grid-column: 27 / -1;
+		}
+
+		&__hydra-face {
+			grid-row: 1 / span 19;
+			grid-column: 1 / span 25;
+		}
+
+		&__microneedling {
+			grid-row: 4 / span 10;
+			grid-column: 27 / -1;
+		}
+
+		&__hautanalyse {
+			grid-row:  20 / -1;
+			grid-column: 16 / span 15;
+		}
+
+		&__laser {
+			grid-row: 20 / span 17;
+			grid-column: 1 / span 15;
+		}
+
+		&__wimpernlifting {
+			grid-row:  15 / span 15;
+			grid-column: 32 / -1;
+		}
+
+		&__fusspflege {
+			grid-row: 37 / -1;
+			grid-column: 1 / span 15;
+		}
+
+		&__faltenlifting {
+			grid-row: 28 / -1;
+			grid-column: 32 / -1;
+		}
+	}
+
+	.qr-grid {
+		display: grid;
+		grid-template-columns: repeat(5, minmax(0, auto));
+		gap: 10px;
+		max-width: 800px;
+		width: 95%;
+		margin-inline: auto;
+
+		img {
+			max-width: 100%;
+		}
+
+		&__column {
+			display: flex;
+			flex-direction: column;
+
+			span {
+				font-size: clamp(.5rem, 1.5vw, .8rem);
+				line-height: 1.15;
+			}
+		}
+	}
+
+	.bild-container {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		height: 200px;
+	}
+
+	.bild-container > .img_diode {
+		max-width: 120px;
+		width: 30%;
+	}
+
+	.bild-container > .img_sommerbeine {
+		max-width: 130px;
+		width: 30%;
+	}
+
+	.bild-container > .img_winterzeit {
+		max-width: 300px;
+		width: 30%;
+		display: none;
+	}
+
+	.bild-container > .show {
+		display: block;
+	}
+
+	.angebote {
+		background-color: #441d30;
+		color: white;
+		max-width: 500px;
+		width: 95%;
+		margin: 0 auto;
+		text-transform: uppercase;
+		text-align: left;
+		font-size: 1.2rem;
+		padding: 0.2em 0.3em 0.2em 2em;
+	}
+
+	.angebote > ul {
+		list-style-type: square;
+	}
+
+	.angebote > ul > li + li {
+		margin-top: 0.3em;
+	}
+
+	.angebote a {
+		text-decoration: underline;
+	}
+
+	ul.hautanalyse-list {
+		li a {
+			text-decoration: underline;
+			font-weight: bold;
+		}
+	}
+
+	.google-bewertung-button {
+		text-decoration: none;
+		padding: 5px 20px;
+		color: #fba421;
+		background-color: white;
+		border: 3px solid #fba421;
+		border-radius: 10px;
+		margin-block: 5px;
+		display: inline-block;
+
+		&:hover, &:focus {
+			background-color: #fba421;
+			color: white;
+		}
+	}
+
+	.image-grid {
+		display: grid!important;
+		opacity: unset!important;
+		padding: 5px;
+
+		grid-template-columns: repeat(auto-fill, minmax(Min(#{150px}, 100%), 1fr));
+		gap: 10px;
+		justify-items: center;
+
+		img {
+			max-width: 250px;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		@media(min-width: 495px) {
+			grid-template-columns: 1fr 1fr;
+
+			img:nth-of-type(2n) {
+				justify-self: start;
+			}
+
+			img:nth-of-type(2n + 1) {
+				justify-self: end;
+			}
+		}
+
+		@media(min-width: 1200px) {
+			img {
+				max-width: 300px;
+			}
+		}
+	}
+
+	.microneedling-image-grid {
+		max-width: 700px;
+		margin-inline: auto;
+
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 10px;
+		padding: 5px;
+		justify-items: center;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+
+			&:nth-of-type(2) {
+				max-width: 300px;
+			}
+
+			&:last-of-type {
+				max-width: 200px;
+			}
+		}
+
+		@media(min-width: 495px) {
+			grid-template-columns: 2fr 1fr;
+
+			img:first-of-type {
+				grid-column: span 2;
+			}
+		}
+	}
+
+	.facelifting-image-grid {
+		max-width: 800px;
+		margin-inline: auto;
+		display: grid;
+		grid-template-columns: 1fr 2fr 1fr;
+		gap: 10px;
+		padding: 5px;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	.rezensionen-area {
+		max-width: 800px;
+		margin-inline: auto;
+		padding: 20px;
+
+		img {
+			&:first-child {
+				max-width: 500px;
+			}
+
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	@media (min-width: 700px) {
+		main {
+			padding-left: calc(25px + 14em);
+			width: 100%;
+		}
+
+		.menu__toggle {
+			display: none;
+		}
+
+		.menu__dropdown {
+			background-color: #aeafb1;
+			display: block;
+			text-align: left;
+			position: fixed;
+			width: calc(25px + 14em);
+			top: var(--header-height);
+			bottom: 0;
+			text-shadow: initial;
+
+			> ul {
+				border: 0;
+			}
+
+			> ul > div {
+				padding-left: 0.3em;
+				border-top: 1px solid var(--color-background);
+				border-bottom: 1px solid var(--color-background);
+			}
+
+			> ul > li + li {
+				border: 0;
+			}
+
+			> ul > li > a {
+				padding: 0.5em;
+				padding-left: 0.8em;
+				border-top: 1px dotted var(--color-background);
+				border-bottom: 1px dotted var(--color-background);
+				font-size: 0.8rem;
+			}
+		}
+
+		footer {
+			padding-left: calc(25px + 14em);
+			width: 100%;
+		}
+	}
+
+	a.stellenanzeige {
+		text-decoration: none;
+		color: black;
+		background: white;
+		display: inline-block;
+		margin-top: .5em;
+		text-transform: unset !important;
+	}
+
+	.corona-info {
+		margin: 7em auto 2em auto;
+		max-width: 800px;
+
+		& > .tile {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			font-size: 1.1em;
+
+			& > p {
+				margin: 1em 0;
+			}
+
+			& > img {
+				max-width: 100%;
+			}
+
+			& > .corona-image {
+				margin-bottom: 10px;
+			}
+
+			& > .laughing-image {
+				width: 350px;
+			}
+
+			& > .big-text {
+				font-size: 1.5rem;
+			}
+
+			& span {
+				color: red;
+			}
+
+			& > small {
+				font-size: .8rem;
+			}
+		}
+	}
+
+	.weihnachten {
+		background-color: white;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		padding: 10px;
+		display: inline-block;
+
+		& > img {
+			max-width: 100%;
+		}
 	}
 </style>
+
+<script>
+	const headerHeight = document.querySelector("header").clientHeight;
+	document.documentElement.style.setProperty('--header-height', headerHeight + 'px');
+
+	// toggle menu by toggling 'is-open' class to the header
+	document.querySelector("#menu__toggle").addEventListener("click", () => {
+		closeMenu();
+	});
+
+	// jump to elements when clicking menu items and also close the menu
+	document.querySelector("#menu__home").addEventListener("click", () => {
+		window.scrollTo(0, 0);
+		document.querySelector("#menu").classList.remove("is-open");
+		document.querySelector("#header").classList.remove("header-positioned");
+	});
+	document.querySelectorAll("[name='jump-hautanalyse']").forEach(selector => selector.addEventListener("click", () => {
+		scrollToElement("hautanalyse");
+		document.querySelector("#menu").classList.remove("is-open");
+		document.querySelector("#header").classList.remove("header-positioned");
+	}));
+	document.querySelectorAll("[name='jump-gesicht']").forEach(selector => selector.addEventListener("click", () => {
+		scrollToElement("gesicht");
+		document.querySelector("#menu").classList.remove("is-open");
+		document.querySelector("#header").classList.remove("header-positioned");
+	}));
+	document.querySelectorAll("[name='jump-augen']").forEach(selector => selector.addEventListener("click", () => {
+		scrollToElement("augen");
+		document.querySelector("#menu").classList.remove("is-open");
+		document.querySelector("#header").classList.remove("header-positioned");
+	}));
+	document.querySelectorAll("[name='jump-haare-wachs']").forEach(selector => selector.addEventListener("click", () => {
+		scrollToElement("haare_wachs");
+		document.querySelector("#menu").classList.remove("is-open");
+		document.querySelector("#header").classList.remove("header-positioned");
+	}));
+	document.querySelectorAll("[name='jump-haare-diode']").forEach(selector => selector.addEventListener("click", () => {
+		scrollToElement("haare_diode");
+		document.querySelector("#menu").classList.remove("is-open");
+		document.querySelector("#header").classList.remove("header-positioned");
+	}));
+	document.querySelectorAll("[name='jump-microneedling']").forEach(selector => selector.addEventListener("click", () => {
+		scrollToElement("microneedling");
+		document.querySelector("#menu").classList.remove("is-open");
+		document.querySelector("#header").classList.remove("header-positioned");
+	}));
+	document.querySelectorAll("[name='jump-facelifting']").forEach(selector => selector.addEventListener("click", () => {
+		scrollToElement("facelifting");
+		document.querySelector("#menu").classList.remove("is-open");
+		document.querySelector("#header").classList.remove("header-positioned");
+	}));
+	document.querySelectorAll("[name='jump-massagen']").forEach(selector => selector.addEventListener("click", () => {
+		scrollToElement("massagen");
+		document.querySelector("#menu").classList.remove("is-open");
+		document.querySelector("#header").classList.remove("header-positioned");
+	}));
+	document.querySelectorAll("[name='jump-manikuere']").forEach(selector => selector.addEventListener("click", () => {
+		scrollToElement("manikuere");
+		document.querySelector("#menu").classList.remove("is-open");
+		document.querySelector("#header").classList.remove("header-positioned");
+	}));
+	document.querySelectorAll("[name='jump-shellac']").forEach(selector => selector.addEventListener("click", () => {
+		scrollToElement("shellac");
+		document.querySelector("#menu").classList.remove("is-open");
+		document.querySelector("#header").classList.remove("header-positioned");
+	}));
+	document.querySelectorAll("[name='jump-fuss']").forEach(selector => selector.addEventListener("click", () => {
+		scrollToElement("fuss");
+		document.querySelector("#menu").classList.remove("is-open");
+		document.querySelector("#header").classList.remove("header-positioned");
+	}));
+	document.querySelectorAll("[name='jump-nagelpilz']").forEach(selector => selector.addEventListener("click", () => {
+		scrollToElement("fuss_nagelpilz");
+		document.querySelector("#menu").classList.remove("is-open");
+		document.querySelector("#header").classList.remove("header-positioned");
+	}));
+	document.querySelectorAll("[name='jump-eingewachsen']").forEach(selector => selector.addEventListener("click", () => {
+		scrollToElement("fuss_eingewachsen");
+		document.querySelector("#menu").classList.remove("is-open");
+		document.querySelector("#header").classList.remove("header-positioned");
+	}));
+	document.querySelectorAll("[name='jump-gutscheine']").forEach(selector => selector.addEventListener("click", () => {
+		scrollToElement("gutscheine");
+		document.querySelector("#menu").classList.remove("is-open");
+		document.querySelector("#header").classList.remove("header-positioned");
+	}));
+	document.querySelectorAll("[name='jump-rezensionen']").forEach(selector => selector.addEventListener("click", () => {
+		scrollToElement("rezensionen");
+		document.querySelector("#menu").classList.remove("is-open");
+		document.querySelector("#header").classList.remove("header-positioned");
+	}));
+	document.querySelectorAll("[name='jump-kontakt']").forEach(selector => selector.addEventListener("click", () => {
+		scrollToElement("kontakt");
+		document.querySelector("#menu").classList.remove("is-open");
+		document.querySelector("#header").classList.remove("header-positioned");
+	}));
+
+	const scrollToElement = (elementName) => {
+		window.scrollBy(0, document.getElementById(elementName).getBoundingClientRect().top - headerHeight - 5);
+	};
+
+	if ([7, 8, 9, 10, 11, 0, 1].indexOf((new Date()).getMonth()) > -1) {
+		document.querySelector(".img_winterzeit").classList.toggle("show");
+	}
+
+	const closeMenu = () => {
+		document.querySelector("#menu").classList.toggle("is-open");
+		const vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+		if (vw < 700) {
+			document.querySelector("#header").classList.toggle("header-positioned");
+		}
+	};
+</script>
