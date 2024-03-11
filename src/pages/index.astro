@@ -2,7 +2,6 @@
 import Layout from '../layouts/Layout.astro';
 
 import { Image } from "astro:assets";
-
 import whatsappLogo from "../images/whatsapp.svg";
 import weihnachtenImg from "../images/weihnachten.jpg";
 import teslimeKleinImg from "../images/teslime_klein.webp";
@@ -61,6 +60,8 @@ import rezension8Img from "../images/rezension8.webp";
 import instagramImg from "../images/instagram.png";
 import wegbeschreibungImg from "../images/wegbeschreibung.jpg";
 import termineKosmetikImg from "../images/termine-kosmetik.jpg";
+
+const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 ---
 
 <Layout title="Teslime Kosmetik und medizinische Fachfusspflege">
@@ -1168,7 +1169,7 @@ import termineKosmetikImg from "../images/termine-kosmetik.jpg";
 				title="Navigation zur Praxis mit Google Maps"
 				class="img_map"
 				frameborder="0"
-				src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDdd0rnYxlTj2_X40X3D5wu9WtzizeFeE8
+				src="https://www.google.com/maps/embed/v1/place?key={googleMapsKey}
     &q=Eva-Zeisel-Straße+4,+78713+Schramberg" allowfullscreen>
 			</iframe>
 
@@ -1190,7 +1191,7 @@ import termineKosmetikImg from "../images/termine-kosmetik.jpg";
 				<strong>Webmaster:</strong><br>
 				Alexander Schuster<br>
 				&#9993; <a href="mailto:alexander.schuster@web.de">alexander.schuster@web.de</a><br>
-				<a href="https://github.com/Reaver86/teslime" target="new">Code auf Github</a>
+				<a href="https://github.com/Reaver86/teslime.de" target="new">Code auf Github</a>
 			</p>
 		</div>
 
