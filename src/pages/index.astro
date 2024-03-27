@@ -75,7 +75,7 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 			</address>
 
 			<a href="https://wa.me/4917662157680" target="_blank" rel="noopener noreferrer">
-				<Image width="50" class="whatsapp-logo" src={whatsappLogo} alt="Schreib mir auf Whatsapp"/>
+				<Image width="50" class="whatsapp-logo" src={whatsappLogo} alt="Schreib mir auf Whatsapp" loading="eager"/>
 			</a>
 		</div>
 
@@ -100,8 +100,8 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 					<li><a name="jump-hautanalyse">Bildbasierte Hautanalyse (ich liebe dieses Gerät)</a></li>
 					<li><a name="jump-gesicht">Hydra-Face Gesichtsbehandlung</a></li>
 					<li><a name="jump-microneedling">Microneedling - mit und ohne Radiofrequenz</a></li>
-					<li><a name="jump-facelifting">Face-Lifting mit Ultraschall</a></li>
-					<li><a name="jump-augen">Strahlende Augen</a></li>
+					<li><a name="jump-facelifting">Face-Lifting mit Spezialultraschall</a></li>
+					<li><a name="jump-augen">Wimpernlifting</a></li>
 					<li><a name="jump-haare-wachs">Haarentfernung&nbsp;mit&nbsp;Wachs</a></li>
 					<li><a name="jump-haare-diode">dauerhafte Haarentfernung mit <span class="no-wrap">Dioden-Laser</span></a></li>
 					<li><a name="jump-massagen">Massagen</a></li>
@@ -136,60 +136,60 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 
 			<br>
 			<div class="intro-grid">
-				<Image src={teslimeKleinImg} alt="Teslime"/>
-				<Image src={teslimeLogoImg} alt="Teslime.de"/>
+				<Image loading="eager" src={teslimeKleinImg} alt="Teslime"/>
+				<Image loading="eager" src={teslimeLogoImg} alt="Teslime.de"/>
 			</div>
 			<p class="intro-text">Mein Angebot<br>"Von Gesicht bis Fuss"</p>
 			<div class="topics-grid">
-				<a class="topics-grid__hydra-face" name="jump-gesicht">
-					<Image src={hydraFaceTopImag} alt="Hydra-Face"/>
+				<a class="hydra-face" name="jump-gesicht">
+					<Image src={hydraFaceTopImag} alt="Hydra-Face" loading="eager"/>
 				</a>
-				<Image class="topics-grid__willkommen" src={willkommenTopImg} alt="Willkommen"/>
-				<a class="topics-grid__microneedling" name="jump-microneedling">
-					<Image src={microneedlingTopImg} alt="Gold-Microneedling"/>
+				<Image class="willkommen" src={willkommenTopImg} alt="Willkommen" loading="eager"/>
+				<a class="microneedling" name="jump-microneedling">
+					<Image src={microneedlingTopImg} alt="Gold-Microneedling" loading="eager"/>
 				</a>
-				<a class="topics-grid__laser" name="jump-haare-diode">
-					<Image src={laserTopImg} alt="Dioden-Laser"/>
+				<a class="laser" name="jump-haare-diode">
+					<Image src={laserTopImg} alt="Dioden-Laser" loading="eager"/>
 				</a>
-				<a class="topics-grid__fusspflege" name="jump-fuss">
-					<Image src={fusspflegeTopImg} alt="Fusspflege"/>
+				<a class="fusspflege" name="jump-fuss">
+					<Image src={fusspflegeTopImg} alt="Fusspflege" loading="eager"/>
 				</a>
-				<a class="topics-grid__hautanalyse" name="jump-hautanalyse">
-					<Image src={hautanalyseTopImg} alt="Hautanalyse"/>
+				<a class="hautanalyse" name="jump-hautanalyse">
+					<Image src={hautanalyseTopImg} alt="Hautanalyse" loading="eager"/>
 				</a>
-				<a class="topics-grid__wimpernlifting" name="jump-augen">
-					<Image src={wimpernliftingTopImg} alt="Wimpernlifting"/>
+				<a class="wimpernlifting" name="jump-augen">
+					<Image src={wimpernliftingTopImg} alt="Wimpernlifting" loading="eager"/>
 				</a>
-				<a class="topics-grid__faltenlifting" name="jump-facelifting">
-					<Image src={faceliftingTopImg} alt="Faltenlifting"/>
+				<a class="faltenlifting" name="jump-facelifting">
+					<Image src={faceliftingTopImg} alt="Faltenlifting" loading="eager"/>
 				</a>
 			</div>
 			<div class="qr-grid">
-				<div class="qr-grid__column">
+				<div class="column">
 					<a href="https://wa.me/4917662157680" target="_blank" rel="noopener noreferrer">
 						<Image src={whatsappQrImg} alt="Whatsapp"/>
 					</a>
 					<span><span style="color:#5555e3">SCAN & GO<br> to chat</span><br>0176-62157680</span>
 				</div>
-				<div class="qr-grid__column">
+				<div class="column">
 					<a href="https://www.teslime.de" target="_blank" rel="noopener noreferrer">
 						<Image src={teslimeQrImg} alt="Teslime.de"/>
 					</a>
 					<span>www.teslime.de</span>
 				</div>
-				<div class="qr-grid__column">
+				<div class="column">
 					<a href="https://www.facebook.com/kosmetik.teslime.schuster" target="_blank" rel="noopener noreferrer">
 						<Image src={facebookQrImg} alt="Facebook"/>
 					</a>
 					<span>kosmetik.<br>teslime.schuster</span>
 				</div>
-				<div class="qr-grid__column">
+				<div class="column">
 					<a href="https://www.instagram.com/teslimeschuster/?r=nametag" target="_blank" rel="noopener noreferrer">
 						<Image src={imageQrImg} alt="Instagram"/>
 					</a>
 					<span>teslimeschuster</span>
 				</div>
-				<div class="qr-grid__column">
+				<div class="column">
 					<a href="https://g.page/r/Ca9tkQy1JNHgEBM/review" target="_blank" rel="noopener noreferrer">
 						<Image src={googleQrImg} alt="Google"/>
 					</a>
@@ -223,7 +223,7 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 		<section>
 			<span id="hautanalyse"></span>
 
-			<h2>Profi-Hautanalyse</h2>
+			<h2>Hautanalyse</h2>
 
 			<div class="tile gesicht">
 				<h3>Mit dem Skin-Analyser</h3>
@@ -245,13 +245,13 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 				</figure>
 
 				<br><br>
-				<h4>Beispiel einer Handlungsempfehlung:</h4>
+				<h4>Beispiel einer Empfehlung:</h4>
 
 				<ul class="hautanalyse-list">
-					<li>Empfindliche Epidermis: <a name="jump-gesicht">Hydra-Face</a></li>
+					<li>Empfindliche Epidermis: <a name="jump-gesicht">Hydra-Face-Luxusbehandlung</a></li>
 					<li>Poren und noch nicht sichtbare Pigmentflecken (UV-Spots): <a name="jump-microneedling">Gold&nbsp;Microneedling&nbsp;mit&nbsp;Radiofrequenz</a></li>
-					<li>Falten: Ein <a name="jump-facelifting">Ultraschall-Face-Lifting</a> ist möglich</li>
-					<li>Porphyrine (Talg und Fett): Hier ist alles gut</li>
+					<li>Falten: <a name="jump-facelifting">Face-Lifting mit Spezialultraschall</a></li>
+					<li>Porphyrine (Talg und Fett): kein Handlungsbedarf</li>
 				</ul>
 
 				<p>Je kleiner der Stern, desto besser ist das Ergebnis.<br>Unbedingt Sonnenschutz für Gesicht und Dekolleté.</p>
@@ -314,18 +314,6 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 				</ul>
 				<br>
 
-				<h3>Hydra-Face-Basis</h3>
-				<div class="duration">ca.&nbsp;60&nbsp;min</div>
-				<div>110,00&nbsp;€</div>
-
-				<p class="underline">Ablauf:</p>
-				<ul class="checklist">
-					<li>Hydra-Reinigung, Hydra/Diamant-Dermabrasion, Peeling, ggfs. Bedampfung, Skin-Skrubber, Reinigung mit Vakuumhandstücken, Sauerstoffpistole</li>
-					<li>Hyaluron + Wirkstoffkomplex</li>
-					<li>Bipolare und tripolare Radiofrequenz Behandlung</li>
-					<li>PDT-Lichttherapie</li>
-					<li>Abschlusspflege /-massage</li>
-				</ul>
 				<p class="underline">Ergebnisbeispiel:</p>
 
 				<div class="image-grid">
@@ -436,8 +424,8 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 				</div>
 
 				<div class="item">
-					<p>Achseln (gegen Schwitzen)</p>
-					<div>150,00&nbsp;€</div>
+					<p>Achseln (gegen übermäßiges Schwitzen)</p>
+					<div>130,00&nbsp;€</div>
 				</div>
 
 				<div class="item">
@@ -518,7 +506,6 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 
 			<div class="tile gesicht">
 				<h3>Diamant-Mikrodermabrasion</h3>
-				<h4>Das Geheimnis der Stars</h4>
 				<div class="duration">ca.&nbsp;60&nbsp;min</div>
 				<div>75,00&nbsp;€</div>
 				<br>
@@ -543,27 +530,40 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 
 			<span id="facelifting"></span>
 			<div class="tile">
-				<h3 style="margin-top:0.5em">Der Faltenkiller</h3>
+				<h3 style="margin-top:0.5em">Face-Lifting</h3>
+				<h4>Der Faltenkiller mit Spezialultraschall</h4>
 
-				<p style="margin-top:0">
-					Face-Lifting mit Ultraschall<br>
-					<em>Empfohlen ab 40</em><br>
-				</p>
+				<p>Bereits ab dem 20. - 25. Lebensjahr fängt die Haut ganz langsam
+					an zu altern, die Anzahl der Kollagen- und Elastinfasern
+					verringert sich, die Fasern reißen und werden kürzer.
+					Es entstehen Falten.</p>
+
+				<p>Das Face-Lifting mit meinem Spezial-Ultraschall-Gerät ist die
+					beste Alternative zur Faltenbekämpfungs-OP. Es ist eine
+					extrem gute After-Aging-Behandlung ab dem 40. Lebensjahr.
+					Der Kollagen- und Elastinrückgang wird gestoppt und zu
+					neuem Wachstum angeregt.</p>
+
+				<p>Kleinere Falten verschwinden vollständig, tiefere Falten
+					werden erheblich reduziert. Man erhält ein deutlich jüngeres
+					Aussehen für mehrere Jahre.</p>
+
+				<ul class="checklist" style="text-align:left">
+					<li>Die beste Faltenbekämpfung ohne OP</li>
+					<li>Hautverjüngung/Hautstraffung von Innen</li>
+					<li>nur eine Behandlung nötig</li>
+					<li>wird aber speziell ab 40 Jahren empfohlen</li>
+					<li>Wirkdauer: 3-4 Jahre</li>
+					<li>Ergebnis: 20% sofort sichtbar, danach verjüngt sich die Haut allmählich in den nächsten 6 Monaten</li>
+					<li>schmerzfrei, keine Ausfallzeiten</li>
+					<li>ausführliche Beratung in der Praxis</li>
+				</ul>
 
 				<div class="facelifting-image-grid">
 					<Image src={faltenkiller1Img} alt="Faltenkiller: Bild von junger Frau" width="262" height="274"/>
 					<Image src={faltenkiller2Img} alt="Faltenkiller: Frischer Apfel und verschrumpelter Apfel" width="344" height="240"/>
 					<Image src={faltenkiller3Img} alt="Faltenkiller: Bild von junger Frau" width="266" height="276"/>
 				</div>
-
-				<ul class="checklist" style="text-align:left">
-					<li>Die beste Faltenbekämpfung ohne OP</li>
-					<li>Hautverjüngung/Hautstraffung von Innen</li>
-					<li>nur eine Behandlung nötig</li>
-					<li>Wirkdauer: 2-4 Jahre</li>
-					<li>Ergebnis allmählich nach ca. 6 Monaten voll sichtbar</li>
-					<li>schmerzfrei, keine Ausfallzeiten</li>
-				</ul>
 
 				<div class="item">
 					<p>Gesicht + Hals + Dekolleté</p>
@@ -592,7 +592,7 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 
 				<div class="item">
 					<p>Areal am Körper, je ca. 10 x 10cm</p>
-					<div>200,00&nbsp;€</div>
+					<div>160,00&nbsp;€</div>
 				</div>
 			</div>
 
@@ -600,8 +600,6 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 
 		<section>
 			<span id="augen"></span>
-
-			<h2>strahlende Augen</h2>
 
 			<div class="tile">
 				<h3>Wimpernlifting</h3>
@@ -969,24 +967,24 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 						ggfs. eingewachsene Nägel oder Rollnägel behandeln<br>
 						komplette Fachfußpflege
 						<span>ca.&nbsp;45&nbsp;min</span></p>
-					<div>43,00&nbsp;€</div>
+					<div>46,00&nbsp;€</div>
 				</div>
 
 				<div class="item">
 					<p>Hühneraugen entfernen
 						<small>, zwei und mehr</small>
 					</p>
-					<div>je&nbsp;10,00&nbsp;€</div>
+					<div>je&nbsp;11,00&nbsp;€</div>
 				</div>
 
 				<div class="item">
-					<p>Fußreflexzonenmassage, <br>nach Hanne Marquardt<span>ca.&nbsp;30&nbsp;min</span></p>
-					<div>36,00&nbsp;€</div>
+					<p>Fußreflexzonenmassage, <br>nach Hanne Marquardt <span>ca.&nbsp;30&nbsp;min</span></p>
+					<div>39,00&nbsp;€</div>
 				</div>
 
 				<div class="item">
-					<p>Relax-/Wellnessfußmassage<span>ca.&nbsp;15&nbsp;min</span></p>
-					<div>18,00&nbsp;€</div>
+					<p>Relax-/Wellnessfußmassage <span>ca.&nbsp;15&nbsp;min</span></p>
+					<div>20,00&nbsp;€</div>
 				</div>
 
 				<div class="item">
@@ -1016,7 +1014,7 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 				<div class="gesicht">
 					<h3>Nagelpilz-Behandlung</h3>
 					<strong class="sub-heading">Nagelpilzbehandlung mit dem PACT-MED-Phototherapie-Strahler, schmerzfrei und ohne Nebenwirkungen.</strong>
-					<div>je Bestrahlung&nbsp;25,00&nbsp;€</div>
+					<div>je Bestrahlung&nbsp;30,00&nbsp;€</div>
 					<br>
 					<br>
 					<Image class="img_inside" src={nagelpilzErkrankungsstadienImg} alt="Nagelpilz Erkrankungsstadien"/>
@@ -1024,19 +1022,24 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 					<ul>
 						<li>
 							<strong>In der Praxis: </strong>
-							Die pilzbefallenen Nagelteile werden abgefräst und ein Spezialgel wird aufgetragen. Nach einer Einwirkzeit von 10
-							Minuten erfolgt die photodynamische Pilz-/Keimabtötung mit dem PACT-Strahler. Mindestens 1 Mal pro Woche,
-							mind. 4 Mal hintereinander, je nach Schwere des Pilzbefalls.
+							Die pilzbefallenen Nagelteile werden abgefräst und ein
+							Spezialgel wird aufgetragen. Nach einer Einwirkzeit erfolgt die photo-
+							dynamische Pilz-/Keimabtötung mit dem PACT-Strahler. In der ersten
+							Woche jeden zweiten Tag eine Bestrahlung, eine Woche später noch eine
+							Bestrahlung, danach eventuell noch eine, je nach Schwere des Pilzbefalls.
 							<br>
 							<strong>Zu Hause: </strong>
-							Sie müssen zu Hause unterstützend, diszipliniert mithelfen und zusätzlich antimykotische Mittel auf die befallenen
-							Nägel und umliegende Haut auftragen, Socken und Schuhe desinfizieren und noch mehr. Sie erhalten von uns alle
-							Mittel sowie ein Blatt mit einer ausführlichen Anleitung.
+							antimykotische Mittel auf die befallenen Nägel und umliegende
+							Haut auftragen, Socken desinfizieren und Schuhe nicht zwei Tage
+							hintereinander tragen.
 							<br>
-							<strong>Ergebnis: </strong>
-							Der Nagel sollte nach und nach gesund nachwachsen. Trotzdem ist das Ergebnis sehr individuell, ein Wiederanstecken
-							ist möglich. Krankheiten wie Diabetes mellitus, Durchblutungsstörungen, Entzündungen der Nägel und besonders
-							Immunschwäche, erhöhen die Infektionsgefahr. Die Heilung vom Nagelpilz kann nicht garantiert werden.
+							<strong>Ergebnis 1: </strong>
+							Der Nagelpilz verschwindet und alles ist gut.
+							<br>
+							<strong>Ergebnis 2: </strong>
+							Ihr Immunsystem ist nicht stark genug, eine Wiederansteckung
+							tritt ein. Wir wiederholen die Behandlung nach 1-2 Jahren. Der Nagelpilz
+							wird also immer wieder kräftig zurückgedrängt und klein gehalten.
 						</li>
 					</ul>
 					<Image class="img_inside" src={pactTherapieImg} alt="Therapie mit der PACT Lampe"/>
@@ -1052,7 +1055,7 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 					<h3>Nagelkorrektur mit Spangentechnik</h3>
 					<strong class="sub-heading">Bei schmerzhaft eingewachsenen/eingerollten Nägeln.</strong>
 					<div class="duration">Nagelkorrektur mit einer Spange</div>
-					<div>je&nbsp;Nagel&nbsp;35,00&nbsp;€</div>
+					<div>je&nbsp;Nagel&nbsp;40,00&nbsp;€</div>
 					<ul>
 						<li>
 							Bei schmerzhaft eingewachsenen/eingerollten Nägeln verwenden wir Spangen zum Aufkleben.
@@ -1071,14 +1074,13 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 			<span id="gutscheine"></span>
 
 			<div class="tile">
-				<div class="underline">Alle Behandlungen sind auch als <strong>GESCHENKGUTSCHEIN</strong> erhältlich.</div>
+				<div class="underline"><strong>GUTSCHEIN</strong></div>
 
 				<div>
-					Sie können Ihren Gutschein gerne telefonisch unter der Nummer <span class="no-wrap">07422-567820</span> oder <span class="no-wrap">0176-62157680</span> bestellen. Wir liefern dann per Post
-					auf Rechnung. Auch mit getrennter Rechnungs- und Lieferanschrift. So ist Ihr Geschenk schnell bei der/dem Beschenkten.
+					Alle Behandlungen sind auch als Gutschein erhältlich.
 				</div>
 
-				<p>Eure Teslime</p>
+				<div>Ich freue mich auf Ihre Nachricht.</div>
 			</div>
 
 		</section>
@@ -1126,7 +1128,6 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 			<div>
 				Montag bis Freitag 9:00 bis 18:00 Uhr, Termine nach Vereinbarung.
 			</div>
-			<div>Preise gültig seit Oktober 2022</div>
 
 			<br>
 
@@ -1191,7 +1192,7 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 				<strong>Webmaster:</strong><br>
 				Alexander Schuster<br>
 				&#9993; <a href="mailto:alexander.schuster@web.de">alexander.schuster@web.de</a><br>
-				letzte Aktualisierung: 11.03.2024
+				letzte Aktualisierung: 27.03.2024
 			</p>
 		</div>
 
