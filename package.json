@@ -2,7 +2,7 @@
   "name": "teslime-de",
   "description": "Homepage of Kosmetik and med. Fachfusspflege Studio Teslime Schuster",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "scripts": {
     "start": "astro dev",
     "build": "astro check && astro build",
@@ -10,8 +10,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "0.5.6",
-    "astro": "4.4.15",
-    "typescript": "5.3.3"
+    "@astrojs/check": "0.5.10",
+    "astro": "4.5.10",
+    "typescript": "5.4.3"
   }
 }

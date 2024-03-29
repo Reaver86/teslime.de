@@ -1169,9 +1169,12 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 			<iframe
 				title="Navigation zur Praxis mit Google Maps"
 				class="img_map"
-				frameborder="0"
-				src="https://www.google.com/maps/embed/v1/place?key={googleMapsKey}
-    &q=Eva-Zeisel-Straße+4,+78713+Schramberg" allowfullscreen>
+				style="border:0"
+				loading="lazy"
+				allowfullscreen
+				referrerpolicy="no-referrer-when-downgrade"
+				src={`https://www.google.com/maps/embed/v1/place?key=${googleMapsKey}
+    &q=Eva-Zeisel-Straße+4,+78713+Schramberg`}>
 			</iframe>
 
 			<br><br>
