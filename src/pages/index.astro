@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 
 import { Image } from "astro:assets";
 import whatsappLogo from "../images/whatsapp.svg";
-import weihnachtenImg from "../images/weihnachten.jpg";
+// import weihnachtenImg from "../images/weihnachten.jpg";
 import teslimeKleinImg from "../images/teslime_klein.webp";
 import teslimeLogoImg from "../images/teslime_logo.webp";
 import hydraFaceTopImag from "../images/hydra-face_top.webp";
@@ -16,7 +16,7 @@ import wimpernliftingTopImg from "../images/wimpernlifting_top.webp";
 import faceliftingTopImg from "../images/face-lifting_top.webp";
 import whatsappQrImg from "../images/whatsapp_qr.webp";
 import teslimeQrImg from "../images/teslime_qr.webp";
-import urlaubFlugzeugImg from "../images/urlaub-flugzeug.png";
+// import urlaubFlugzeugImg from "../images/urlaub-flugzeug.png";
 import facebookQrImg from "../images/facebook_qr.webp";
 import imageQrImg from "../images/instagram_qr.webp";
 import googleQrImg from "../images/google_qr.webp";
@@ -58,7 +58,7 @@ import rezension6Img from "../images/rezension6.webp";
 import rezension7Img from "../images/rezension7.webp";
 import rezension8Img from "../images/rezension8.webp";
 import instagramImg from "../images/instagram.png";
-import wegbeschreibungImg from "../images/wegbeschreibung.jpg";
+// import wegbeschreibungImg from "../images/wegbeschreibung.jpg";
 import termineKosmetikImg from "../images/termine-kosmetik.jpg";
 
 const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
@@ -97,24 +97,24 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 					<li><a class="stellenanzeige" href="Stellenangebot.pdf" target="_blank">STELLENANGEBOT</a></li>
 					<div>Bereich Kosmetik</div>
 					<li><a class="stellenanzeige" href="NiSV.jpg" target="_blank">NiSV-VERORDNUNG</a></li>
-					<li><a name="jump-hautanalyse">Bildbasierte Hautanalyse (ich liebe dieses Gerät)</a></li>
-					<li><a name="jump-gesicht">Hydra-Face Gesichtsbehandlung</a></li>
-					<li><a name="jump-microneedling">Microneedling - mit und ohne Radiofrequenz</a></li>
-					<li><a name="jump-facelifting">Face-Lifting mit Spezialultraschall</a></li>
-					<li><a name="jump-augen">Wimpernlifting</a></li>
-					<li><a name="jump-haare-wachs">Haarentfernung&nbsp;mit&nbsp;Wachs</a></li>
-					<li><a name="jump-haare-diode">dauerhafte Haarentfernung mit <span class="no-wrap">Dioden-Laser</span></a></li>
-					<li><a name="jump-massagen">Massagen</a></li>
-					<li><a name="jump-manikuere">Maniküre</a></li>
-					<li><a name="jump-shellac">Shellac</a></li>
+					<li><a href="#scroll-hautanalyse">Bildbasierte Hautanalyse (ich liebe dieses Gerät)</a></li>
+					<li><a href="#scroll-gesicht">Hydra-Face Gesichtsbehandlung</a></li>
+					<li><a href="#scroll-microneedling">Microneedling - mit und ohne Radiofrequenz</a></li>
+					<li><a href="#scroll-facelifting">Face-Lifting mit Spezialultraschall</a></li>
+					<li><a href="#scroll-augen">Wimpernlifting</a></li>
+					<li><a href="#scroll-haare-wachs">Haarentfernung&nbsp;mit&nbsp;Wachs</a></li>
+					<li><a href="#scroll-haare-diode">dauerhafte Haarentfernung mit <span class="no-wrap">Dioden-Laser</span></a></li>
+					<li><a href="#scroll-massagen">Massagen</a></li>
+					<li><a href="#scroll-manikuere">Maniküre</a></li>
+					<li><a href="#scroll-shellac">Shellac</a></li>
 					<div>Bereich Fusspflege</div>
-					<li><a name="jump-fuss">med.&nbsp;Fachfusspflege</a></li>
-					<li><a name="jump-nagelpilz">Nagelpilz</a></li>
-					<li><a name="jump-eingewachsen">Eingewachsene&nbsp;Nägel-Spangen</a></li>
+					<li><a href="#scroll-fuss">med.&nbsp;Fachfusspflege</a></li>
+					<li><a href="#scroll-nagelpilz">Nagelpilz</a></li>
+					<li><a href="#scroll-eingewachsen">Eingewachsene&nbsp;Nägel-Spangen</a></li>
 					<div>Sonstiges</div>
-					<li><a name="jump-gutscheine">Geschenk-Gutscheine für Ihre Liebsten</a></li>
-					<li><a name="jump-rezensionen">Google Rezensionen</a></li>
-					<li><a name="jump-kontakt">Kontakt</a></li>
+					<li><a href="#scroll-gutscheine">Geschenk-Gutscheine für Ihre Liebsten</a></li>
+					<li><a href="#scroll-rezensionen">Google Rezensionen</a></li>
+					<li><a href="#scroll-kontakt">Kontakt</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -141,26 +141,26 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 			</div>
 			<p class="intro-text">Mein Angebot<br>"Von Gesicht bis Fuss"</p>
 			<div class="topics-grid">
-				<a class="hydra-face" name="jump-gesicht">
+				<a class="hydra-face" href="#scroll-gesicht">
 					<Image src={hydraFaceTopImag} alt="Hydra-Face" loading="eager"/>
 				</a>
 				<Image class="willkommen" src={willkommenTopImg} alt="Willkommen" loading="eager"/>
-				<a class="microneedling" name="jump-microneedling">
+				<a class="microneedling" href="#scroll-microneedling">
 					<Image src={microneedlingTopImg} alt="Gold-Microneedling" loading="eager"/>
 				</a>
-				<a class="laser" name="jump-haare-diode">
+				<a class="laser" href="#scroll-haare-diode">
 					<Image src={laserTopImg} alt="Dioden-Laser" loading="eager"/>
 				</a>
-				<a class="fusspflege" name="jump-fuss">
+				<a class="fusspflege" href="#scroll-fuss">
 					<Image src={fusspflegeTopImg} alt="Fusspflege" loading="eager"/>
 				</a>
-				<a class="hautanalyse" name="jump-hautanalyse">
+				<a class="hautanalyse" href="#scroll-hautanalyse">
 					<Image src={hautanalyseTopImg} alt="Hautanalyse" loading="eager"/>
 				</a>
-				<a class="wimpernlifting" name="jump-augen">
+				<a class="wimpernlifting" href="#scroll-augen">
 					<Image src={wimpernliftingTopImg} alt="Wimpernlifting" loading="eager"/>
 				</a>
-				<a class="faltenlifting" name="jump-facelifting">
+				<a class="faltenlifting" href="#scroll-facelifting">
 					<Image src={faceliftingTopImg} alt="Faltenlifting" loading="eager"/>
 				</a>
 			</div>
@@ -221,7 +221,7 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 		</section>
 
 		<section>
-			<span id="hautanalyse"></span>
+			<span id="scroll-hautanalyse"></span>
 
 			<h2>Hautanalyse</h2>
 
@@ -248,9 +248,9 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 				<h4>Beispiel einer Empfehlung:</h4>
 
 				<ul class="hautanalyse-list">
-					<li>Empfindliche Epidermis: <a name="jump-gesicht">Hydra-Face-Luxusbehandlung</a></li>
-					<li>Poren und noch nicht sichtbare Pigmentflecken (UV-Spots): <a name="jump-microneedling">Gold&nbsp;Microneedling&nbsp;mit&nbsp;Radiofrequenz</a></li>
-					<li>Falten: <a name="jump-facelifting">Face-Lifting mit Spezialultraschall</a></li>
+					<li>Empfindliche Epidermis: <a href="#scroll-gesicht">Hydra-Face-Luxusbehandlung</a></li>
+					<li>Poren und noch nicht sichtbare Pigmentflecken (UV-Spots): <a href="#scroll-microneedling">Gold&nbsp;Microneedling&nbsp;mit&nbsp;Radiofrequenz</a></li>
+					<li>Falten: <a href="#scroll-facelifting">Face-Lifting mit Spezialultraschall</a></li>
 					<li>Porphyrine (Talg und Fett): kein Handlungsbedarf</li>
 				</ul>
 
@@ -263,7 +263,7 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 		</section>
 
 		<section>
-			<span id="gesicht"></span>
+			<span id="scroll-gesicht"></span>
 
 			<h2>Gesichtsbehandlungen</h2>
 
@@ -365,7 +365,7 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 				</ul>
 			</div>
 
-			<span id="microneedling"></span>
+			<span id="scroll-microneedling"></span>
 			<div class="tile">
 				<h3 style="margin-top:0.5em">Narben/Akne-Narben, großpoorige Haut<br>Gold-Microneedling mit RF</h3>
 
@@ -528,7 +528,7 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 				</ul>
 			</div>
 
-			<span id="facelifting"></span>
+			<span id="scroll-facelifting"></span>
 			<div class="tile">
 				<h3 style="margin-top:0.5em">Face-Lifting</h3>
 				<h4>Der Faltenkiller mit Spezialultraschall</h4>
@@ -599,7 +599,7 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 		</section>
 
 		<section>
-			<span id="augen"></span>
+			<span id="scroll-augen"></span>
 
 			<div class="tile">
 				<h3>Wimpernlifting</h3>
@@ -636,7 +636,7 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 		</section>
 
 		<section>
-			<span id="haare_wachs"></span>
+			<span id="scroll-haare_wachs"></span>
 
 			<h2>Haarentfernung</h2>
 
@@ -690,7 +690,7 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 			</div>
 
 			<div class="tile">
-				<span id="haare_diode"></span>
+				<span id="scroll-haare_diode"></span>
 
 				<h3>dauerhafte Haarentfernung<br> mit Dioden-Laser</h3>
 				<p>Nahezu schmerzfrei. Der LASER wird für jeden Kunden und Körperbereich individuell eingestellt.<br>Im Normalfall sind 4-8 Behandlungen notwendig, alle 4-6 Wochen.</p>
@@ -833,7 +833,7 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 		</section>
 
 		<section>
-			<span id="massagen"></span>
+			<span id="scroll-massagen"></span>
 
 			<h2>Massagen</h2>
 
@@ -892,7 +892,7 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 		</section>
 
 		<section>
-			<span id="manikuere"></span>
+			<span id="scroll-manikuere"></span>
 
 			<h2>Maniküre</h2>
 
@@ -917,7 +917,7 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 		</section>
 
 		<section>
-			<span id="shellac"></span>
+			<span id="scroll-shellac"></span>
 
 			<div class="tile">
 
@@ -946,7 +946,7 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 		</section>
 
 		<section>
-			<span id="fuss"></span>
+			<span id="scroll-fuss"></span>
 
 			<h2>Bereich Fusspflege</h2>
 
@@ -1008,7 +1008,7 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 
 			</div>
 
-			<span id="fuss_nagelpilz"></span>
+			<span id="scroll-fuss_nagelpilz"></span>
 			<div class="tile">
 
 				<div class="gesicht">
@@ -1047,7 +1047,7 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 
 			</div>
 
-			<span id="fuss_eingewachsen"></span>
+			<span id="scroll-fuss_eingewachsen"></span>
 			<div class="tile">
 
 				<div class="gesicht">
@@ -1071,7 +1071,7 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 
 		<br>
 		<section>
-			<span id="gutscheine"></span>
+			<span id="scroll-gutscheine"></span>
 
 			<div class="tile">
 				<div class="underline"><strong>GUTSCHEIN</strong></div>
@@ -1086,7 +1086,7 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 		</section>
 
 		<br>
-		<span id="rezensionen"></span>
+		<span id="scroll-rezensionen"></span>
 		<section class="rezensionen-area">
 			<Image src={rezensionenSterneImg} alt="4,9 Sterne Bewertung bei Google" width="674" height="254"/>
 			<Image src={rezension1Img} alt="" width="984" height="370"/>
@@ -1103,7 +1103,7 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 	<hr>
 
 	<footer>
-		<span id="kontakt"></span>
+		<span id="scroll-kontakt"></span>
 
 		<h2>Kontakt</h2>
 
