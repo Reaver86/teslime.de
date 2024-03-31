@@ -3,7 +3,6 @@ import Layout from '../layouts/Layout.astro';
 
 import { Image } from "astro:assets";
 import whatsappLogo from "../images/whatsapp.svg";
-// import weihnachtenImg from "../images/weihnachten.jpg";
 import teslimeKleinImg from "../images/teslime_klein.webp";
 import teslimeLogoImg from "../images/teslime_logo.webp";
 import hydraFaceTopImag from "../images/hydra-face_top.webp";
@@ -58,7 +57,6 @@ import rezension6Img from "../images/rezension6.webp";
 import rezension7Img from "../images/rezension7.webp";
 import rezension8Img from "../images/rezension8.webp";
 import instagramImg from "../images/instagram.png";
-// import wegbeschreibungImg from "../images/wegbeschreibung.jpg";
 import termineKosmetikImg from "../images/termine-kosmetik.jpg";
 
 const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
@@ -123,17 +121,6 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 	<main>
 		<section class="introduction">
 
-			<!--      <div class="weihnachten">-->
-			<!--        <Image src={weihnachtenImg} alt="Weihnachten">-->
-			<!--        <p>-->
-			<!--          Liebe Kundinnen und liebe Kunden,<br>-->
-			<!--          zwischen dem 24.12.2020 und dem 10.01.2021 mache ich Weihnachtsurlaub.<br>-->
-			<!--          Anrufe zwecks Terminvereinbarungen nehme ich gerne entgegen.<br>-->
-			<!--          <br>-->
-			<!--          Eure Teslime-->
-			<!--        </p>-->
-			<!--      </div>-->
-
 			<br>
 			<div class="intro-grid">
 				<Image loading="eager" src={teslimeKleinImg} alt="Teslime"/>
@@ -169,7 +156,7 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 					<a href="https://wa.me/4917662157680" target="_blank" rel="noopener noreferrer">
 						<Image src={whatsappQrImg} alt="Whatsapp"/>
 					</a>
-					<span><span style="color:#5555e3">SCAN & GO<br> to chat</span><br>0176-62157680</span>
+					<span><span>SCAN & GO<br> to chat</span><br>0176-62157680</span>
 				</div>
 				<div class="column">
 					<a href="https://www.teslime.de" target="_blank" rel="noopener noreferrer">
@@ -213,7 +200,6 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 				Hier finden Sie meine Angebote.<br>
 				Ich freue mich auf Ihren Anruf, Ihre WhatsApp Nachricht, E-Mail... und natürlich auf Ihren Besuch!<br>
 				&phone; 07422-567820, ✆ 0176-62157680<br>
-				Preise gelten seit Oktober 2022<br>
 			</p>
 
 			<hr>
@@ -1150,16 +1136,6 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 				Sie können während der Fußpflege Ihr Handy aufladen und verwenden.
 			</div>
 
-			<!--      <br>-->
-			<!--      <div class="underline">-->
-			<!--        Wegbeschreibung wegen den Umleitungen in Sulgen:-->
-			<!--      </div>-->
-			<!--      <div>-->
-			<!--        Von Schramberg kommend: bitte ganz normal Sulgen rechts rausfahren, dann irgendwo wenden und über die Brücke Richtung Haldenhof (Die Brücke über die B462 zum und vom Haldenhof ist von Sulgen aus einspurig befahrbar - Baustellenampeln!)-->
-			<!--        Von Rottweil kommend: bitte beim Sportzentrum rausfahren und dann in etwa wie oben beschrieben.-->
-			<!--      </div>-->
-			<!--      <Image class="img_wegbeschreibung" src={wegbeschreibungImg}" alt="Wegbeschreibung"/>-->
-
 			<br>
 
 			<div>
@@ -1181,7 +1157,7 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 
 			<div>Terminblock/Kontaktdaten zum Ausdrucken:</div>
 
-			<a href="Terminblock_Teslime.pdf" download="Terminblock_Teslime">
+			<a href="./Terminblock_Teslime.pdf" download="Terminblock_Teslime">
 				<Image class="img_inside" src={termineKosmetikImg} alt="Terminblock Bild zum ausdrucken"/>
 			</a>
 

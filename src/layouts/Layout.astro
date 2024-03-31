@@ -25,6 +25,7 @@ const { title } = Astro.props;
 	:root {
 		--color-background: hsla(268, 25%, 90%, 1);
 		--color-tile: hsla(268, 25%, 95%, 1);
+		--header-height: 150px;
 
 		box-sizing: border-box;
 		font-size: calc(0.7rem + 0.8vw);
@@ -142,7 +143,7 @@ const { title } = Astro.props;
 
 	.menu.is-open .menu__toggle span:nth-child(1) {
 		top: 0.9em;
-		width: 0%;
+		width: 0;
 		left: 50%;
 	}
 
@@ -597,7 +598,7 @@ const { title } = Astro.props;
 		opacity: unset!important;
 		padding: 5px;
 
-		grid-template-columns: repeat(auto-fill, minmax(Min(#{150px}, 100%), 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(Min(150px, 100%), 1fr));
 		gap: 10px;
 		justify-items: center;
 
@@ -802,12 +803,10 @@ const { title } = Astro.props;
 	const headerHeight = document.querySelector("header")?.clientHeight;
 	document.documentElement.style.setProperty('--header-height', headerHeight + 'px');
 
-	// toggle menu by toggling 'is-open' class to the header
 	document.querySelector("#menu__toggle")?.addEventListener("click", () => {
 		closeMenu();
 	});
 
-	// jump to elements when clicking menu items and also close the menu
 	document.querySelector("#menu__home")?.addEventListener("click", () => {
 		window.scrollTo(0, 0);
 		document.querySelector("#menu")?.classList.remove("is-open");
