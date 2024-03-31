@@ -803,12 +803,10 @@ const { title } = Astro.props;
 	const headerHeight = document.querySelector("header")?.clientHeight;
 	document.documentElement.style.setProperty('--header-height', headerHeight + 'px');
 
-	// toggle menu by toggling 'is-open' class to the header
 	document.querySelector("#menu__toggle")?.addEventListener("click", () => {
 		closeMenu();
 	});
 
-	// jump to elements when clicking menu items and also close the menu
 	document.querySelector("#menu__home")?.addEventListener("click", () => {
 		window.scrollTo(0, 0);
 		document.querySelector("#menu")?.classList.remove("is-open");
