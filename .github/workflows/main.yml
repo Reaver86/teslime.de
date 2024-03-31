@@ -53,7 +53,7 @@ jobs:
         with:
           path: ${{ env.BUILD_PATH }}/dist
       - name: Sync files via ftp
-        uses: SamKirkland/FTP-Deploy-Action@4.3.5
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
