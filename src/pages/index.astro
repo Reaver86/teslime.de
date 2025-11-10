@@ -36,6 +36,11 @@ import microneedlingFrauImg from "../images/microneedling-Frau.webp";
 import faltenkiller1Img from "../images/faltenkiller1.webp";
 import faltenkiller2Img from "../images/faltenkiller2.webp";
 import faltenkiller3Img from "../images/faltenkiller3.webp";
+import fusspilz1Img from "../images/fusspilz1.webp";
+import fusspilz2Img from "../images/fusspilz2.webp";
+import fusspilz3Img from "../images/fusspilz3.webp";
+import fusspilz4Img from "../images/fusspilz4.webp";
+import wimpernliftingVorherImg from "../images/wimpernlifting_vorher.webp";
 import wimpernwelleImg from "../images/wimpernwelle.jpg";
 import laserImg from "../images/laser.jpeg";
 import laserDiodenImg from "../images/laser_dioderm.jpg";
@@ -54,8 +59,6 @@ import rezension3Img from "../images/rezension3.webp";
 import rezension4Img from "../images/rezension4.webp";
 import rezension5Img from "../images/rezension5.webp";
 import rezension6Img from "../images/rezension6.webp";
-import rezension7Img from "../images/rezension7.webp";
-import rezension8Img from "../images/rezension8.webp";
 import instagramImg from "../images/instagram.png";
 import termineKosmetikImg from "../images/termine-kosmetik.jpg";
 
@@ -92,7 +95,7 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 			<div class="menu__dropdown">
 				<ul>
 					<div>Bereich Kosmetik</div>
-					<li><a class="stellenanzeige" href="NiSV.jpg" target="_blank">NiSV-VERORDNUNG</a></li>
+					<li><a class="stellenanzeige" href="NiSV.jpeg" target="_blank">NiSV-VERORDNUNG</a></li>
 					<li><a href="#scroll-hautanalyse">Bildbasierte Hautanalyse (ich liebe dieses Gerät)</a></li>
 					<li><a href="#scroll-gesicht">Hydra-Face Gesichtsbehandlung</a></li>
 					<li><a href="#scroll-microneedling">Microneedling - mit und ohne Radiofrequenz</a></li>
@@ -210,7 +213,7 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 			<h2>Hautanalyse</h2>
 
 			<div class="tile gesicht">
-				<h3>Mit dem Skin-Analyser</h3>
+				<h3>Mit dem Skin-Analyzer</h3>
 				<p style="margin-block:0">(eines der modernsten und besten Geräte auf dem Markt)<br>
 					mit Alterssimulation 5-7 Jahre in die Zukunft und
 					ausführliche Besprechung der Ergebnisse und Handlungsempfehlungen
@@ -594,7 +597,14 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 				</p>
 				<div style="opacity:0.7">60,00&nbsp;€</div>
 
-				<Image class="img_wimpernwelle" src={wimpernwelleImg} alt="Wimpernwelle"/>
+                <figure>
+				    <Image class="img_wimpernwelle" src={wimpernliftingVorherImg} alt="Wimpernwelle vorher"/>
+                    <figcaption>vorher</figcaption>
+                </figure>
+                <figure>
+				    <Image class="img_wimpernwelle" src={wimpernwelleImg} alt="Wimpernwelle nachher"/>
+                    <figcaption>nachher</figcaption>
+                </figure>
 
 				<div class="item">
 					<p>Wimpern färben</p>
@@ -608,12 +618,12 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 
 				<div class="item">
 					<p>Augenbrauen korrigieren</p>
-					<div>11,00&nbsp;€</div>
+					<div>12,00&nbsp;€</div>
 				</div>
 
 				<div class="item">
 					<p>Augenbrauen färben</p>
-					<div>11,00&nbsp;€</div>
+					<div>12,00&nbsp;€</div>
 				</div>
 
 			</div>
@@ -836,41 +846,29 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 
 				<div class="item">
 					<p>Klassiche Körpermassage<span>ca.&nbsp;60&nbsp;min</span></p>
-					<div>66,00&nbsp;€</div>
+					<div>68,00&nbsp;€</div>
 				</div>
 
 				<div class="item">
 					<p>Rückenmassage inkl. Arme und Hände<span>ca.&nbsp;30&nbsp;min</span></p>
-					<div>38,00&nbsp;€</div>
+					<div>40,00&nbsp;€</div>
 				</div>
 
 				<div class="item">
 					<p>Hot Stone Massage<span>ca.&nbsp;60&nbsp;min</span></p>
-					<div>75,00&nbsp;€</div>
+					<div>78,00&nbsp;€</div>
 				</div>
 
 				<div class="item">
 					<p>Ayurvedische Genzkörpermassage<span>ca.&nbsp;60&nbsp;min</span></p>
-					<div>66,00&nbsp;€</div>
+					<div>78,00&nbsp;€</div>
 				</div>
 
 				<div class="item">
 					<p>Lomi Lomi Massage<span>ca.&nbsp;60&nbsp;min</span></p>
-					<div>66,00&nbsp;€</div>
+					<div>78,00&nbsp;€</div>
 				</div>
 
-			</div>
-
-			<div class="tile gesicht">
-				<h3>Fussreflexzonenmassage</h3>
-				<strong class="sub-heading">(nach Hanne Marquardt)</strong>
-				<div class="duration">ca.&nbsp;30&nbsp;min</div>
-				<div>36,00&nbsp;€</div>
-				<ul>
-					<li>Beschwerden lindern</li>
-					<li>Selbstheilungskräfte anregen</li>
-					<li>Verbesserung der Durchblutung und des peripheren Lymphabflusses</li>
-				</ul>
 			</div>
 
 		</section>
@@ -916,12 +914,17 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 
 				<div class="item">
 					<p>Maniküre + SHELLAC-Lackierung</p>
-					<div>40,00&nbsp;€</div>
+					<div>55,00&nbsp;€</div>
 				</div>
 
 				<div class="item">
 					<p>SHELLAC-Lackierung</p>
 					<div>25,00&nbsp;€</div>
+				</div>
+
+				<div class="item">
+					<p>Handpeeling + Handmassage<span>ca.&nbsp;30&nbsp;min</span></p>
+					<div>30,00&nbsp;€</div>
 				</div>
 
 				<small>* Entfernung einer früheren SHELLAC-Lackierung: 10 €</small>
@@ -949,9 +952,10 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 						ggfs. Hühneraugen entfernen<small>, ein Hühnerauge inkl.</small><br>
 						ggfs. Pilznägel abschleifen<br>
 						ggfs. eingewachsene Nägel oder Rollnägel behandeln<br>
+                        kurze Abschlussmassage mit dazu passender Pflegecreme
 						komplette Fachfußpflege
 						<span>ca.&nbsp;45&nbsp;min</span></p>
-					<div>46,00&nbsp;€</div>
+					<div>48,00&nbsp;€</div>
 				</div>
 
 				<div class="item">
@@ -963,7 +967,7 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 
 				<div class="item">
 					<p>Fußreflexzonenmassage, <br>nach Hanne Marquardt <span>ca.&nbsp;30&nbsp;min</span></p>
-					<div>39,00&nbsp;€</div>
+					<div>40,00&nbsp;€</div>
 				</div>
 
 				<div class="item">
@@ -975,6 +979,25 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 					<p>Nägel lackieren</p>
 					<div>10,00&nbsp;€</div>
 				</div>
+
+                <div class="fusspflege-grid">
+                    <figure>
+                        <Image class="img_fusspflege_grid" src={fusspilz1Img} alt=""/>
+                        <figcaption>rechts vorher</figcaption>
+                    </figure>
+                    <figure>
+                        <Image class="img_fusspflege_grid" src={fusspilz3Img} alt=""/>
+                        <figcaption>links vorher</figcaption>
+                    </figure>
+                    <figure>
+                        <Image class="img_fusspflege_grid" src={fusspilz2Img} alt=""/>
+                        <figcaption>rechts nachher</figcaption>
+                    </figure>
+                    <figure>
+                        <Image class="img_fusspflege_grid" src={fusspilz4Img} alt=""/>
+                        <figcaption>links nachher</figcaption>
+                    </figure>
+                </div>
 
 				<small>* Entfernung einer früheren Lackierung: 5 €</small>
 				<br>
@@ -995,20 +1018,29 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 			<span id="scroll-fuss-nagelpilz"></span>
 			<div class="tile">
 
-				<div class="gesicht">
-					<h3>Nagelpilz-Behandlung</h3>
-					Der Nagelpilz wird während der normalen Fachfußpflege einfach mitbehandelt.
-					<br>
-					<br>
-					<Image class="img_inside" src={nagelpilzErkrankungsstadienImg} alt="Nagelpilz Erkrankungsstadien"/>
-					<p><strong>Behandlungsablauf:</strong></p>
-					<ul>
-						<li>
-							Teslime schleift die mit Pilz befallenen Stellen gründlich weg, putzt den Nagelfalz ebenfalls gründlich, so dass danach möglichst wenig Feuchtigkeit im Nagelbereich sein kann. Sie erhalten ein antimykotisches Mittel zum Auftragen auf die Nägel. Einen kleinen Einblick finden Sie in dem Video: Teslime behandelt ihren Ehemann.
-						</li>
-					</ul>
-					<iframe style="width:95%;max-width:500px;" width="400" height="600" src="https://www.youtube.com/embed/od_KYgEFuuo" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-				</div>
+                <h3>Nagelpilz-Behandlung</h3>
+                <Image class="img_inside" src={nagelpilzErkrankungsstadienImg} alt="Nagelpilz Erkrankungsstadien"/>
+                <br>
+                <br>
+
+                <div class="item">
+                    <p>Leichter Pilzbefall wird während der normalen Fachfußpflege einfach mitbehandelt.</p>
+                </div>
+
+                <div class="item">
+                    <p>Mittlerer und schwerer Pilzbefall</p>
+                    <div>10,00&nbsp;€</div>
+                </div>
+
+                <p><strong>Behandlungsablauf:</strong></p>
+
+                <strong>In der Praxis:</strong> die mit Pilz befallenen Stellen werden gründlich weggeschliffen, ebenso wird der Nagelfalz gründlich gesäubert, so dass danach möglichst wenig Feuchtigkeit im Nagelbereich sien kann. Sie erhalten ein antimykotisches Mittel zum Auftragen auf die Nägel. Einen kleinen Einblick finden Sie in folgendem Video: Teslime behandelt ihren Ehemann. <br>
+                <strong>Zu Hause:</strong> antimykotische Mittel auf die befallenen Nägel auftragen, Socken waschen und desinfizieren und die gleichen Schuhe nicht zwei Tage hintereinander tragen. <br>
+                <strong>Ergebnis 1:</strong> Der Nagelpilz verschwindet und alles ist gut. <br>
+                <strong>Ergenbis 2:</strong> Der Nagelpilz verschwindet nicht ,Sie gehen zum Hautarzt damit er einen Abstrich macht um die Pilzart zu bestimmen. Sie erhalten dann eventuell ein anderes Mittel zum Auftragen auf die Nägel. Sie kommen weiterhin regelmäßig zur Fußpflege um eine eventuelle Wiederansteckung frühzeitig zu erkennen.
+                <br><br>
+
+                <iframe style="width:95%;max-width:500px;" width="400" height="600" src="https://www.youtube.com/embed/od_KYgEFuuo" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 			</div>
 
@@ -1018,17 +1050,18 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 				<div class="gesicht">
 
 					<h3>Nagelkorrektur mit Spangentechnik</h3>
-					<strong class="sub-heading">Bei schmerzhaft eingewachsenen/eingerollten Nägeln.</strong>
+					<strong class="sub-heading">Die Schmerzen verschwinden im Normalfall sofort.</strong>
 					<div class="duration">Nagelkorrektur mit einer Spange</div>
 					<div>je&nbsp;Nagel&nbsp;40,00&nbsp;€</div>
+					<Image class="img_inside" src={nagelkorrekturSpangeImg} alt="Spange für Nagelkorrektur"/>
 					<ul>
 						<li>
-							Bei schmerzhaft eingewachsenen/eingerollten Nägeln verwenden wir Spangen zum Aufkleben.
-							Die Spange zieht die Nagelränder sanft hoch, der Nagel wächst dann weniger gekrümmt heraus und nach ca. 4-6 Wochen wird die Spange erneuert.
-							Nach ein paar Monaten hat der Nagel eine normale Wölbung. (siehe Fotos)
+							Bei schmerzhaft eingewachsenen/eingerollten Nägeln verwenden wir eine Spange zum Aufkleben.
+							Die Spange zieht die Nagelränder sanft hoch, der Nagel wächst dann weniger gekrümmt heraus und je nach Bedarf wird die Spange erneuert.
+							Nach ein paar Monaten hat der Nagel eine normale Wölbung.
+                            Die Spange stört im Alltag nicht und ist kaum sichtbar.
 						</li>
 					</ul>
-					<Image class="img_inside" src={nagelkorrekturSpangeImg} alt="Spange für Nagelkorrektur"/>
 				</div>
 
 			</div>
@@ -1039,7 +1072,7 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 			<span id="scroll-gutscheine"></span>
 
 			<div class="tile">
-				<div class="underline"><strong>GUTSCHEIN</strong></div>
+				<div class="underline"><strong>GUTSCHEINE</strong></div>
 
 				<div>
 					Alle Behandlungen sind auch als Gutschein erhältlich.
@@ -1060,8 +1093,6 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 			<Image src={rezension4Img} alt="" width="996" height="384"/>
 			<Image src={rezension5Img} alt="" width="974" height="320"/>
 			<Image src={rezension6Img} alt="" width="996" height="388"/>
-			<Image src={rezension7Img} alt="" width="1002" height="512"/>
-			<Image src={rezension8Img} alt="" width="956" height="386"/>
 		</section>
 	</main>
 
@@ -1091,7 +1122,7 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 				Öffnungszeiten:
 			</div>
 			<div>
-				Montag bis Freitag 9:00 bis 18:00 Uhr, Termine nach Vereinbarung.
+				Montag bis Freitag, Termine nach Vereinbarung.
 			</div>
 
 			<br>
@@ -1101,19 +1132,24 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 			</div>
 
 			<div class="max-width-700">
+                <strong>
 				Bitte geben Sie uns möglichst früh
 				Bescheid, falls Sie einen Termin nicht einhalten können. Danke.
+                </strong>
 				<br><br>
 				Bitte haben Sie Verständnis dafür, dass ich während
-				einer Behandlung nicht abnehmen kann. Sprechen Sie
+				einer Behandlung nicht ans Telefon kann. Sprechen Sie
 				bitte auf den Anrufbeantworter, hinterlassen Sie
 				Ihre Telefonnummer, ich rufe Sie so schnell wie möglich zurück.
 			</div>
 			<br>
-			<div>
-				Ein ausgewiesener Kundenparkplatz vor der Garage steht zur Verfügung. Ein WLAN-Gastzugang ist vorhanden.
-				Sie können während der Fußpflege Ihr Handy aufladen und verwenden.
-			</div>
+
+            <ul class="checklist">
+                <li>Kundenparkplätze vor der Garage und auf dem Hof</li>
+                <li>Kundentoilette</li>
+                <li>WLAN-Gastzugang</li>
+                <li>Sie können während der Fußpflege ihr Handy aufladen</li>
+            </ul>
 
 			<br>
 
@@ -1132,14 +1168,7 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
     &q=Eva-Zeisel-Straße+4,+78713+Schramberg`}>
 			</iframe>
 
-			<br><br>
-
-			<div>Terminblock/Kontaktdaten zum Ausdrucken:</div>
-
-			<a href="./Terminblock_Teslime.pdf" download="Terminblock_Teslime">
-				<Image class="img_inside" src={termineKosmetikImg} alt="Terminblock Bild zum ausdrucken"/>
-			</a>
-
+			<br>
 			<br>
 
 			<p>
@@ -1150,7 +1179,7 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 				<strong>Webmaster:</strong><br>
 				Alexander Schuster<br>
 				&#9993; <a href="mailto:alexander.schuster@web.de">alexander.schuster@web.de</a><br>
-				letzte Aktualisierung: 27.03.2024
+				letzte Aktualisierung: 01.11.2025
 			</p>
 		</div>
 
