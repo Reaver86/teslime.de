@@ -1,0 +1,7 @@
+[mcp_servers.astro-docs]
+url = "https://mcp.docs.astro.build/mcp"
+
+[mcp_servers.github]
+command = "/Users/alexanderschuster/.local/bin/github-mcp-server-official"
+args = ["stdio"]
+default_tools_approval_mode = "writes"
