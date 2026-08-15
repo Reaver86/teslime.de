@@ -48,6 +48,7 @@ import laserSommerbeineImg from "../images/laser_sommerbeine.jpg";
 import laserWinterzeitImg from "../images/laser_winterzeit.png";
 import laserErklaerungImg from "../images/laser_erklaerung.jpg";
 import hotStoneMassageImg from "../images/hot-stone-massage.png";
+import teslimeWillkommenImage from "../images/Teslime_willkommen.webp";
 import fusspflegeImg from "../images/fusspflege.jpg";
 import nagelpilzErkrankungsstadienImg from "../images/nagelpilz_erkrankungsstadien.jpg";
 import pactTherapieImg from "../images/pact_therapie.jpg";
@@ -98,14 +99,14 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 					<li><a class="stellenanzeige" href="NiSV.jpeg" target="_blank">NiSV-VERORDNUNG</a></li>
 					<li><a href="#scroll-hautanalyse">Bildbasierte Hautanalyse (ich liebe dieses Gerät)</a></li>
 					<li><a href="#scroll-gesicht">Hydra-Face Gesichtsbehandlung</a></li>
-					<li><a href="#scroll-microneedling">Microneedling - mit und ohne Radiofrequenz</a></li>
 					<li><a href="#scroll-facelifting">Face-Lifting mit Spezialultraschall</a></li>
-					<li><a href="#scroll-augen">Wimpernlifting</a></li>
-					<li><a href="#scroll-haare-wachs">Haarentfernung&nbsp;mit&nbsp;Wachs</a></li>
-					<li><a href="#scroll-haare-diode">dauerhafte Haarentfernung mit <span class="no-wrap">Dioden-Laser</span></a></li>
-					<li><a href="#scroll-massagen">Massagen</a></li>
+					<li><a href="#scroll-microneedling">Microneedling - mit und ohne Radiofrequenz</a></li>
 					<li><a href="#scroll-manikuere">Maniküre</a></li>
 					<li><a href="#scroll-shellac">Shellac</a></li>
+					<li><a href="#scroll-augen">Wimpernlifting</a></li>
+					<li><a href="#scroll-massagen">Massagen</a></li>
+					<li><a href="#scroll-haare-diode">dauerhafte Haarentfernung mit <span class="no-wrap">Dioden-Laser</span></a></li>
+					<li><a href="#scroll-haare-wachs">Haarentfernung&nbsp;mit&nbsp;Wachs</a></li>
 					<div>Bereich Fusspflege</div>
 					<li><a href="#scroll-fuss">med.&nbsp;Fachfusspflege</a></li>
 					<li><a href="#scroll-fuss-nagelpilz">Nagelpilz</a></li>
@@ -312,7 +313,7 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 
 				<h3>Klassische Kosmetikbehandlung</h3>
 				<div class="duration">ca.&nbsp;90&nbsp;min</div>
-				<div>90,00&nbsp;€</div>
+				<div>105,00&nbsp;€</div>
 
 				<br>
 				<Image src={gesichtsbehandlung1Img} alt="Gesichtsbehandlung Beispiel 1"/>
@@ -341,7 +342,7 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 			<div class="tile gesicht">
 				<h3>Intensiv-Gesichtsreinigung</h3>
 				<div class="duration">ca.&nbsp;60&nbsp;min</div>
-				<div>70,00&nbsp;€</div>
+				<div>75,00&nbsp;€</div>
 				<ul>
 					<li>Reinigungsmassage</li>
 					<li>Intensivpeeling</li>
@@ -352,238 +353,164 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 				</ul>
 			</div>
 
-			<span id="scroll-microneedling"></span>
-			<div class="tile">
-				<h3 style="margin-top:0.5em">Narben/Akne-Narben, großpoorige Haut<br>Gold-Microneedling mit RF</h3>
+            <span id="scroll-facelifting"></span>
+            <div class="tile">
+                <h3 style="margin-top:0.5em">Face-Lifting</h3>
+                <h4>Der Faltenkiller</h4>
+                <h4>Mit gebündeltem Spezialultraschall</h4>
+                <p style="margin-block:0">
+                    Gesicht, Hals und Dekolleté<br>
+                    eine sehr wirksame Behandlung, speziell ab 40
+                </p>
+                <div>600,00&nbsp;€</div>
 
-				<p style="margin-top:0">
-					Starkes Duo: Microneedling plus Radiofrequenz<br>
-					<em>Empfohlen für: für jedes Alter</em><br>
-					<em>Ausfallzeiten: Keine</em>
+                <p>Bereits ab dem 25. Lebensjahr fängt die Haut ganz langsam
+                    an zu altern, die Anzahl der Kollagen- und Elastinfasern
+                    verringert sich, die Fasern reißen und werden kürzer.
+                    Es entstehen Falten.</p>
+
+                <p>Das Face-Lifting mit meinem Spezial-Ultraschall-Gerät stoppt diesen Vorgang für mehrere Jahre. Der Ultraschall wird in 1,5 bis 4,5mm gebündelt und setzt dort Anregungspunkte.
+                    Dadurch werden die körpereigenen Reperaturkräfte aktiviert und die Neubildung von Kollagen und Elastin wird gestartet.
+                    Es wird eine sichtbare Straffung der Hautoberfläche erreicht. Vor Beginn der Behandlung messe ich die Hautdicke, um sicher zu stellen, dass 4,5mm nicht zu tief greift.</p>
+
+                <p>Kleinere Falten verschwinden vollständig, tiefere Falten
+                    werden erheblich reduziert. Man erhält ein deutlich jüngeres
+                    Aussehen für mehrere Jahre.</p>
+
+                <ul class="checklist" style="text-align:left">
+                    <li>Faltenbekämpfung ohne Anästhesie, ohne OP</li>
+                    <li>Hautverjüngung um 3 bis 5 Jahre</li>
+                    <li>Wirkdauer 3 bis 5 Jahre und mehr</li>
+                    <li>nur eine Behandlung nötig, ab 40 Jahren empfohlen</li>
+                    <li>Ergebnis: 20% sofort sichtbar, danach verjüngt sich die Haut allmählich in den nächsten 6 Monaten</li>
+                    <li>schmerzfrei, keine Ausfallzeiten</li>
+                    <li>ausführliche Beratung in der Praxis</li>
+                </ul>
+
+                <div class="facelifting-image-grid">
+                    <Image src={faltenkiller1Img} alt="Faltenkiller: Bild von junger Frau" width="262" height="274"/>
+                    <Image src={faltenkiller2Img} alt="Faltenkiller: Frischer Apfel und verschrumpelter Apfel" width="344" height="240"/>
+                    <Image src={faltenkiller3Img} alt="Faltenkiller: Bild von junger Frau" width="266" height="276"/>
+                </div>
+            </div>
+
+            <div class="tile gesicht">
+                <h3>Micro Needling</h3>
+                <div class="duration">ca.&nbsp;60&nbsp;min</div>
+                <div>140,00&nbsp;€</div>
+                <p>
+                    Das Micro Needling mittels Needling Pen ist ein neues und
+                    sehr erfolgreiches Verfahren im Bereich der Anti-Aging- und
+                    Problemhaut-Behandlungen. Durch die gezielte Perforation der Haut
+                    (Needling Pen mit 24 feinen Nadeln), setzen die Zellen unmittelbar
+                    nach der Anwendung Wachstumsfaktoren frei, welche die Produktion
+                    von Kollagen und Elastin und die Ausschüttung von Hyaluronsäure
+                    stimulieren.
+                    <br>
+                    Die Aufnahmefähigkeit der aufgetragenen Wirkstoffe
+                    wird erheblich gesteigert, was zu einem deutlich verbesserten
+                    Hautergebnis führt. Anwendungsbereiche:
+                    Gesicht, Augen, Lippen, Hals, Dekolleté, Körper und Hände.
+                </p>
+                <p>Sensationelle Ergebnisse im Bereich:</p>
+                <ul class="checklist">
+                    <li>Porenverkleinerung und Verfeinerung des Hautbildes</li>
+                    <li>Hautfestigung, Hautstraffung, Augenringe</li>
+                    <li>Faltenreduktion</li>
+                    <li>Hautverjüngung von sonnengeschädigter Haut</li>
+                    <li>Aufhellung von Pigmentstörungen</li>
+                    <li>Akne</li>
+                    <li>Narben verschiedener Art (besonders&nbsp;Aknenarben)</li>
+                    <li>Dehnungs- und Schwangerschaftsstreifen</li>
+                </ul>
+            </div>
+
+            <span id="scroll-microneedling"></span>
+			<div class="tile gesicht">
+				<h3 style="margin-top:0.5em">Gold-Microneedling<br>mit Radiofrequenzstrom</h3>
+
+				<p style="margin-block:0">
+					Gesicht, Hals und Dekolleté
 				</p>
+                <div class="duration">ca.&nbsp;90&nbsp;min</div>
+                <div>230,00&nbsp;€</div>
+
+                <p>
+                    Es ist die Weiterentwicklung des normalen Microneedlings. Durch den zusätzlichen Stromimpuls mit Radiofrequenz (5&nbsp;MHz), der individuell eingestellt wird,
+                    werden die Ergebnisse erheblich verstärkt und die Wirkdauer verlängert.
+                </p>
+                <ul class="checklist">
+                    <li>Empfohlen für jedes Alter</li>
+                    <li>Ergebnis nach ca. 2 Monaten voll sichtbar</li>
+                    <li>Wirkdauer: ca. 2 Jahre und länger</li>
+                    <li>Ausfallzeiten: keine</li>
+                </ul>
+                <p>
+                    Teslime arbeitet mit der Stempeltechnik, das Gerät macht die darauf folgenden 3 Schritte automatisch.
+                </p>
 
 				<div class="microneedling-image-grid">
 					<Image src={microneedlingAblaufImg} alt="Microneedling Schaubild - Nadeln dringen in die Haut und geben Radiofrequenzenergie ab" width="1013" height="393"/>
 					<Image src={microneedlingMaschineImg} alt="Microneedling Gerät" width="639" height="462"/>
 					<Image src={microneedlingFrauImg} alt="Microneedling Beispiel Ergebnis am Gesicht einer Frau" width="534" height="642"/>
 				</div>
-
-				<p class="underline">Indikationen</p>
-				<ul class="checklist" style="text-align:left">
-					<li class="underline">Hautverjüngung/Hautstraffung von außen und von innen</li>
-					<li>Aknenarben, sonstige Narben</li>
-					<li>großporige Haut</li>
-					<li>Pigmentflecken</li>
-					<li>Augenringe</li>
-					<li>Falten</li>
-					<li>übermäßiges Schwitzen im Achselbereich</li>
-					<li>Dehnungsstreifen, OP-Narben</li>
-				</ul>
-
-				<ul class="checklist-x">
-					<li>Ergebnis nach ca. 2 Monaten voll sichtbar</li>
-					<li>Wirkungsdauer: ca. 2 Jahre und länger</li>
-				</ul>
-
-				<div class="item">
-					<p>Gesicht komplett</p>
-					<div>300,00&nbsp;€</div>
-				</div>
-
-				<div class="item">
-					<p>Hals</p>
-					<div>150,00&nbsp;€</div>
-				</div>
-
-				<div class="item">
-					<p>Dekolleté</p>
-					<div>150,00&nbsp;€</div>
-				</div>
-
-				<div class="item">
-					<p>Gesicht + Hals</p>
-					<div>400,00&nbsp;€</div>
-				</div>
-
-				<div class="item">
-					<p>Gesicht + Hals + Dekolleté</p>
-					<div>450,00&nbsp;€</div>
-				</div>
-
-				<div class="item">
-					<p>Achseln (gegen übermäßiges Schwitzen)</p>
-					<div>130,00&nbsp;€</div>
-				</div>
-
-				<div class="item">
-					<p>Dehnungsstreifen</p>
-					<div>individuell</div>
-				</div>
-
-				<ul class="checklist-x">
-					<li>eine 3-er Kur, alle 6 Wochen bringt die besten Ergebnisse</li>
-					<li>Kurpreis: dritte Behandlung zum halben Preis</li>
-				</ul>
-
-			</div>
-
-			<div class="tile gesicht">
-				<h3>Micro Needling</h3>
-				<h4>Das natürliche Face-Lift ohne OP</h4>
-				<div class="duration">ca.&nbsp;60&nbsp;min</div>
-				<div>110,00&nbsp;€</div>
-				<br>
-				<div>als Kur (4-6 mal, 1x pro Monat) 95,00&nbsp;€</div>
-				<p>
-					Das Micro Needling mittels Needling Pen ist ein neues und
-					sehr erfolgreiches Verfahren im Bereich der Anti-Aging- und
-					Problemhaut-Behandlungen. Durch die gezielte Perforation der Haut
-					(Needling Pen mit 24 feinen Nadeln), setzen die Zellen unmittelbar
-					nach der Anwendung Wachstumsfaktoren frei, welche die Produktion
-					von Kollagen und Elastin und die Ausschüttung von Hyaluronsäure
-					stimulieren.
-					<br>
-					Die Aufnahmefähigkeit der aufgetragenen Wirkstoffe
-					wird erheblich gesteigert, was zu einem deutlich verbesserten
-					Hautergebnis führt. Anwendungsbereiche:
-					Gesicht, Augen, Lippen, Hals, Dekolleté, Körper und Hände.
-					Sensationelle Ergebnisse im Bereich:
-				</p>
-				<ul class="checklist">
-					<li>Hautfestigung</li>
-					<li>Faltenreduktion</li>
-					<li>Hautverjüngung von sonnengeschädigter Haut</li>
-					<li>Narben verschiedener Art (besonders&nbsp;Aknenarben)</li>
-					<li>Dehnungs- und Schwangerschaftsstreifen</li>
-					<li>Aufhellung von Pigmentstörungen</li>
-					<li>Porenverkleinerung und Verfeinerung des Hautbildes</li>
-				</ul>
-				<p>
-					Es wird eine Kurbehandlung von 4-6 Behandlungen in&nbsp;4-wöchigen
-					Abständen empfohlen
-				</p>
-			</div>
-
-			<div class="tile gesicht">
-				<h3>Fruchtsäurepeeling</h3>
-				<div class="duration">ca.&nbsp;60&nbsp;min</div>
-				<div>80,00&nbsp;€</div>
-				<br>
-				<div>als Kur (4-6 mal, 1x pro Monat) 70,00&nbsp;€</div>
-				<p>
-					Bei vielen Hautleiden kommt es zu einer übermäßigen Anhäufung
-					toter Hautzellen, so dass die Haut dick wird und ihren Glanz
-					verliert. Mit Hilfe von Fruchtsäuren lassen sich die auf der
-					Hautoberfläche liegenden Hautzellschichten ablösen und entfernen.
-					Auf diese Weise wird die Schicht der Hornzellen dünner und es
-					kommt zu einer fortlaufenden Verbesserung des Aussehens und der
-					Beschaffenheit der Haut.
-					Anwendung unter Einschleusung von Hyaluronsäure bei:
-
-				</p>
-				<ul class="checklist">
-					<li>Akne (jugendliche/erwachsene Haut)</li>
-					<li>offene und geschlossene Komedonen (Mitesser)</li>
-					<li>unreine und grobporige Haut</li>
-					<li>reife Haut, erschlaffte Haut, Fältchen, Pigmentflecken</li>
-					<li>lichtgeschädigte Haut</li>
-					<li>stumpfe, glanzlose und raue Haut</li>
-				</ul>
-			</div>
-
-			<div class="tile gesicht">
-				<h3>Diamant-Mikrodermabrasion</h3>
-				<div class="duration">ca.&nbsp;60&nbsp;min</div>
-				<div>75,00&nbsp;€</div>
-				<br>
-				<div>als Kur (4-6 mal, 1x pro Monat) 65,00&nbsp;€</div>
-				<p>
-					Kontrolliertes Abtragen von Verhornungen, Anregung der Zellteilung
-					und Verfeinerung des Hautbildes, Minderung von Falten, Aufhellen von
-					Pigment- und Altersflecken, Verbesserung von Narben, Behandlung von
-					großporiger und unreiner Haut, selbst für empfindliche Haut geeignet.
-					<br>
-					Auch hier wird hochdosierte Hyaluronsäure mit Ultraschall eingeschleust.
-				</p>
-				<ul class="checklist">
-					<li>Akne (jugendliche/erwachsene Haut)</li>
-					<li>offene und geschlossene Komedonen (Mitesser)</li>
-					<li>unreine und grobporige Haut</li>
-					<li>reife Haut, erschlaffte Haut, Fältchen, Pigmentflecken</li>
-					<li>lichtgeschädigte Haut</li>
-					<li>stumpfe, glanzlose und raue Haut</li>
-				</ul>
-			</div>
-
-			<span id="scroll-facelifting"></span>
-			<div class="tile">
-				<h3 style="margin-top:0.5em">Face-Lifting</h3>
-				<h4>Der Faltenkiller mit Spezialultraschall</h4>
-
-				<p>Bereits ab dem 20. - 25. Lebensjahr fängt die Haut ganz langsam
-					an zu altern, die Anzahl der Kollagen- und Elastinfasern
-					verringert sich, die Fasern reißen und werden kürzer.
-					Es entstehen Falten.</p>
-
-				<p>Das Face-Lifting mit meinem Spezial-Ultraschall-Gerät ist die
-					beste Alternative zur Faltenbekämpfungs-OP. Es ist eine
-					extrem gute After-Aging-Behandlung ab dem 40. Lebensjahr.
-					Der Kollagen- und Elastinrückgang wird gestoppt und zu
-					neuem Wachstum angeregt.</p>
-
-				<p>Kleinere Falten verschwinden vollständig, tiefere Falten
-					werden erheblich reduziert. Man erhält ein deutlich jüngeres
-					Aussehen für mehrere Jahre.</p>
-
-				<ul class="checklist" style="text-align:left">
-					<li>Die beste Faltenbekämpfung ohne OP</li>
-					<li>Hautverjüngung/Hautstraffung von Innen</li>
-					<li>nur eine Behandlung nötig</li>
-					<li>wird aber speziell ab 40 Jahren empfohlen</li>
-					<li>Wirkdauer: 3-4 Jahre</li>
-					<li>Ergebnis: 20% sofort sichtbar, danach verjüngt sich die Haut allmählich in den nächsten 6 Monaten</li>
-					<li>schmerzfrei, keine Ausfallzeiten</li>
-					<li>ausführliche Beratung in der Praxis</li>
-				</ul>
-
-				<div class="facelifting-image-grid">
-					<Image src={faltenkiller1Img} alt="Faltenkiller: Bild von junger Frau" width="262" height="274"/>
-					<Image src={faltenkiller2Img} alt="Faltenkiller: Frischer Apfel und verschrumpelter Apfel" width="344" height="240"/>
-					<Image src={faltenkiller3Img} alt="Faltenkiller: Bild von junger Frau" width="266" height="276"/>
-				</div>
-
-				<div class="item">
-					<p>Gesicht + Hals + Dekolleté</p>
-					<div>950,00&nbsp;€</div>
-				</div>
-
-				<div class="item">
-					<p>Gesicht + Hals</p>
-					<div>800,00&nbsp;€</div>
-				</div>
-
-				<div class="item">
-					<p>Gesicht</p>
-					<div>650,00&nbsp;€</div>
-				</div>
-
-				<div class="item">
-					<p>Dekolleté</p>
-					<div>500,00&nbsp;€</div>
-				</div>
-
-				<div class="item">
-					<p>Tränensäcke</p>
-					<div>75,00&nbsp;€</div>
-				</div>
-
-				<div class="item">
-					<p>Areal am Körper, je ca. 10 x 10cm</p>
-					<div>160,00&nbsp;€</div>
-				</div>
 			</div>
 
 		</section>
+
+        <section>
+            <span id="scroll-manikuere"></span>
+
+            <h2>Maniküre</h2>
+
+            <div class="tile">
+
+                <h3>Maniküre-klassisch</h3>
+
+                <div class="item">
+                    <p>Beurteilung der Haut & Nägel<br>Naturnägel formen<br>Nagelbad<br>Nagelhautpflege<br>Abschlusscreme</p>
+                    <div>35,00&nbsp;€</div>
+                </div>
+
+                <div class="item">
+                    <p>Nägel lackieren</p>
+                    <div>10,00&nbsp;€</div>
+                </div>
+
+                <small>* Entfernung einer früheren Lackierung: 5 €</small>
+
+            </div>
+
+        </section>
+
+        <section>
+            <span id="scroll-shellac"></span>
+
+            <div class="tile">
+
+                <h3>Shellac</h3>
+                <strong class="sub-heading">Der Nagellack der Stars</strong>
+
+                <p>
+                    Auftragbar wie Nagellack, haltbar wie Gel, mind.&nbsp;14&nbsp;Tage haltbar,
+                    kein Abblättern, absolut kratzfester, widerstandsfähiger
+                    UV-gehärteter Hochglanz. Keine Trocknungszeit erforderlich.
+                </p>
+
+                <div class="item">
+                    <p>Maniküre + SHELLAC-Lackierung</p>
+                    <div>50,00&nbsp;€</div>
+                </div>
+
+                <div class="item">
+                    <p>SHELLAC-Lackierung</p>
+                    <div>25,00&nbsp;€</div>
+                </div>
+
+                <small>* Entfernung einer früheren SHELLAC-Lackierung: 10 €</small>
+
+            </div>
+        </section>
 
 		<section>
 			<span id="scroll-augen"></span>
@@ -606,19 +533,11 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
                     <figcaption>nachher</figcaption>
                 </figure>
 
-				<div class="item">
-					<p>Wimpern färben</p>
-					<div>13,00&nbsp;€</div>
-				</div>
-
-				<div class="item">
-					<p>Augenbrauen neu formen</p>
-					<div>17,00&nbsp;€</div>
-				</div>
+                <p>Zusatzleistungen</p>
 
 				<div class="item">
 					<p>Augenbrauen korrigieren</p>
-					<div>12,00&nbsp;€</div>
+					<div>15,00&nbsp;€</div>
 				</div>
 
 				<div class="item">
@@ -626,66 +545,63 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 					<div>12,00&nbsp;€</div>
 				</div>
 
+				<div class="item">
+					<p>Wimpern färben</p>
+					<div>13,00&nbsp;€</div>
+				</div>
 			</div>
 		</section>
 
-		<section>
-			<span id="scroll-haare-wachs"></span>
+        <section>
+            <span id="scroll-massagen"></span>
+
+            <h2>Massagen</h2>
+
+            <div class="tile">
+
+                <h3>Von Klassisch bis Wellness</h3>
+
+                <Image class="img_hotstone" src={hotStoneMassageImg} alt="Massage Beispiel"/>
+
+                <ul class="checklist" style="text-align:left;">
+                    <li>Entspannung der Muskulatur</li>
+                    <li>lokale Verbesserung der Durchblutung</li>
+                    <li>Senkung des Blutdrucks und des Pulses</li>
+                    <li>Verbesserung des Zellstoffwechsels</li>
+                    <li>Stressabbau</li>
+                    <li>psychische und physische Entspannung u.a.</li>
+                </ul>
+
+                <div class="item">
+                    <p>Klassiche Körpermassage<span>ca.&nbsp;60&nbsp;min</span></p>
+                    <div>76,00&nbsp;€</div>
+                </div>
+
+                <div class="item">
+                    <p>Rückenmassage + Arme und Hände<span>ca.&nbsp;30&nbsp;min</span></p>
+                    <div>45,00&nbsp;€</div>
+                </div>
+
+                <div class="item">
+                    <p>Hot Stone Massage<span>ca.&nbsp;60&nbsp;min</span></p>
+                    <div>80,00&nbsp;€</div>
+                </div>
+
+                <div class="item">
+                    <p>Ayurvedische Genzkörpermassage<span>ca.&nbsp;60&nbsp;min</span></p>
+                    <div>76,00&nbsp;€</div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section>
+            <span id="scroll-haare-diode"></span>
 
 			<h2>Haarentfernung</h2>
 
 			<div class="tile">
-				<h3>Haarentfernung mit Wachs</h3>
-
-				<div class="item">
-					<p>Oberlippe oder Kinn</p>
-					<div>je&nbsp;10,00&nbsp;€</div>
-				</div>
-
-				<div class="item">
-					<p>Oberlippe oder Kinn, während einer Behandlung</p>
-					<div>je&nbsp;6,00&nbsp;€</div>
-				</div>
-
-				<div class="item">
-					<p>Gesicht komplett</p>
-					<div>25,00&nbsp;€</div>
-				</div>
-
-				<div class="item">
-					<p>Gesicht komplett, während einer Behandlung</p>
-					<div>20,00&nbsp;€</div>
-				</div>
-
-				<div class="item">
-					<p>Beine bis Knie</p>
-					<div>35,00&nbsp;€</div>
-				</div>
-
-				<div class="item">
-					<p>Beine komplett</p>
-					<div>50,00&nbsp;€</div>
-				</div>
-
-				<div class="item">
-					<p>Achseln</p>
-					<div>15,00&nbsp;€</div>
-				</div>
-
-				<div class="item">
-					<p>Bikinizone (nur Damen)</p>
-					<div>20,00&nbsp;€</div>
-				</div>
-
-				<div class="item">
-					<p>Rücken oder Brust</p>
-					<div>35 - 45,00&nbsp;€</div>
-				</div>
-			</div>
-
-			<div class="tile">
-				<span id="scroll-haare-diode"></span>
-
 				<h3>dauerhafte Haarentfernung<br> mit Dioden-Laser</h3>
 				<p>Nahezu schmerzfrei. Der LASER wird für jeden Kunden und Körperbereich individuell eingestellt.<br>Im Normalfall sind 4-8 Behandlungen notwendig, alle 4-6 Wochen.</p>
 
@@ -824,155 +740,91 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 
 			</div>
 
-		</section>
+            <div class="tile">
+                <span id="scroll-haare-wachs"></span>
+                <h3>Haarentfernung mit Wachs/Zuckerpaste</h3>
 
-		<section>
-			<span id="scroll-massagen"></span>
+                <div class="item">
+                    <p>Oberlippe oder Kinn</p>
+                    <div>je&nbsp;10,00&nbsp;€</div>
+                </div>
 
-			<h2>Massagen</h2>
+                <div class="item">
+                    <p>Gesicht komplett</p>
+                    <div>25,00&nbsp;€</div>
+                </div>
 
-			<div class="tile">
+                <div class="item">
+                    <p>Beine bis Knie</p>
+                    <div>35,00&nbsp;€</div>
+                </div>
 
-				<h3>Klassisch/Wellness</h3>
+                <div class="item">
+                    <p>Beine komplett</p>
+                    <div>50,00&nbsp;€</div>
+                </div>
 
-				<Image class="img_hotstone" src={hotStoneMassageImg} alt="Massage Beispiel"/>
+                <div class="item">
+                    <p>Achseln</p>
+                    <div>15,00&nbsp;€</div>
+                </div>
 
-				<p>
-					Wirkung: Entspannung der Muskulatur, lokale Verbesserung der
-					Durchblutung, Senkung des Blutdrucks und des Pulses,
-					Verbesserung des Zellstoffwechsels, Stressabbau,
-					psychische&nbsp;Entspannung u.a.
-				</p>
+                <div class="item">
+                    <p>Bikinizone (nur Damen)</p>
+                    <div>20,00&nbsp;€</div>
+                </div>
 
-				<div class="item">
-					<p>Klassiche Körpermassage<span>ca.&nbsp;60&nbsp;min</span></p>
-					<div>68,00&nbsp;€</div>
-				</div>
+                <div class="item">
+                    <p>Rücken oder Brust</p>
+                    <div>35 - 45,00&nbsp;€</div>
+                </div>
+            </div>
 
-				<div class="item">
-					<p>Rückenmassage inkl. Arme und Hände<span>ca.&nbsp;30&nbsp;min</span></p>
-					<div>40,00&nbsp;€</div>
-				</div>
-
-				<div class="item">
-					<p>Hot Stone Massage<span>ca.&nbsp;60&nbsp;min</span></p>
-					<div>78,00&nbsp;€</div>
-				</div>
-
-				<div class="item">
-					<p>Ayurvedische Genzkörpermassage<span>ca.&nbsp;60&nbsp;min</span></p>
-					<div>78,00&nbsp;€</div>
-				</div>
-
-				<div class="item">
-					<p>Lomi Lomi Massage<span>ca.&nbsp;60&nbsp;min</span></p>
-					<div>78,00&nbsp;€</div>
-				</div>
-
-			</div>
-
-		</section>
-
-		<section>
-			<span id="scroll-manikuere"></span>
-
-			<h2>Maniküre</h2>
-
-			<div class="tile">
-
-				<h3>Maniküre-klassisch</h3>
-
-				<div class="item">
-					<p>Beurteilung der Haut & Nägel<br>Naturnägel formen<br>Nagelbad<br>Nagelhautpflege<br>Abschlusscreme</p>
-					<div>35,00&nbsp;€</div>
-				</div>
-
-				<div class="item">
-					<p>Nägel lackieren</p>
-					<div>10,00&nbsp;€</div>
-				</div>
-
-				<small>* Entfernung einer früheren Lackierung: 5 €</small>
-
-			</div>
-
-		</section>
-
-		<section>
-			<span id="scroll-shellac"></span>
-
-			<div class="tile">
-
-				<h3>Shellac</h3>
-				<strong class="sub-heading">Der Nagellack der Stars</strong>
-
-				<p>
-					Auftragbar wie Nagellack, haltbar wie Gel, mind.&nbsp;14&nbsp;Tage haltbar,
-					kein Abblättern, absolut kratzfester, widerstandsfähiger
-					UV-gehärteter Hochglanz. Keine Trocknungszeit erforderlich.
-				</p>
-
-				<div class="item">
-					<p>Maniküre + SHELLAC-Lackierung</p>
-					<div>55,00&nbsp;€</div>
-				</div>
-
-				<div class="item">
-					<p>SHELLAC-Lackierung</p>
-					<div>25,00&nbsp;€</div>
-				</div>
-
-				<div class="item">
-					<p>Handpeeling + Handmassage<span>ca.&nbsp;30&nbsp;min</span></p>
-					<div>30,00&nbsp;€</div>
-				</div>
-
-				<small>* Entfernung einer früheren SHELLAC-Lackierung: 10 €</small>
-
-			</div>
-		</section>
+        </section>
 
 		<section>
 			<span id="scroll-fuss"></span>
 
 			<h2>Bereich Fusspflege</h2>
 
-			<div class="tile">
+            <div class="tile">
+                <h3 style="margin-top:0.5em">Medizinische Fachfußpflege</h3>
 
-				<h3>Medizinische Fachfußpflege</h3>
-				<strong class="sub-heading">(auch für Diabetiker)</strong>
+                <p style="margin-block:0">
+                    (auch für Diabetiker)
+                </p>
+                <div class="inline duration">ca.&nbsp;45&nbsp;min</div>
+                <div class="inline">52,00&nbsp;€</div>
 
-				<br>
-				<Image class="img_fußpflege" src={fusspflegeImg} alt="Bild von Teslime im Kosmetikstudio"/>
+                <ul class="checklist" style="text-align:left;">
+                    <li>Nägel schneiden, Nägelverschönerung</li>
+                    <li>Hornhaut entfernen/abschleifen</li>
+                    <li>ggfs. Hühneraugen entfernen<small>, ein Hühnerauge inkl.</small></li>
+                    <li>ggfs. Pilznägel abschleifen</li>
+                    <li>ggfs. eingewachsene Nägel oder Rollnägel behandeln</li>
+                    <li>kurze Abschlussmassage mit dazu passender Pflegecreme</li>
+                    <li>komplette Fachfußpflege</li>
+                </ul>
 
-				<div class="item">
-					<p>Aromafußbad<br>
-						Nägel schneiden, Nägelverschönerung<br>
-						Hornhaut entfernen/abschleifen<br>
-						ggfs. Hühneraugen entfernen<small>, ein Hühnerauge inkl.</small><br>
-						ggfs. Pilznägel abschleifen<br>
-						ggfs. eingewachsene Nägel oder Rollnägel behandeln<br>
-                        kurze Abschlussmassage mit dazu passender Pflegecreme
-						komplette Fachfußpflege
-						<span>ca.&nbsp;45&nbsp;min</span></p>
-					<div>48,00&nbsp;€</div>
-				</div>
+                <Image class="img_teslime_willkommen" src={teslimeWillkommenImage} alt="Teslimes Fachfußpflege Praxis"/>
 
-				<div class="item">
+                <p>Zusatzleistungen</p>
+
+                <div class="item">
+                    <p>Fußreflexzonenmassage, <br>nach Hanne Marquardt <span>ca.&nbsp;30&nbsp;min</span></p>
+                    <div>45,00&nbsp;€</div>
+                </div>
+
+                <div class="item">
+                    <p>Relax-/Wellnessfußmassage <span>ca.&nbsp;15&nbsp;min</span></p>
+                    <div>23,00&nbsp;€</div>
+                </div>
+
+                <div class="item">
 					<p>Hühneraugen entfernen
 						<small>, zwei und mehr</small>
 					</p>
-					<div>je&nbsp;11,00&nbsp;€</div>
-				</div>
-
-				<div class="item">
-					<p>Fußreflexzonenmassage, <br>nach Hanne Marquardt <span>ca.&nbsp;30&nbsp;min</span></p>
-					<div>40,00&nbsp;€</div>
-				</div>
-
-				<div class="item">
-					<p>Relax-/Wellnessfußmassage <span>ca.&nbsp;15&nbsp;min</span></p>
-					<div>20,00&nbsp;€</div>
+					<div>je&nbsp;10,00&nbsp;€</div>
 				</div>
 
 				<div class="item">
@@ -1024,12 +876,16 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
                 <br>
 
                 <div class="item">
-                    <p>Leichter Pilzbefall wird während der normalen Fachfußpflege einfach mitbehandelt.</p>
+                    <p>Leichter Pilzbefall wird während der normalen Fachfußpflege einfach mitbehandelt (d.h. möglichst viel weggeschliffen).</p>
                 </div>
 
                 <div class="item">
                     <p>Mittlerer und schwerer Pilzbefall</p>
                     <div>10,00&nbsp;€</div>
+                </div>
+
+                <div class="item">
+                    <p>Nagelpilz tritt ab einem Alter von ca. 60 Jahren leider sehr häufig auf, da das Immunsystem schwächer wird.</p>
                 </div>
 
                 <p><strong>Behandlungsablauf:</strong></p>
@@ -1038,6 +894,9 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
                 <strong>Zu Hause:</strong> antimykotische Mittel auf die befallenen Nägel auftragen, Socken waschen und desinfizieren und die gleichen Schuhe nicht zwei Tage hintereinander tragen. <br>
                 <strong>Ergebnis 1:</strong> Der Nagelpilz verschwindet und alles ist gut. <br>
                 <strong>Ergenbis 2:</strong> Der Nagelpilz verschwindet nicht ,Sie gehen zum Hautarzt damit er einen Abstrich macht um die Pilzart zu bestimmen. Sie erhalten dann eventuell ein anderes Mittel zum Auftragen auf die Nägel. Sie kommen weiterhin regelmäßig zur Fußpflege um eine eventuelle Wiederansteckung frühzeitig zu erkennen.
+                <br>
+                Sie kommen weiterhin regelmäßig zur Fußpflege, dadurch wird die Behandlung sehr start unterstützt.
+
                 <br><br>
 
                 <iframe style="width:95%;max-width:500px;" width="400" height="600" src="https://www.youtube.com/embed/od_KYgEFuuo" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -1049,10 +908,10 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 
 				<div class="gesicht">
 
-					<h3>Nagelkorrektur mit Spangentechnik</h3>
+					<h3>Nagelkorrektur mit einer Spange</h3>
 					<strong class="sub-heading">Die Schmerzen verschwinden im Normalfall sofort.</strong>
-					<div class="duration">Nagelkorrektur mit einer Spange</div>
 					<div>je&nbsp;Nagel&nbsp;40,00&nbsp;€</div>
+                    <br><br>
 					<Image class="img_inside" src={nagelkorrekturSpangeImg} alt="Spange für Nagelkorrektur"/>
 					<ul>
 						<li>
@@ -1179,7 +1038,7 @@ const googleMapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 				<strong>Webmaster:</strong><br>
 				Alexander Schuster<br>
 				&#9993; <a href="mailto:alexander.schuster@web.de">alexander.schuster@web.de</a><br>
-				letzte Aktualisierung: 01.11.2025
+				letzte Aktualisierung: 01.06.2026
 			</p>
 		</div>
 
