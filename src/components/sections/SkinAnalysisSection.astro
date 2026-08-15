@@ -1,0 +1,125 @@
+---
+import { Image } from "astro:assets";
+
+import SectionAnchor from "../SectionAnchor.astro";
+import TreatmentCard from "../TreatmentCard.astro";
+import analysisExampleImage from "../../images/gesichtsanalyse-stern.webp";
+import analyzerImage from "../../images/gesichtsanalyse.webp";
+import skinOverviewImage from "../../images/hautanalyse.webp";
+---
+
+<section aria-labelledby="skin-analysis-heading">
+  <SectionAnchor id="scroll-hautanalyse" />
+  <h2 id="skin-analysis-heading">Hautanalyse</h2>
+
+  <TreatmentCard class="analysis-card">
+    <h3>Mit dem Skin-Analyzer</h3>
+    <p class="analysis-card__introduction">
+      (eines der modernsten und besten Geräte auf dem Markt)<br />
+      mit Alterssimulation 5–7 Jahre in die Zukunft und ausführlicher Besprechung der
+      Ergebnisse und Handlungsempfehlungen
+    </p>
+    <div class="analysis-card__price">50,00&nbsp;€</div>
+
+    <div class="analysis-card__devices">
+      <Image
+        src={analyzerImage}
+        alt="Gerät für die bildbasierte Gesichtsanalyse"
+        width={698}
+        height={737}
+      />
+      <Image
+        src={analysisExampleImage}
+        alt="Beispielauswertung für Falten, Poren, Flecken und Empfindlichkeit"
+        width={584}
+        height={554}
+      />
+    </div>
+
+    <figure>
+      <Image src={skinOverviewImage} alt="Beispielbilder einer Hautanalyse" />
+      <figcaption>Beispielbilder – da bleibt nichts verborgen.</figcaption>
+    </figure>
+
+    <h4>Beispiel einer Empfehlung:</h4>
+    <ul class="analysis-card__recommendations">
+      <li>
+        Empfindliche Epidermis: <a href="#scroll-gesicht">Hydra-Face-Luxusbehandlung</a>
+      </li>
+      <li>
+        Poren und noch nicht sichtbare Pigmentflecken (UV-Spots):
+        <a href="#scroll-microneedling">Gold-Microneedling mit Radiofrequenz</a>
+      </li>
+      <li>
+        Falten: <a href="#scroll-facelifting">Facelifting mit Spezialultraschall</a>
+      </li>
+      <li>Porphyrine (Talg und Fett): kein Handlungsbedarf</li>
+    </ul>
+
+    <p>
+      Je kleiner der Stern, desto besser ist das Ergebnis.<br />Unbedingt Sonnenschutz für
+      Gesicht und Dekolleté verwenden.
+    </p>
+
+    <h4>Teslimes Kommentar:</h4>
+    <em>
+      Sorgen machen mir die unter der Haut liegenden, noch nicht sichtbaren Pigmentflecken
+      (UV-Spots), die aber in den nächsten Jahren sichtbar werden. Daher sind sofortiges
+      Handeln und die richtige Pflege der Haut nötig.
+    </em>
+  </TreatmentCard>
+</section>
+
+<style>
+  .analysis-card__introduction {
+    margin-block: 0;
+  }
+
+  .analysis-card__price {
+    opacity: 0.7;
+  }
+
+  .analysis-card__devices {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    margin-block: 2em;
+  }
+
+  .analysis-card__devices :global(img) {
+    width: 40%;
+    min-width: 250px;
+    max-width: 350px;
+    height: 100%;
+  }
+
+  .analysis-card__devices :global(img:first-child) {
+    border-radius: 50%;
+  }
+
+  figure :global(img) {
+    width: 85%;
+    max-width: 800px;
+    height: 100%;
+  }
+
+  figcaption {
+    font-size: 0.8rem;
+  }
+
+  .analysis-card__recommendations {
+    list-style-image: url("../../images/gesichtsanalyse-stern-mini.webp");
+  }
+
+  .analysis-card__recommendations a {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  em {
+    display: inline-block;
+    margin-bottom: 1em;
+  }
+</style>

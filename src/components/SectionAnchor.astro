@@ -1,0 +1,16 @@
+---
+interface Props {
+  id: string;
+}
+
+const { id } = Astro.props;
+---
+
+<span class="section-anchor" {id} aria-hidden="true"></span>
+
+<style>
+  .section-anchor {
+    display: block;
+    height: 0;
+  }
+</style>

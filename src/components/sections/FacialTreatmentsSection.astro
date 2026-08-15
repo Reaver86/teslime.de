@@ -1,0 +1,342 @@
+---
+import { Image } from "astro:assets";
+
+import ImageGallery from "../ImageGallery.astro";
+import SectionAnchor from "../SectionAnchor.astro";
+import TreatmentCard from "../TreatmentCard.astro";
+import analysisExampleImage from "../../images/gesichtsanalyse-stern.webp";
+import analyzerImage from "../../images/gesichtsanalyse.webp";
+import classicTreatment1Image from "../../images/gesichtsbehandlung-1.png";
+import classicTreatment2Image from "../../images/gesichtsbehandlung-2.png";
+import classicTreatment3Image from "../../images/gesichtsbehandlung-3.png";
+import wrinkleKiller1Image from "../../images/faltenkiller-1.webp";
+import wrinkleKiller2Image from "../../images/faltenkiller-2.webp";
+import wrinkleKiller3Image from "../../images/faltenkiller-3.webp";
+import hydraFaceAfterImage from "../../images/hydra-face-nachher.webp";
+import hydraFaceDevice1Image from "../../images/hydra-face-geraet-1.webp";
+import hydraFaceDevice2Image from "../../images/hydra-face-geraet-2.webp";
+import hydraFaceBeforeImage from "../../images/hydra-face-vorher.webp";
+import microneedlingProcessImage from "../../images/microneedling-ablauf.webp";
+import microneedlingFaceImage from "../../images/microneedling-ergebnis.webp";
+import microneedlingDeviceImage from "../../images/microneedling-rf-geraet.webp";
+---
+
+<section aria-labelledby="facial-treatments-heading">
+  <SectionAnchor id="scroll-gesicht" />
+  <h2 id="facial-treatments-heading">Gesichtsbehandlungen</h2>
+
+  <TreatmentCard class="facial-card">
+    <h3>Grundprogramm für gesunde Haut</h3>
+    <h4>Hydra-Face</h4>
+
+    <p>
+      Teslimes Hollywoodbehandlung in drei Schritten:<br />
+      (1) Hautanalyse + (2) Behandlung + (3) Glow-Effekt<br />
+      <em>Empfohlen für jedes Alter</em><br />
+      <em>Ausfallzeiten: keine</em>
+    </p>
+
+    <ImageGallery>
+      <Image
+        class="round-image"
+        src={analyzerImage}
+        alt="Gerät für die bildbasierte Gesichtsanalyse"
+        width={698}
+        height={737}
+      />
+      <Image
+        class="contained-image"
+        src={analysisExampleImage}
+        alt="Beispielauswertung einer Gesichtsanalyse"
+        width={584}
+        height={554}
+      />
+      <Image
+        src={hydraFaceDevice1Image}
+        alt="Hydra-Face-Gerät"
+        width={674}
+        height={643}
+      />
+      <Image
+        src={hydraFaceDevice2Image}
+        alt="Hydra-Face-Gerät bei einer Beispielanwendung"
+        width={516}
+        height={643}
+      />
+    </ImageGallery>
+
+    <div class="comment">
+      <h4>Teslimes Kommentar:</h4>
+      <em>
+        Regelmäßige Anwendung alle 6–8 Wochen führt zu einer <span
+          class="underlined">dauerhaft strahlenden und gesunden Haut</span
+        > und verlangsamt den Alterungsprozess der Haut erheblich. Es ist die perfekte
+        Gesichtspflege für jedes Alter. Mit dem Hautanalysegerät dokumentiere ich jedes
+        Mal den Zustand der Haut.
+      </em>
+    </div>
+
+    <h3>Hydra-Face-Luxusbehandlung</h3>
+    <div class="treatment-meta"><span>ca. 90 min</span><span>150,00&nbsp;€</span></div>
+
+    <p class="underlined">Schritt 1:</p>
+    <ul class="checklist">
+      <li>
+        Aufnahme des Hautzustands mit dem professionellen Hautanalysegerät, mit
+        Alterssimulation 5–7 Jahre in die Zukunft
+      </li>
+    </ul>
+    <p class="underlined">Schritt 2: (auf Sie abgestimmt)</p>
+    <ul class="checklist">
+      <li>
+        Hydra-Reinigung, Hydra-/Diamant-Dermabrasion, Peeling, ggf. Bedampfung,
+        Skin-Scrubber, Reinigung mit Vakuumhandstücken, Sauerstoffpistole
+      </li>
+      <li>Hyaluron + Wirkstoffkomplex</li>
+      <li>Bipolare und tripolare Radiofrequenzbehandlung</li>
+      <li>Mikrostrom-Handschuh</li>
+      <li>PDT-Lichttherapie</li>
+      <li>Abschlusspflege/-massage</li>
+    </ul>
+    <p class="underlined">Schritt 3 = Ergebnis:</p>
+    <ul class="checklist">
+      <li>Glow-Effekt: saubere + strahlende Haut für mehrere Wochen</li>
+    </ul>
+
+    <p class="underlined">Ergebnisbeispiel:</p>
+    <ImageGallery>
+      <Image
+        src={hydraFaceBeforeImage}
+        alt="Hydra-Face vor der Anwendung"
+        width={768}
+        height={1024}
+      />
+      <Image
+        src={hydraFaceAfterImage}
+        alt="Hydra-Face nach der Anwendung – sichtbar strahlendere Haut"
+        width={768}
+        height={860}
+      />
+    </ImageGallery>
+
+    <h3>Klassische Kosmetikbehandlung</h3>
+    <div class="treatment-meta"><span>ca. 90 min</span><span>105,00&nbsp;€</span></div>
+
+    <div class="classic-examples">
+      <Image src={classicTreatment1Image} alt="Beispiel einer Gesichtsbehandlung" />
+      <Image src={classicTreatment2Image} alt="Beispiel einer Gesichtsbehandlung" />
+      <Image src={classicTreatment3Image} alt="Beispiel einer Gesichtsbehandlung" />
+    </div>
+
+    <p>
+      Hals-, Gesichts- und Dekolletébehandlung mit individuell auf Ihre Haut abgestimmten
+      Spezialprodukten, inkl. Wirkstoffampulle und Augenpackung/-maske.
+    </p>
+    <ul>
+      <li>Nackenmassage</li>
+      <li>Reinigungsmassage</li>
+      <li>Hautanalyse</li>
+      <li>Intensivpeeling</li>
+      <li>Bedampfung</li>
+      <li>Behandlung von Hautunreinheiten</li>
+      <li>Augenbrauenkorrektur</li>
+      <li>Wirkstoffampulle oder Serum</li>
+      <li>Gesichts-, Hals- und Dekolletémassage</li>
+      <li>Packung/Maske</li>
+      <li>Abschlusspflege</li>
+    </ul>
+  </TreatmentCard>
+
+  <TreatmentCard class="facial-card">
+    <h3>Intensiv-Gesichtsreinigung</h3>
+    <div class="treatment-meta"><span>ca. 60 min</span><span>75,00&nbsp;€</span></div>
+    <ul>
+      <li>Reinigungsmassage</li>
+      <li>Intensivpeeling</li>
+      <li>Bedampfung</li>
+      <li>Behandlung von Hautunreinheiten</li>
+      <li>Ampulle</li>
+      <li>Abschlusspflege</li>
+    </ul>
+  </TreatmentCard>
+
+  <SectionAnchor id="scroll-facelifting" />
+  <TreatmentCard class="facial-card">
+    <h3>Facelifting</h3>
+    <h4>Der Faltenkiller</h4>
+    <h4>Mit gebündeltem Spezialultraschall</h4>
+    <p class="compact-copy">
+      Gesicht, Hals und Dekolleté<br />eine sehr wirksame Behandlung, speziell ab 40
+    </p>
+    <div class="standalone-price">600,00&nbsp;€</div>
+
+    <p>
+      Bereits ab dem 25. Lebensjahr fängt die Haut ganz langsam an zu altern. Die Anzahl
+      der Kollagen- und Elastinfasern verringert sich, die Fasern reißen und werden kürzer.
+      Es entstehen Falten.
+    </p>
+    <p>
+      Das Facelifting mit meinem Spezialultraschallgerät stoppt diesen Vorgang für mehrere
+      Jahre. Der Ultraschall wird in 1,5 bis 4,5 mm gebündelt und setzt dort
+      Anregungspunkte. Dadurch werden die körpereigenen Reparaturkräfte aktiviert und die
+      Neubildung von Kollagen und Elastin wird gestartet. Es wird eine sichtbare Straffung
+      der Hautoberfläche erreicht. Vor Beginn der Behandlung messe ich die Hautdicke, um
+      sicherzustellen, dass 4,5 mm nicht zu tief greift.
+    </p>
+    <p>
+      Kleinere Falten verschwinden vollständig, tiefere Falten werden erheblich reduziert.
+      Man erhält ein deutlich jüngeres Aussehen für mehrere Jahre.
+    </p>
+    <ul class="checklist">
+      <li>Faltenbekämpfung ohne Anästhesie, ohne OP</li>
+      <li>Hautverjüngung um 3 bis 5 Jahre</li>
+      <li>Wirkdauer 3 bis 5 Jahre und mehr</li>
+      <li>nur eine Behandlung nötig, ab 40 Jahren empfohlen</li>
+      <li>
+        Ergebnis: 20 % sofort sichtbar, danach verjüngt sich die Haut allmählich in den
+        nächsten 6 Monaten
+      </li>
+      <li>schmerzfrei, keine Ausfallzeiten</li>
+      <li>ausführliche Beratung in der Praxis</li>
+    </ul>
+
+    <ImageGallery variant="facelift">
+      <Image
+        src={wrinkleKiller1Image}
+        alt="Faltenkiller: Bild einer jungen Frau"
+        width={262}
+        height={274}
+      />
+      <Image
+        src={wrinkleKiller2Image}
+        alt="Faltenkiller: frischer und verschrumpelter Apfel"
+        width={344}
+        height={240}
+      />
+      <Image
+        src={wrinkleKiller3Image}
+        alt="Faltenkiller: Bild einer jungen Frau"
+        width={266}
+        height={276}
+      />
+    </ImageGallery>
+  </TreatmentCard>
+
+  <TreatmentCard class="facial-card">
+    <h3>Microneedling</h3>
+    <div class="treatment-meta"><span>ca. 60 min</span><span>140,00&nbsp;€</span></div>
+    <p>
+      Das Microneedling mittels Needling-Pen ist ein neues und sehr erfolgreiches Verfahren
+      im Bereich der Anti-Aging- und Problemhautbehandlungen. Durch die gezielte Perforation
+      der Haut (Needling-Pen mit 24 feinen Nadeln) setzen die Zellen unmittelbar nach der
+      Anwendung Wachstumsfaktoren frei, welche die Produktion von Kollagen und Elastin und
+      die Ausschüttung von Hyaluronsäure stimulieren.<br />
+      Die Aufnahmefähigkeit der aufgetragenen Wirkstoffe wird erheblich gesteigert, was zu
+      einem deutlich verbesserten Hautergebnis führt. Anwendungsbereiche: Gesicht, Augen,
+      Lippen, Hals, Dekolleté, Körper und Hände.
+    </p>
+    <p>Sensationelle Ergebnisse im Bereich:</p>
+    <ul class="checklist">
+      <li>Porenverkleinerung und Verfeinerung des Hautbilds</li>
+      <li>Hautfestigung, Hautstraffung, Augenringe</li>
+      <li>Faltenreduktion</li>
+      <li>Hautverjüngung von sonnengeschädigter Haut</li>
+      <li>Aufhellung von Pigmentstörungen</li>
+      <li>Akne</li>
+      <li>Narben verschiedener Art (besonders Aknenarben)</li>
+      <li>Dehnungs- und Schwangerschaftsstreifen</li>
+    </ul>
+  </TreatmentCard>
+
+  <SectionAnchor id="scroll-microneedling" />
+  <TreatmentCard class="facial-card">
+    <h3>Gold-Microneedling<br />mit Radiofrequenzstrom</h3>
+    <p class="compact-copy">Gesicht, Hals und Dekolleté</p>
+    <div class="treatment-meta"><span>ca. 90 min</span><span>230,00&nbsp;€</span></div>
+    <p>
+      Es ist die Weiterentwicklung des normalen Microneedlings. Durch den zusätzlichen
+      Stromimpuls mit Radiofrequenz (5 MHz), der individuell eingestellt wird, werden die
+      Ergebnisse erheblich verstärkt und die Wirkdauer verlängert.
+    </p>
+    <ul class="checklist">
+      <li>Empfohlen für jedes Alter</li>
+      <li>Ergebnis nach ca. 2 Monaten voll sichtbar</li>
+      <li>Wirkdauer: ca. 2 Jahre und länger</li>
+      <li>Ausfallzeiten: keine</li>
+    </ul>
+    <p>
+      Teslime arbeitet mit der Stempeltechnik. Das Gerät führt die darauffolgenden drei
+      Schritte automatisch aus.
+    </p>
+
+    <ImageGallery variant="microneedling">
+      <Image
+        src={microneedlingProcessImage}
+        alt="Microneedling-Schaubild: Nadeln dringen in die Haut und geben Radiofrequenzenergie ab"
+        width={1013}
+        height={393}
+      />
+      <Image
+        src={microneedlingDeviceImage}
+        alt="Microneedling-Gerät"
+        width={639}
+        height={462}
+      />
+      <Image
+        src={microneedlingFaceImage}
+        alt="Beispielergebnis des Microneedlings im Gesicht"
+        width={534}
+        height={642}
+      />
+    </ImageGallery>
+  </TreatmentCard>
+</section>
+
+<style>
+  .facial-card > h3 {
+    margin-top: 0.5em;
+  }
+
+  .facial-card > h4 {
+    font-size: 0.9em;
+  }
+
+  .facial-card > ul {
+    text-align: left;
+  }
+
+  .round-image {
+    border-radius: 50%;
+  }
+
+  .contained-image {
+    object-fit: contain;
+  }
+
+  .comment {
+    margin-block: 2em;
+  }
+
+  .treatment-meta {
+    display: flex;
+    justify-content: center;
+    opacity: 0.7;
+  }
+
+  .treatment-meta span + span::before {
+    content: "    •    ";
+    white-space: pre;
+  }
+
+  .classic-examples {
+    margin-top: 1em;
+  }
+
+  .compact-copy {
+    margin-block: 0;
+  }
+
+  .standalone-price {
+    opacity: 0.7;
+  }
+</style>

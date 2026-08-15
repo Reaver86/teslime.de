@@ -1,0 +1,50 @@
+---
+interface Props {
+  price: string;
+  duration?: string;
+}
+
+const { price, duration } = Astro.props;
+---
+
+<div class="price-row">
+  <p>
+    <slot />
+    {duration && <span class="price-row__duration">{duration}</span>}
+  </p>
+  <div class="price-row__price">{price}</div>
+</div>
+
+<style>
+  .price-row {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 40px;
+    font-size: 1em;
+    text-align: left;
+  }
+
+  .price-row p {
+    display: inline-block;
+  }
+
+  .price-row__price {
+    align-self: flex-end;
+    margin-bottom: 0.7em;
+  }
+
+  .price-row__duration {
+    opacity: 0.7;
+  }
+
+  .price-row__duration::before {
+    content: "  •  ";
+  }
+
+  @media (max-width: 420px) {
+    .price-row {
+      gap: 0.5em;
+      padding-left: 20px;
+    }
+  }
+</style>

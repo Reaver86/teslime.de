@@ -1,0 +1,205 @@
+---
+import { Image } from "astro:assets";
+
+import { site } from "../data/site";
+import facebookQrImage from "../images/facebook-qr.webp";
+import faceLiftingTopImage from "../images/facelifting-top.webp";
+import footCareTopImage from "../images/fusspflege-top.webp";
+import googleQrImage from "../images/google-qr.webp";
+import skinAnalysisTopImage from "../images/hautanalyse-top.webp";
+import hydraFaceTopImage from "../images/hydra-face-top.webp";
+import instagramQrImage from "../images/instagram-qr.webp";
+import laserTopImage from "../images/laser-top.webp";
+import microneedlingTopImage from "../images/microneedling-top.webp";
+import portraitImage from "../images/teslime-klein.webp";
+import teslimeLogoImage from "../images/teslime-logo.webp";
+import teslimeQrImage from "../images/teslime-qr.webp";
+import welcomeTopImage from "../images/willkommen-top.webp";
+import eyelashLiftingTopImage from "../images/wimpernlifting-top.webp";
+import whatsappQrImage from "../images/whatsapp-qr.webp";
+---
+
+<section class="introduction" aria-labelledby="introduction-heading">
+  <div class="introduction__identity">
+    <Image src={portraitImage} alt="Teslime Schuster" loading="eager" />
+    <Image src={teslimeLogoImage} alt="Teslime.de" loading="eager" />
+  </div>
+
+  <h2 class="introduction__heading" id="introduction-heading">
+    Mein Angebot<br />„Von Gesicht bis Fuß“
+  </h2>
+
+  <div class="topic-collage">
+    <a class="topic-collage__hydra-face" href="#scroll-gesicht">
+      <Image src={hydraFaceTopImage} alt="Hydra-Face" loading="eager" />
+    </a>
+    <Image
+      class="topic-collage__welcome"
+      src={welcomeTopImage}
+      alt="Willkommen"
+      loading="eager"
+    />
+    <a class="topic-collage__microneedling" href="#scroll-microneedling">
+      <Image src={microneedlingTopImage} alt="Gold-Microneedling" loading="eager" />
+    </a>
+    <a class="topic-collage__laser" href="#scroll-haare-diode">
+      <Image src={laserTopImage} alt="Diodenlaser" loading="eager" />
+    </a>
+    <a class="topic-collage__foot-care" href="#scroll-fuss">
+      <Image src={footCareTopImage} alt="Fußpflege" loading="eager" />
+    </a>
+    <a class="topic-collage__skin-analysis" href="#scroll-hautanalyse">
+      <Image src={skinAnalysisTopImage} alt="Hautanalyse" loading="eager" />
+    </a>
+    <a class="topic-collage__eyelash-lifting" href="#scroll-augen">
+      <Image src={eyelashLiftingTopImage} alt="Wimpernlifting" loading="eager" />
+    </a>
+    <a class="topic-collage__face-lifting" href="#scroll-facelifting">
+      <Image src={faceLiftingTopImage} alt="Facelifting" loading="eager" />
+    </a>
+  </div>
+
+  <div class="qr-grid" aria-label="Schnellzugriffe über QR-Codes">
+    <div class="qr-grid__column">
+      <a href={site.mobile.whatsappUrl} target="_blank" rel="noopener noreferrer">
+        <Image src={whatsappQrImage} alt="WhatsApp-QR-Code" />
+      </a>
+      <span><span>SCAN &amp; GO<br />to chat</span><br />{site.mobile.display}</span>
+    </div>
+    <div class="qr-grid__column">
+      <a href={site.websiteUrl} target="_blank" rel="noopener noreferrer">
+        <Image src={teslimeQrImage} alt="QR-Code für Teslime.de" />
+      </a>
+      <span>www.teslime.de</span>
+    </div>
+    <div class="qr-grid__column">
+      <a href={site.facebookUrl} target="_blank" rel="noopener noreferrer">
+        <Image src={facebookQrImage} alt="Facebook-QR-Code" />
+      </a>
+      <span>kosmetik.<br />teslime.schuster</span>
+    </div>
+    <div class="qr-grid__column">
+      <a href={site.instagram.url} target="_blank" rel="noopener noreferrer">
+        <Image src={instagramQrImage} alt="Instagram-QR-Code" />
+      </a>
+      <span>{site.instagram.label}</span>
+    </div>
+    <div class="qr-grid__column">
+      <a href={site.googleReviewUrl} target="_blank" rel="noopener noreferrer">
+        <Image src={googleQrImage} alt="QR-Code für eine Google-Bewertung" />
+      </a>
+      <span>Ich bitte um eine Bewertung</span>
+    </div>
+  </div>
+
+  <p>
+    Liebe Kundinnen, liebe Kunden,<br />
+    hier finden Sie meine Angebote.<br />
+    Ich freue mich auf Ihren Anruf, Ihre WhatsApp-Nachricht oder E-Mail … und natürlich
+    auf Ihren Besuch!<br />
+    ☎ {site.telephone}, ✆ {site.mobile.display}
+  </p>
+
+  <hr />
+</section>
+
+<style>
+  .introduction {
+    max-width: var(--content-width);
+    margin: var(--header-height) auto 0;
+    padding-top: 1em;
+  }
+
+  .introduction__identity {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 75%;
+    max-width: 800px;
+    margin-inline: auto;
+  }
+
+  .introduction__identity :global(img) {
+    max-width: 100%;
+  }
+
+  .introduction__identity :global(img:first-of-type) {
+    justify-self: end;
+  }
+
+  .introduction__heading {
+    margin: 0;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+  }
+
+  .topic-collage {
+    display: grid;
+    grid-template-columns: repeat(50, 1fr);
+    grid-template-rows: repeat(42, 1fr);
+    width: 95%;
+    max-width: 800px;
+    margin-inline: auto;
+    margin-block-end: 20px;
+  }
+
+  .topic-collage__welcome {
+    grid-row: 1 / span 3;
+    grid-column: 27 / -1;
+    margin: 0.3em;
+  }
+
+  .topic-collage__hydra-face {
+    grid-row: 1 / span 19;
+    grid-column: 1 / span 25;
+  }
+
+  .topic-collage__microneedling {
+    grid-row: 4 / span 10;
+    grid-column: 27 / -1;
+  }
+
+  .topic-collage__skin-analysis {
+    grid-row: 20 / -1;
+    grid-column: 16 / span 15;
+  }
+
+  .topic-collage__laser {
+    grid-row: 20 / span 17;
+    grid-column: 1 / span 15;
+  }
+
+  .topic-collage__eyelash-lifting {
+    grid-row: 15 / span 15;
+    grid-column: 32 / -1;
+  }
+
+  .topic-collage__foot-care {
+    grid-row: 37 / -1;
+    grid-column: 1 / span 15;
+  }
+
+  .topic-collage__face-lifting {
+    grid-row: 28 / -1;
+    grid-column: 32 / -1;
+  }
+
+  .qr-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, auto));
+    gap: 10px;
+    width: 95%;
+    max-width: 800px;
+    margin-inline: auto;
+  }
+
+  .qr-grid__column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .qr-grid__column span {
+    font-size: clamp(0.5rem, 1.5vw, 0.8rem);
+    line-height: 1.15;
+  }
+</style>

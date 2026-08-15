@@ -1,0 +1,163 @@
+---
+import { Image } from "astro:assets";
+
+import ImageGallery from "../ImageGallery.astro";
+import PriceRow from "../PriceRow.astro";
+import SectionAnchor from "../SectionAnchor.astro";
+import TreatmentCard from "../TreatmentCard.astro";
+import laserDeviceImage from "../../images/laser-geraet.jpeg";
+import diodeLaserImage from "../../images/diodenlaser-geraet.jpg";
+import laserExplanationImage from "../../images/laser-erklaerung.jpg";
+import summerLegsImage from "../../images/laser-sommerbeine.jpg";
+import winterLaserImage from "../../images/laser-winterzeit.png";
+---
+
+<section aria-labelledby="hair-removal-heading">
+  <SectionAnchor id="scroll-haare-diode" />
+  <h2 id="hair-removal-heading">Haarentfernung</h2>
+
+  <TreatmentCard>
+    <h3>Dauerhafte Haarentfernung<br />mit Diodenlaser</h3>
+    <p>
+      Nahezu schmerzfrei. Der Laser wird für jeden Kunden und Körperbereich individuell
+      eingestellt.<br />Im Normalfall sind 4–8 Behandlungen im Abstand von 4–6 Wochen
+      notwendig.
+    </p>
+
+    <Image
+      class="laser-device-image"
+      src={laserDeviceImage}
+      alt="Der eisig gekühlte Laserkopf schützt die oberste Hautschicht"
+    />
+
+    <ImageGallery variant="laser">
+      <Image src={diodeLaserImage} alt="Diodenlaser" />
+      <Image src={summerLegsImage} alt="Glatte Sommerbeine" />
+      <Image
+        class="seasonal-image"
+        data-seasonal-image
+        src={winterLaserImage}
+        alt="Winterzeit ist Laserzeit"
+      />
+    </ImageGallery>
+
+    <h3>Einzelbehandlungen</h3>
+    <PriceRow price="25,00 €">Oberlippe oder Kinn oder Wangen</PriceRow>
+    <PriceRow price="40,00 €">Hals oder Nacken</PriceRow>
+    <PriceRow price="35,00 €">Achseln</PriceRow>
+    <PriceRow price="45,00 €">Bikinizone oder Intimzone (nur Damen)</PriceRow>
+    <PriceRow price="50,00 €">Unterarme oder Oberarme</PriceRow>
+    <PriceRow price="50,00 €">Rücken, oberer oder unterer Bereich</PriceRow>
+    <PriceRow price="50,00 €">Brust oder Bauch</PriceRow>
+    <PriceRow price="85,00 €">Beine, Unterschenkel</PriceRow>
+    <PriceRow price="100,00 €">Beine, Oberschenkel</PriceRow>
+
+    <h3>Ermäßigung im kleinen Paket</h3>
+    <div class="discount">ca. 10&nbsp;% Ermäßigung</div>
+    <PriceRow price="60,00 €">Gesicht komplett</PriceRow>
+    <PriceRow price="90,00 €">Arme komplett</PriceRow>
+    <PriceRow price="90,00 €">Rücken komplett</PriceRow>
+    <PriceRow price="90,00 €">Brust + Bauch komplett</PriceRow>
+    <PriceRow price="170,00 €">Beine komplett</PriceRow>
+    <PriceRow price="85,00 €">Bikinizone + Intimzone (nur Damen)</PriceRow>
+
+    <h3>Ermäßigung im großen Paket</h3>
+    <div class="discount">ca. 20&nbsp;% Ermäßigung</div>
+    <PriceRow price="170,00 €">
+      Achseln,<br />Bikinizone + Intimzone (nur Damen),<br />Beine, Unterschenkel
+    </PriceRow>
+    <PriceRow price="230,00 €">
+      Achseln,<br />Bikinizone + Intimzone (nur Damen),<br />Beine komplett
+    </PriceRow>
+    <PriceRow price="20 % Ermäßigung">
+      mindestens drei Einzelbehandlungen<br />von jeweils 50&nbsp;€ und mehr,<br />nach
+      eigener Wahl
+    </PriceRow>
+
+    <h3>Die drei Phasen des Haarwachstums (Haarzyklus)</h3>
+    <strong class="sub-heading">Trotz modernster Technik sind mehrere Behandlungen nötig</strong>
+    <p>
+      Je nach Körperregion befinden sich <strong>20–30&nbsp;%</strong> der Haare in der
+      <strong>Anagenphase</strong>, in der sie mit der <strong>Papille</strong> verbunden
+      sind. Nur diese Haare kann der <strong>Laser</strong> entfernen. Beim nächsten Termin
+      sind andere Haare in dieser Phase; dann werden auch diese entfernt. Daher sind
+      mehrere Termine nötig.
+    </p>
+
+    <Image
+      class="laser-explanation-image"
+      src={laserExplanationImage}
+      alt="Hautquerschnitt mit den drei Phasen des Haarwachstums"
+    />
+
+    <div class="laser-guidance">
+      <h3>Verhalten vor und nach der Laserbehandlung</h3>
+      <ul class="checklist">
+        <li>
+          ca. 4 Wochen vor den Behandlungen keine Haare zupfen oder mit Wachs bzw.
+          Zuckerpaste entfernen (Rasieren ist erlaubt; bitte einen Tag vorher rasieren),
+        </li>
+        <li>
+          ca. 4 Wochen vor und nach den Behandlungen kein intensives Sonnenbad (bzw.
+          Schutzcreme mit Faktor 50 benutzen) und kein Solarium,
+        </li>
+        <li>
+          ca. 24 h nach den Behandlungen keine Vollbäder, Sauna, Chlorwasser (Schwimmbad)
+          oder Sport
+        </li>
+      </ul>
+    </div>
+
+    <small>
+      Mögliche Nebenwirkungen: Hyperpigmentierung (dunkle Hautverfärbung),
+      Hypopigmentierung (weiße Flecken), Blasenbildung, Wundentzündung,
+      Wundheilungsstörung.
+    </small>
+  </TreatmentCard>
+
+  <SectionAnchor id="scroll-haare-wachs" />
+  <TreatmentCard>
+    <h3>Haarentfernung mit Wachs/Zuckerpaste</h3>
+    <PriceRow price="je 10,00 €">Oberlippe oder Kinn</PriceRow>
+    <PriceRow price="25,00 €">Gesicht komplett</PriceRow>
+    <PriceRow price="35,00 €">Beine bis zum Knie</PriceRow>
+    <PriceRow price="50,00 €">Beine komplett</PriceRow>
+    <PriceRow price="15,00 €">Achseln</PriceRow>
+    <PriceRow price="20,00 €">Bikinizone (nur Damen)</PriceRow>
+    <PriceRow price="35–45,00 €">Rücken oder Brust</PriceRow>
+  </TreatmentCard>
+</section>
+
+<script>
+  const seasonalImage = document.querySelector<HTMLElement>("[data-seasonal-image]");
+  const month = new Date().getMonth();
+  const isLaserSeason = month >= 7 || month <= 1;
+
+  seasonalImage?.classList.toggle("is-seasonal-visible", isLaserSeason);
+</script>
+
+<style>
+  h3 {
+    margin-top: 0.5em;
+  }
+
+  .laser-device-image {
+    width: 95%;
+    max-width: 400px;
+    margin-bottom: 20px;
+  }
+
+  .discount {
+    opacity: 0.7;
+  }
+
+  .laser-explanation-image {
+    width: 95%;
+    max-width: 500px;
+    margin: 0.5em;
+  }
+
+  .laser-guidance ul {
+    text-align: left;
+  }
+</style>

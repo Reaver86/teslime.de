@@ -5,6 +5,10 @@ dist/
 .astro/
 .idea/
 
+# local browser artifacts
+.playwright-cli/
+output/
+
 # dependencies
 node_modules/
 

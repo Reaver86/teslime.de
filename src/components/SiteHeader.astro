@@ -1,0 +1,343 @@
+---
+import { Image } from "astro:assets";
+
+import { navigationGroups } from "../data/navigation";
+import { site } from "../data/site";
+import homeIcon from "../images/home.svg";
+import whatsappIcon from "../images/whatsapp.svg";
+---
+
+<header class="site-header" data-site-header>
+  <div class="site-header__content" data-header-content>
+    <h1>{site.heading}</h1>
+    <small>– {site.qualification} –</small>
+    <address>
+      <span class="no-wrap">{site.address.street},</span>{" "}
+      <span class="no-wrap">{site.address.city},</span>{" "}
+      <span class="no-wrap">✉ {site.email}</span><br />
+      <span class="no-wrap">✆ {site.mobile.display} (WhatsApp),</span>{" "}
+      <span class="no-wrap">☎ {site.telephone}</span>
+    </address>
+
+    <a
+      class="site-header__whatsapp"
+      href={site.mobile.whatsappUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Image
+        width={50}
+        src={whatsappIcon}
+        alt="Schreiben Sie mir auf WhatsApp"
+        loading="eager"
+      />
+    </a>
+  </div>
+
+  <nav class="navigation" aria-label="Hauptnavigation" data-navigation>
+    <a class="navigation__home" href="#top" aria-label="Zum Seitenanfang">
+      <Image src={homeIcon} alt="" loading="eager" />
+    </a>
+
+    <button
+      class="navigation__toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="navigation-panel"
+      data-navigation-toggle
+    >
+      <span class="visually-hidden">Menü</span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
+
+    <div class="navigation__panel" id="navigation-panel" data-navigation-panel>
+      {navigationGroups.map((group, groupIndex) => {
+        const headingId = `navigation-group-${groupIndex}`;
+
+        return (
+          <section class="navigation__group" aria-labelledby={headingId}>
+            <h2 id={headingId}>{group.label}</h2>
+            <ul>
+              {group.items.map((item) => (
+                <li>
+                  <a
+                    class:list={{ "navigation__notice": item.newTab }}
+                    href={item.href}
+                    target={item.newTab ? "_blank" : undefined}
+                    rel={item.newTab ? "noopener noreferrer" : undefined}
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        );
+      })}
+    </div>
+  </nav>
+</header>
+
+<script>
+  const header = document.querySelector<HTMLElement>("[data-site-header]");
+  const headerContent = document.querySelector<HTMLElement>("[data-header-content]");
+  const navigation = document.querySelector<HTMLElement>("[data-navigation]");
+  const toggle = document.querySelector<HTMLButtonElement>("[data-navigation-toggle]");
+  const panel = document.querySelector<HTMLElement>("[data-navigation-panel]");
+  const desktopQuery = window.matchMedia("(min-width: 700px)");
+
+  const updateHeaderHeight = () => {
+    if (!headerContent) return;
+    document.documentElement.style.setProperty(
+      "--header-height",
+      `${headerContent.getBoundingClientRect().height}px`,
+    );
+  };
+
+  const setMenuOpen = (isOpen: boolean, restoreFocus = false) => {
+    navigation?.classList.toggle("is-open", isOpen);
+    header?.classList.toggle("site-header--menu-open", isOpen && !desktopQuery.matches);
+    toggle?.setAttribute("aria-expanded", String(isOpen));
+
+    if (restoreFocus) toggle?.focus();
+  };
+
+  toggle?.addEventListener("click", () => {
+    setMenuOpen(toggle.getAttribute("aria-expanded") !== "true");
+  });
+
+  panel?.querySelectorAll<HTMLAnchorElement>("a").forEach((link) => {
+    link.addEventListener("click", () => setMenuOpen(false));
+  });
+
+  document.querySelector<HTMLAnchorElement>(".navigation__home")?.addEventListener("click", () => {
+    setMenuOpen(false);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && toggle?.getAttribute("aria-expanded") === "true") {
+      setMenuOpen(false, true);
+    }
+  });
+
+  desktopQuery.addEventListener("change", () => setMenuOpen(false));
+
+  if (headerContent && "ResizeObserver" in window) {
+    new ResizeObserver(updateHeaderHeight).observe(headerContent);
+  } else {
+    window.addEventListener("resize", updateHeaderHeight);
+  }
+
+  updateHeaderHeight();
+</script>
+
+<style>
+  .site-header {
+    position: fixed;
+    inset: 0 0 auto;
+    z-index: 10;
+    background: url("../images/site-header-background.webp") no-repeat;
+    background-size: cover;
+    text-shadow: 0.1em 0.1em 0.1em #fff;
+  }
+
+  .site-header--menu-open {
+    height: 100dvh;
+    background-position: 50% 50%;
+  }
+
+  .site-header__content {
+    max-width: calc(100% - 110px);
+    margin-inline: auto;
+  }
+
+  h1 {
+    padding-top: 0.3em;
+    font-size: 1.5em;
+  }
+
+  address {
+    font-size: 0.8rem;
+  }
+
+  .site-header__whatsapp {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  .navigation {
+    position: relative;
+    height: 100%;
+  }
+
+  .navigation__home,
+  .navigation__toggle {
+    position: absolute;
+    overflow: hidden;
+    border: 0;
+    color: #000;
+    background: transparent;
+  }
+
+  .navigation__home {
+    top: -4.1em;
+    left: 0.65em;
+    width: 50px;
+    height: 50px;
+  }
+
+  .navigation__home :global(img) {
+    width: 42px;
+  }
+
+  .navigation__toggle {
+    top: -3.5em;
+    right: 1em;
+    width: 2.7em;
+    height: 2.3em;
+    cursor: pointer;
+  }
+
+  .navigation__toggle > span:not(.visually-hidden) {
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 0.5em;
+    border-radius: 0.5em;
+    background: #000;
+    opacity: 1;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+  }
+
+  .navigation__toggle > span:nth-child(2) {
+    top: 0.1em;
+  }
+
+  .navigation__toggle > span:nth-child(3),
+  .navigation__toggle > span:nth-child(4) {
+    top: 0.9em;
+  }
+
+  .navigation__toggle > span:nth-child(5) {
+    top: 1.7em;
+  }
+
+  .is-open .navigation__toggle > span:nth-child(2),
+  .is-open .navigation__toggle > span:nth-child(5) {
+    top: 0.9em;
+    left: 50%;
+    width: 0;
+  }
+
+  .is-open .navigation__toggle > span:nth-child(3) {
+    transform: rotate(45deg);
+  }
+
+  .is-open .navigation__toggle > span:nth-child(4) {
+    transform: rotate(-45deg);
+  }
+
+  .navigation__panel {
+    display: none;
+    height: calc(100dvh - var(--header-height));
+    overflow-y: auto;
+    border: 2px solid var(--color-background);
+    border-top: 0;
+  }
+
+  .is-open .navigation__panel {
+    display: block;
+  }
+
+  .navigation__group h2 {
+    margin: 0;
+    padding: 0;
+    border-top: 2px solid var(--color-background);
+    border-bottom: 2px solid var(--color-background);
+    font-size: 1em;
+    text-transform: none;
+  }
+
+  .navigation__group:first-child h2 {
+    border-top: 0;
+  }
+
+  .navigation__group ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .navigation__group li + li {
+    border-top: 2px solid var(--color-background);
+  }
+
+  .navigation__group a {
+    display: block;
+    padding: 0.5em 1em;
+    color: #000;
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .navigation__group .navigation__notice {
+    display: block;
+    margin-top: 0.5em;
+    color: #000;
+    background: #fff;
+    text-transform: none;
+  }
+
+  @media (max-width: 380px) {
+    .site-header__whatsapp {
+      top: 70px;
+      right: 5px;
+    }
+  }
+
+  @media (min-width: 700px) {
+    .navigation__home {
+      top: -2.4em;
+    }
+
+    .navigation__toggle {
+      display: none;
+    }
+
+    .navigation__panel {
+      position: fixed;
+      top: var(--header-height);
+      bottom: 0;
+      display: block;
+      width: var(--sidebar-width);
+      height: auto;
+      border: 0;
+      background-color: var(--color-navigation);
+      text-align: left;
+      text-shadow: none;
+    }
+
+    .navigation__group h2 {
+      padding-left: 0.3em;
+      border-width: 1px;
+    }
+
+    .navigation__group li + li {
+      border: 0;
+    }
+
+    .navigation__group a {
+      padding: 0.5em 0.5em 0.5em 0.8em;
+      border-top: 1px dotted var(--color-background);
+      border-bottom: 1px dotted var(--color-background);
+      font-size: 0.8rem;
+    }
+  }
+</style>

@@ -1,0 +1,115 @@
+---
+import { Image } from "astro:assets";
+
+import PriceRow from "../PriceRow.astro";
+import SectionAnchor from "../SectionAnchor.astro";
+import TreatmentCard from "../TreatmentCard.astro";
+import hotStoneMassageImage from "../../images/hot-stone-massage.png";
+import eyelashLiftingBeforeImage from "../../images/wimpernlifting-vorher.webp";
+import eyelashLiftingAfterImage from "../../images/wimpernlifting-nachher.jpg";
+---
+
+<section aria-labelledby="manicure-heading">
+  <SectionAnchor id="scroll-manikuere" />
+  <h2 id="manicure-heading">Maniküre</h2>
+
+  <TreatmentCard>
+    <h3>Klassische Maniküre</h3>
+    <PriceRow price="35,00 €">
+      Beurteilung der Haut und Nägel<br />Naturnägel formen<br />Nagelbad<br
+      />Nagelhautpflege<br />Abschlusscreme
+    </PriceRow>
+    <PriceRow price="10,00 €">Nägel lackieren</PriceRow>
+    <small>* Entfernung einer früheren Lackierung: 5&nbsp;€</small>
+  </TreatmentCard>
+
+  <SectionAnchor id="scroll-shellac" />
+  <TreatmentCard>
+    <h3>Shellac</h3>
+    <strong class="sub-heading">Der Nagellack der Stars</strong>
+    <p>
+      Auftragbar wie Nagellack, haltbar wie Gel, mindestens 14 Tage haltbar, kein
+      Abblättern, absolut kratzfester, widerstandsfähiger, UV-gehärteter Hochglanz. Keine
+      Trocknungszeit erforderlich.
+    </p>
+    <PriceRow price="50,00 €">Maniküre + Shellac-Lackierung</PriceRow>
+    <PriceRow price="25,00 €">Shellac-Lackierung</PriceRow>
+    <small>* Entfernung einer früheren Shellac-Lackierung: 10&nbsp;€</small>
+  </TreatmentCard>
+
+  <SectionAnchor id="scroll-augen" />
+  <TreatmentCard>
+    <h3>Wimpernlifting</h3>
+    <p class="compact-copy">
+      Ausdrucksvoller Blick für ca. 6–8 Wochen. Dauerhafter Schwung und natürliche
+      Betonung auch bei kurzen Wimpern<br />
+      <em>Empfohlen für jedes Alter</em>
+    </p>
+    <div class="standalone-price">60,00&nbsp;€</div>
+
+    <div class="eyelash-examples">
+      <figure>
+        <Image src={eyelashLiftingBeforeImage} alt="Wimpernlifting vorher" />
+        <figcaption>vorher</figcaption>
+      </figure>
+      <figure>
+        <Image src={eyelashLiftingAfterImage} alt="Wimpernlifting nachher" />
+        <figcaption>nachher</figcaption>
+      </figure>
+    </div>
+
+    <p>Zusatzleistungen</p>
+    <PriceRow price="15,00 €">Augenbrauen korrigieren</PriceRow>
+    <PriceRow price="12,00 €">Augenbrauen färben</PriceRow>
+    <PriceRow price="13,00 €">Wimpern färben</PriceRow>
+  </TreatmentCard>
+
+  <SectionAnchor id="scroll-massagen" />
+  <h2>Massagen</h2>
+
+  <TreatmentCard>
+    <h3>Von klassischer Massage bis Wellnessmassage</h3>
+    <Image class="hot-stone-image" src={hotStoneMassageImage} alt="Hot-Stone-Massage" />
+    <ul class="checklist benefits-list">
+      <li>Entspannung der Muskulatur</li>
+      <li>lokale Verbesserung der Durchblutung</li>
+      <li>Senkung des Blutdrucks und des Pulses</li>
+      <li>Verbesserung des Zellstoffwechsels</li>
+      <li>Stressabbau</li>
+      <li>psychische und physische Entspannung u. a.</li>
+    </ul>
+    <PriceRow price="76,00 €" duration="ca. 60 min">Klassische Körpermassage</PriceRow>
+    <PriceRow price="45,00 €" duration="ca. 30 min">
+      Rückenmassage + Arme und Hände
+    </PriceRow>
+    <PriceRow price="80,00 €" duration="ca. 60 min">Hot-Stone-Massage</PriceRow>
+    <PriceRow price="76,00 €" duration="ca. 60 min">
+      Ayurvedische Ganzkörpermassage
+    </PriceRow>
+  </TreatmentCard>
+</section>
+
+<style>
+  .compact-copy {
+    margin-block: 0;
+  }
+
+  .standalone-price {
+    opacity: 0.7;
+  }
+
+  .eyelash-examples :global(img) {
+    width: 90%;
+    max-width: 1000px;
+    margin-top: 10px;
+  }
+
+  .hot-stone-image {
+    width: 95%;
+    max-width: 350px;
+  }
+
+  .benefits-list {
+    text-align: left;
+  }
+</style>

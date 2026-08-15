@@ -1,0 +1,126 @@
+:root {
+  --color-background: hsl(268 25% 90%);
+  --color-surface: hsl(268 25% 95%);
+  --color-navigation: #aeafb1;
+  --color-text: #000;
+  --header-height: 150px;
+  --sidebar-width: calc(25px + 14em);
+  --content-width: 1200px;
+  --tile-border: 2px solid var(--color-text);
+
+  box-sizing: border-box;
+  font-size: calc(0.7rem + 0.8vw);
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  color: var(--color-text);
+  font-family: "Comic Sans MS", "Chalkboard SE", "Comic Neue", sans-serif;
+  text-align: center;
+  background-color: var(--color-background);
+}
+
+main {
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  shape-margin: 1rem;
+  font-style: italic;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin-top: 1em;
+}
+
+a {
+  cursor: pointer;
+}
+
+address {
+  font-style: normal;
+}
+
+figure {
+  margin-inline: min(40px, 5vw);
+}
+
+[id^="scroll-"] {
+  scroll-margin-block-start: var(--header-height);
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+.sub-heading {
+  font-size: 0.83em;
+}
+
+.underlined {
+  text-decoration: underline;
+}
+
+.checklist {
+  list-style: circle;
+}
+
+.max-width-700 {
+  width: 100%;
+  max-width: 700px;
+  margin-inline: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 3px solid #000;
+  outline-offset: 3px;
+}
+
+@media (min-width: 700px) {
+  main {
+    padding-left: var(--sidebar-width);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto;
+    transition-duration: 0.01ms !important;
+  }
+}

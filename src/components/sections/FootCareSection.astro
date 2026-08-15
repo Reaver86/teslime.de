@@ -1,0 +1,221 @@
+---
+import { Image } from "astro:assets";
+
+import ImageGallery from "../ImageGallery.astro";
+import PriceRow from "../PriceRow.astro";
+import SectionAnchor from "../SectionAnchor.astro";
+import TreatmentCard from "../TreatmentCard.astro";
+import footCarePracticeImage from "../../images/teslime-willkommen.webp";
+import footBeforeLeftImage from "../../images/fusspilz-3.webp";
+import footBeforeRightImage from "../../images/fusspilz-1.webp";
+import footAfterLeftImage from "../../images/fusspilz-4.webp";
+import footAfterRightImage from "../../images/fusspilz-2.webp";
+import nailBraceImage from "../../images/nagelkorrektur-spange.jpeg";
+import nailFungusStagesImage from "../../images/nagelpilz-erkrankungsstadien.jpg";
+---
+
+<section aria-labelledby="foot-care-heading">
+  <SectionAnchor id="scroll-fuss" />
+  <h2 id="foot-care-heading">Bereich Fußpflege</h2>
+
+  <TreatmentCard>
+    <h3>Medizinische Fachfußpflege</h3>
+    <p class="compact-copy">(auch für Diabetiker)</p>
+    <div class="treatment-meta"><span>ca. 45 min</span><span>52,00&nbsp;€</span></div>
+
+    <ul class="checklist treatment-list">
+      <li>Nägel schneiden, Nägel verschönern</li>
+      <li>Hornhaut entfernen/abschleifen</li>
+      <li>ggf. Hühneraugen entfernen<small>, ein Hühnerauge inkl.</small></li>
+      <li>ggf. Pilznägel abschleifen</li>
+      <li>ggf. eingewachsene Nägel oder Rollnägel behandeln</li>
+      <li>kurze Abschlussmassage mit dazu passender Pflegecreme</li>
+      <li>komplette Fachfußpflege</li>
+    </ul>
+
+    <Image
+      class="practice-image"
+      src={footCarePracticeImage}
+      alt="Teslimes Fachfußpflegepraxis"
+    />
+
+    <p>Zusatzleistungen</p>
+    <PriceRow price="45,00 €" duration="ca. 30 min">
+      Fußreflexzonenmassage,<br />nach Hanne Marquardt
+    </PriceRow>
+    <PriceRow price="23,00 €" duration="ca. 15 min">
+      Relax-/Wellnessfußmassage
+    </PriceRow>
+    <PriceRow price="je 10,00 €">
+      Hühneraugen entfernen <small>, zwei und mehr</small>
+    </PriceRow>
+    <PriceRow price="10,00 €">Nägel lackieren</PriceRow>
+
+    <ImageGallery variant="foot-care">
+      <figure>
+        <Image src={footBeforeRightImage} alt="Rechter Fuß vor der Behandlung" />
+        <figcaption>rechts vorher</figcaption>
+      </figure>
+      <figure>
+        <Image src={footBeforeLeftImage} alt="Linker Fuß vor der Behandlung" />
+        <figcaption>links vorher</figcaption>
+      </figure>
+      <figure>
+        <Image src={footAfterRightImage} alt="Rechter Fuß nach der Behandlung" />
+        <figcaption>rechts nachher</figcaption>
+      </figure>
+      <figure>
+        <Image src={footAfterLeftImage} alt="Linker Fuß nach der Behandlung" />
+        <figcaption>links nachher</figcaption>
+      </figure>
+    </ImageGallery>
+
+    <small>* Entfernung einer früheren Lackierung: 5&nbsp;€</small><br />
+    <small>* Entfernung einer früheren Shellac-Lackierung: 10&nbsp;€</small>
+  </TreatmentCard>
+
+  <SectionAnchor id="scroll-fuss-nagelpilz" />
+  <TreatmentCard>
+    <h3>Nagelpilzbehandlung</h3>
+    <Image
+      class="content-image"
+      src={nailFungusStagesImage}
+      alt="Erkrankungsstadien von Nagelpilz"
+    />
+
+    <div class="information-row">
+      Leichter Pilzbefall wird während der normalen Fachfußpflege einfach mitbehandelt (d.
+      h. möglichst viel weggeschliffen).
+    </div>
+    <PriceRow price="10,00 €">Mittlerer und schwerer Pilzbefall</PriceRow>
+    <div class="information-row">
+      Nagelpilz tritt ab einem Alter von ca. 60 Jahren leider sehr häufig auf, da das
+      Immunsystem schwächer wird.
+    </div>
+
+    <p><strong>Behandlungsablauf:</strong></p>
+    <p class="treatment-process">
+      <strong>In der Praxis:</strong> Die mit Pilz befallenen Stellen werden gründlich
+      weggeschliffen. Ebenso wird der Nagelfalz gründlich gesäubert, sodass danach möglichst
+      wenig Feuchtigkeit im Nagelbereich zurückbleibt. Sie erhalten ein antimykotisches
+      Mittel zum Auftragen auf die Nägel. Einen kleinen Einblick finden Sie im folgenden
+      Video: Teslime behandelt ihren Ehemann.<br />
+      <strong>Zu Hause:</strong> Antimykotische Mittel auf die befallenen Nägel auftragen,
+      Socken waschen und desinfizieren und die gleichen Schuhe nicht zwei Tage
+      hintereinander tragen.<br />
+      <strong>Ergebnis 1:</strong> Der Nagelpilz verschwindet und alles ist gut.<br />
+      <strong>Ergebnis 2:</strong> Der Nagelpilz verschwindet nicht. Sie gehen zum Hautarzt,
+      damit er einen Abstrich macht, um die Pilzart zu bestimmen. Sie erhalten dann
+      eventuell ein anderes Mittel zum Auftragen auf die Nägel. Sie kommen weiterhin
+      regelmäßig zur Fußpflege, wodurch die Behandlung sehr stark unterstützt und eine
+      eventuelle Wiederansteckung frühzeitig erkannt wird.
+    </p>
+
+    <iframe
+      class="treatment-video"
+      width="400"
+      height="600"
+      src="https://www.youtube.com/embed/od_KYgEFuuo"
+      title="Video einer Nagelpilzbehandlung durch Teslime Schuster"
+      loading="lazy"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+  </TreatmentCard>
+
+  <SectionAnchor id="scroll-fuss-eingewachsen" />
+  <TreatmentCard>
+    <h3>Nagelkorrektur mit einer Spange</h3>
+    <strong class="sub-heading">Die Schmerzen verschwinden im Normalfall sofort.</strong>
+    <div class="standalone-price">je Nagel 40,00&nbsp;€</div>
+    <Image
+      class="content-image"
+      src={nailBraceImage}
+      alt="Spange für die Nagelkorrektur"
+    />
+    <ul class="brace-description">
+      <li>
+        Bei schmerzhaft eingewachsenen/eingerollten Nägeln verwenden wir eine Spange zum
+        Aufkleben. Die Spange zieht die Nagelränder sanft hoch, der Nagel wächst dann weniger
+        gekrümmt heraus und je nach Bedarf wird die Spange erneuert. Nach ein paar Monaten
+        hat der Nagel eine normale Wölbung. Die Spange stört im Alltag nicht und ist kaum
+        sichtbar.
+      </li>
+    </ul>
+  </TreatmentCard>
+
+  <SectionAnchor id="scroll-gutscheine" />
+  <TreatmentCard class="voucher-card">
+    <strong class="underlined">Gutscheine</strong>
+    <div>Alle Behandlungen sind auch als Gutschein erhältlich.</div>
+    <div>Ich freue mich auf Ihre Nachricht.</div>
+  </TreatmentCard>
+</section>
+
+<style>
+  h3 {
+    margin-top: 0.5em;
+  }
+
+  .compact-copy {
+    margin-block: 0;
+  }
+
+  .treatment-meta {
+    display: flex;
+    justify-content: center;
+    opacity: 0.7;
+  }
+
+  .treatment-meta span + span::before {
+    content: "    •    ";
+    white-space: pre;
+  }
+
+  .treatment-list {
+    text-align: left;
+  }
+
+  .practice-image,
+  .content-image {
+    width: 95%;
+    max-width: 500px;
+    margin: 0.5em;
+  }
+
+  .information-row {
+    padding: 1em 40px;
+    text-align: left;
+  }
+
+  .treatment-process {
+    max-width: 900px;
+    margin-inline: auto;
+  }
+
+  .treatment-video {
+    width: 95%;
+    max-width: 500px;
+    border: 0;
+  }
+
+  .standalone-price {
+    margin-bottom: 1em;
+    opacity: 0.7;
+  }
+
+  .brace-description {
+    text-align: left;
+  }
+
+  .voucher-card {
+    margin-top: 1.5em;
+  }
+
+  @media (max-width: 420px) {
+    .information-row {
+      padding-inline: 20px;
+    }
+  }
+</style>

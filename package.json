@@ -1,17 +1,25 @@
 {
   "name": "teslime-de",
-  "description": "Homepage of Kosmetik and med. Fachfusspflege Studio Teslime Schuster",
+  "description": "Homepage des Studios für Kosmetik und medizinische Fachfußpflege Teslime Schuster",
   "type": "module",
   "version": "1.1.1",
+  "private": true,
+  "engines": {
+    "node": ">=24 <25"
+  },
   "scripts": {
-    "start": "astro dev",
-    "build": "astro check && astro build",
+    "dev": "astro dev",
+    "start": "npm run dev",
+    "check": "astro check",
+    "build": "astro build",
+    "test": "npm run build && node --test",
+    "verify": "npm run check && npm test",
     "preview": "astro preview",
     "astro": "astro"
   },
-  "dependencies": {
-    "@astrojs/check": "^0.9.4",
-    "astro": "^5.12.3",
-    "typescript": "5.8.3"
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "astro": "^7.2.2",
+    "typescript": "^6.0.3"
   }
 }

@@ -1,0 +1,49 @@
+---
+import { Image } from "astro:assets";
+
+import SectionAnchor from "../SectionAnchor.astro";
+import review1Image from "../../images/rezension-1.webp";
+import review2Image from "../../images/rezension-2.webp";
+import review3Image from "../../images/rezension-3.webp";
+import review4Image from "../../images/rezension-4.webp";
+import review5Image from "../../images/rezension-5.webp";
+import review6Image from "../../images/rezension-6.webp";
+import reviewStarsImage from "../../images/rezensionen-sterne.webp";
+---
+
+<SectionAnchor id="scroll-rezensionen" />
+<section class="reviews" aria-label="Google-Rezensionen">
+  <Image
+    class="reviews__summary"
+    src={reviewStarsImage}
+    alt="4,9 Sterne Bewertung bei Google"
+  />
+  <Image src={review1Image} alt="Google-Rezension 1" />
+  <Image src={review2Image} alt="Google-Rezension 2" />
+  <Image src={review3Image} alt="Google-Rezension 3" />
+  <Image src={review4Image} alt="Google-Rezension 4" />
+  <Image src={review5Image} alt="Google-Rezension 5" />
+  <Image src={review6Image} alt="Google-Rezension 6" />
+</section>
+
+<style>
+  .reviews {
+    max-width: 650px;
+    margin-inline: auto;
+    padding: 20px;
+  }
+
+  .reviews :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .reviews :global(img + img) {
+    margin-top: 10px;
+  }
+
+  .reviews :global(.reviews__summary) {
+    max-width: 500px;
+  }
+</style>

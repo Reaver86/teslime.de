@@ -1,0 +1,166 @@
+---
+import { PUBLIC_GOOGLE_MAPS_API_KEY } from "astro:env/server";
+import { Image } from "astro:assets";
+
+import { site } from "../data/site";
+import instagramIcon from "../images/instagram-icon.png";
+import SectionAnchor from "./SectionAnchor.astro";
+
+const mapsSearchUrl = new URL("https://www.google.com/maps/search/");
+mapsSearchUrl.searchParams.set("api", "1");
+mapsSearchUrl.searchParams.set("query", site.address.mapsQuery);
+
+let mapsEmbedUrl: string | undefined;
+
+if (PUBLIC_GOOGLE_MAPS_API_KEY) {
+  const url = new URL("https://www.google.com/maps/embed/v1/place");
+  url.searchParams.set("key", PUBLIC_GOOGLE_MAPS_API_KEY);
+  url.searchParams.set("q", site.address.mapsQuery);
+  mapsEmbedUrl = url.toString();
+}
+---
+
+<hr />
+<footer>
+  <SectionAnchor id="scroll-kontakt" />
+  <h2>Kontakt</h2>
+
+  <div class="contact">
+    <address>
+      KOSMETIK UND MEDIZINISCHE<br />
+      FACHFUSSPFLEGE TESLIME SCHUSTER<br />
+      ({site.qualification})<br />
+      {site.address.street}, {site.address.city}<br />
+      ✆ <a href={site.mobile.whatsappUrl} target="_blank" rel="noopener noreferrer">
+        {site.mobile.display} (WhatsApp)
+      </a>,
+      ☎ {site.telephone}<br />
+      <a
+        class="instagram-link"
+        href={site.instagram.url}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Image src={instagramIcon} alt="" />{site.instagram.label} (Instagram)
+      </a>,<br />
+      <a href={site.websiteUrl} target="_blank" rel="noopener noreferrer">www.teslime.de</a>,
+      ✉ <a href={`mailto:${site.email}`}>{site.email}</a>
+    </address>
+
+    <h3 class="contact__label">Öffnungszeiten:</h3>
+    <div>Montag bis Freitag, Termine nach Vereinbarung.</div>
+
+    <h3 class="contact__label">Hinweise:</h3>
+    <div class="max-width-700">
+      <strong>
+        Bitte geben Sie uns möglichst früh Bescheid, falls Sie einen Termin nicht einhalten
+        können. Danke.
+      </strong>
+      <p>
+        Bitte haben Sie Verständnis dafür, dass ich während einer Behandlung nicht ans
+        Telefon kann. Sprechen Sie bitte auf den Anrufbeantworter und hinterlassen Sie Ihre
+        Telefonnummer. Ich rufe Sie so schnell wie möglich zurück.
+      </p>
+    </div>
+
+    <ul class="checklist contact__features">
+      <li>Kundenparkplätze vor der Garage und auf dem Hof</li>
+      <li>Kundentoilette</li>
+      <li>WLAN-Gastzugang</li>
+      <li>Sie können während der Fußpflege Ihr Handy aufladen</li>
+    </ul>
+
+    <p>
+      <small>
+        Zur Navigation bitte auf „Größere Karte ansehen“ beziehungsweise „Routenplaner“
+        klicken.
+      </small>
+    </p>
+
+    {
+      mapsEmbedUrl ? (
+        <iframe
+          title="Navigation zur Praxis mit Google Maps"
+          class="contact__map"
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"
+          src={mapsEmbedUrl}
+        />
+      ) : (
+        <a
+          class="contact__map-fallback"
+          href={mapsSearchUrl.toString()}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Standort in Google Maps öffnen
+        </a>
+      )
+    }
+
+    <p>Eröffnung der Praxis: März 2016</p>
+
+    <p>
+      <strong>Webmaster:</strong><br />
+      Alexander Schuster<br />
+      ✉ <a href="mailto:alexander.schuster@web.de">alexander.schuster@web.de</a><br />
+      Letzte Aktualisierung: 01.06.2026
+    </p>
+  </div>
+</footer>
+
+<style>
+  footer {
+    width: 100%;
+    margin-bottom: 0.5em;
+  }
+
+  .contact {
+    padding-inline: 0.5em;
+  }
+
+  .instagram-link {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .instagram-link :global(img) {
+    width: 20px;
+    margin-right: 5px;
+  }
+
+  .contact__label {
+    margin-top: 1.5em;
+    font-size: 1em;
+    font-weight: normal;
+    text-decoration: underline;
+    text-transform: none;
+  }
+
+  .contact__features {
+    display: inline-block;
+    text-align: left;
+  }
+
+  .contact__map {
+    width: 95%;
+    max-width: 500px;
+    height: 400px;
+    border: 0;
+  }
+
+  .contact__map-fallback {
+    display: inline-block;
+    padding: 0.75em 1em;
+    border: var(--tile-border);
+    color: #000;
+    background: var(--color-surface);
+  }
+
+  @media (min-width: 700px) {
+    footer {
+      padding-left: var(--sidebar-width);
+    }
+  }
+</style>
