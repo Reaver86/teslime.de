@@ -71,6 +71,14 @@ figure {
   white-space: nowrap;
 }
 
+.compact-copy {
+  margin-block: 0;
+}
+
+.standalone-price {
+  opacity: 0.7;
+}
+
 .sub-heading {
   font-size: 0.83em;
 }

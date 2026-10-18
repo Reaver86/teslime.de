@@ -1,0 +1,172 @@
+---
+import { Image } from "astro:assets";
+
+import { treatments } from "../../data/prices";
+
+import FacialTreatmentCard from "./FacialTreatmentCard.astro";
+import ImageGallery from "../ImageGallery.astro";
+import TreatmentMeta from "../TreatmentMeta.astro";
+
+import analysisExampleImage from "../../images/gesichtsanalyse-stern.webp";
+import analyzerImage from "../../images/gesichtsanalyse.webp";
+import classicTreatment1Image from "../../images/gesichtsbehandlung-1.png";
+import classicTreatment2Image from "../../images/gesichtsbehandlung-2.png";
+import classicTreatment3Image from "../../images/gesichtsbehandlung-3.png";
+import hydraFaceAfterImage from "../../images/hydra-face-nachher.webp";
+import hydraFaceDevice1Image from "../../images/hydra-face-geraet-1.webp";
+import hydraFaceDevice2Image from "../../images/hydra-face-geraet-2.webp";
+import hydraFaceBeforeImage from "../../images/hydra-face-vorher.webp";
+---
+
+<FacialTreatmentCard>
+  <h3>Grundprogramm für gesunde Haut</h3>
+  <h4>Hydra-Face</h4>
+
+  <p>
+    Teslimes Hollywoodbehandlung in drei Schritten:<br />
+    (1) Hautanalyse + (2) Behandlung + (3) Glow-Effekt<br />
+    <em>Empfohlen für jedes Alter</em><br />
+    <em>Ausfallzeiten: keine</em>
+  </p>
+
+  <ImageGallery>
+    <Image
+      class="round-image"
+      src={analyzerImage}
+      alt="Gerät für die bildbasierte Gesichtsanalyse"
+      width={698}
+      height={737}
+    />
+    <Image
+      class="contained-image"
+      src={analysisExampleImage}
+      alt="Beispielauswertung einer Gesichtsanalyse"
+      width={584}
+      height={554}
+    />
+    <Image
+      src={hydraFaceDevice1Image}
+      alt="Hydra-Face-Gerät"
+      width={674}
+      height={643}
+    />
+    <Image
+      src={hydraFaceDevice2Image}
+      alt="Hydra-Face-Gerät bei einer Beispielanwendung"
+      width={516}
+      height={643}
+    />
+  </ImageGallery>
+
+  <div class="comment">
+    <h4>Teslimes Kommentar:</h4>
+    <em>
+      Regelmäßige Anwendung alle 6–8 Wochen führt zu einer <span
+        class="underlined">dauerhaft strahlenden und gesunden Haut</span
+      > und verlangsamt den Alterungsprozess der Haut erheblich. Es ist die perfekte
+      Gesichtspflege für jedes Alter. Mit dem Hautanalysegerät dokumentiere ich jedes
+      Mal den Zustand der Haut.
+    </em>
+  </div>
+
+  <h3>Hydra-Face-Luxusbehandlung</h3>
+  <TreatmentMeta {...treatments.hydraFace} />
+
+  <p class="underlined">Schritt 1:</p>
+  <ul class="checklist">
+    <li>
+      Aufnahme des Hautzustands mit dem professionellen Hautanalysegerät, mit
+      Alterssimulation 5–7 Jahre in die Zukunft
+    </li>
+  </ul>
+  <p class="underlined">Schritt 2: (auf Sie abgestimmt)</p>
+  <ul class="checklist">
+    <li>
+      Hydra-Reinigung, Hydra-/Diamant-Dermabrasion, Peeling, ggf. Bedampfung,
+      Skin-Scrubber, Reinigung mit Vakuumhandstücken, Sauerstoffpistole
+    </li>
+    <li>Hyaluron + Wirkstoffkomplex</li>
+    <li>Bipolare und tripolare Radiofrequenzbehandlung</li>
+    <li>Mikrostrom-Handschuh</li>
+    <li>PDT-Lichttherapie</li>
+    <li>Abschlusspflege/-massage</li>
+  </ul>
+  <p class="underlined">Schritt 3 = Ergebnis:</p>
+  <ul class="checklist">
+    <li>Glow-Effekt: saubere + strahlende Haut für mehrere Wochen</li>
+  </ul>
+
+  <p class="underlined">Ergebnisbeispiel:</p>
+  <ImageGallery>
+    <Image
+      src={hydraFaceBeforeImage}
+      alt="Hydra-Face vor der Anwendung"
+      width={768}
+      height={1024}
+    />
+    <Image
+      src={hydraFaceAfterImage}
+      alt="Hydra-Face nach der Anwendung – sichtbar strahlendere Haut"
+      width={768}
+      height={860}
+    />
+  </ImageGallery>
+
+  <h3>Klassische Kosmetikbehandlung</h3>
+  <TreatmentMeta {...treatments.classicFacial} />
+
+  <div class="classic-examples">
+    <Image src={classicTreatment1Image} alt="Beispiel einer Gesichtsbehandlung" />
+    <Image src={classicTreatment2Image} alt="Beispiel einer Gesichtsbehandlung" />
+    <Image src={classicTreatment3Image} alt="Beispiel einer Gesichtsbehandlung" />
+  </div>
+
+  <p>
+    Hals-, Gesichts- und Dekolletébehandlung mit individuell auf Ihre Haut abgestimmten
+    Spezialprodukten, inkl. Wirkstoffampulle und Augenpackung/-maske.
+  </p>
+  <ul>
+    <li>Nackenmassage</li>
+    <li>Reinigungsmassage</li>
+    <li>Hautanalyse</li>
+    <li>Intensivpeeling</li>
+    <li>Bedampfung</li>
+    <li>Behandlung von Hautunreinheiten</li>
+    <li>Augenbrauenkorrektur</li>
+    <li>Wirkstoffampulle oder Serum</li>
+    <li>Gesichts-, Hals- und Dekolletémassage</li>
+    <li>Packung/Maske</li>
+    <li>Abschlusspflege</li>
+  </ul>
+</FacialTreatmentCard>
+
+<FacialTreatmentCard>
+  <h3>Intensiv-Gesichtsreinigung</h3>
+  <TreatmentMeta {...treatments.deepCleansing} />
+  <ul>
+    <li>Reinigungsmassage</li>
+    <li>Intensivpeeling</li>
+    <li>Bedampfung</li>
+    <li>Behandlung von Hautunreinheiten</li>
+    <li>Ampulle</li>
+    <li>Abschlusspflege</li>
+  </ul>
+</FacialTreatmentCard>
+
+<style>
+  .round-image {
+    border-radius: 50%;
+  }
+
+  .contained-image {
+    object-fit: contain;
+  }
+
+  .comment {
+    margin-block: 2em;
+  }
+
+  .classic-examples {
+    margin-top: 1em;
+  }
+</style>

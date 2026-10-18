@@ -1,0 +1,45 @@
+---
+import { Image } from "astro:assets";
+
+import { prices, treatments } from "../../data/prices";
+
+import PriceList from "../PriceList.astro";
+import SectionAnchor from "../SectionAnchor.astro";
+import TreatmentCard from "../TreatmentCard.astro";
+
+import eyelashLiftingBeforeImage from "../../images/wimpernlifting-vorher.webp";
+import eyelashLiftingAfterImage from "../../images/wimpernlifting-nachher.jpg";
+---
+
+<SectionAnchor id="scroll-augen" />
+<TreatmentCard>
+  <h3>Wimpernlifting</h3>
+  <p class="compact-copy">
+    Ausdrucksvoller Blick für ca. 6–8 Wochen. Dauerhafter Schwung und natürliche
+    Betonung auch bei kurzen Wimpern<br />
+    <em>Empfohlen für jedes Alter</em>
+  </p>
+  <div class="standalone-price">{treatments.lashLifting.price}</div>
+
+  <div class="eyelash-examples">
+    <figure>
+      <Image src={eyelashLiftingBeforeImage} alt="Wimpernlifting vorher" />
+      <figcaption>vorher</figcaption>
+    </figure>
+    <figure>
+      <Image src={eyelashLiftingAfterImage} alt="Wimpernlifting nachher" />
+      <figcaption>nachher</figcaption>
+    </figure>
+  </div>
+
+  <p>Zusatzleistungen</p>
+  <PriceList items={prices.lashExtras} />
+</TreatmentCard>
+
+<style>
+  .eyelash-examples :global(img) {
+    width: 90%;
+    max-width: 1000px;
+    margin-top: 10px;
+  }
+</style>

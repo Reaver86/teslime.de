@@ -1,0 +1,75 @@
+---
+import { Image } from "astro:assets";
+
+import { treatments } from "../../data/prices";
+
+import FacialTreatmentCard from "./FacialTreatmentCard.astro";
+import ImageGallery from "../ImageGallery.astro";
+import SectionAnchor from "../SectionAnchor.astro";
+
+import wrinkleKiller1Image from "../../images/faltenkiller-1.webp";
+import wrinkleKiller2Image from "../../images/faltenkiller-2.webp";
+import wrinkleKiller3Image from "../../images/faltenkiller-3.webp";
+---
+
+<SectionAnchor id="scroll-facelifting" />
+<FacialTreatmentCard>
+  <h3>Facelifting</h3>
+  <h4>Der Faltenkiller</h4>
+  <h4>Mit gebündeltem Spezialultraschall</h4>
+  <p class="compact-copy">
+    Gesicht, Hals und Dekolleté<br />eine sehr wirksame Behandlung, speziell ab 40
+  </p>
+  <div class="standalone-price">{treatments.facelift.price}</div>
+
+  <p>
+    Bereits ab dem 25. Lebensjahr fängt die Haut ganz langsam an zu altern. Die Anzahl
+    der Kollagen- und Elastinfasern verringert sich, die Fasern reißen und werden kürzer.
+    Es entstehen Falten.
+  </p>
+  <p>
+    Das Facelifting mit meinem Spezialultraschallgerät stoppt diesen Vorgang für mehrere
+    Jahre. Der Ultraschall wird in 1,5 bis 4,5 mm gebündelt und setzt dort
+    Anregungspunkte. Dadurch werden die körpereigenen Reparaturkräfte aktiviert und die
+    Neubildung von Kollagen und Elastin wird gestartet. Es wird eine sichtbare Straffung
+    der Hautoberfläche erreicht. Vor Beginn der Behandlung messe ich die Hautdicke, um
+    sicherzustellen, dass 4,5 mm nicht zu tief greift.
+  </p>
+  <p>
+    Kleinere Falten verschwinden vollständig, tiefere Falten werden erheblich reduziert.
+    Man erhält ein deutlich jüngeres Aussehen für mehrere Jahre.
+  </p>
+  <ul class="checklist">
+    <li>Faltenbekämpfung ohne Anästhesie, ohne OP</li>
+    <li>Hautverjüngung um 3 bis 5 Jahre</li>
+    <li>Wirkdauer 3 bis 5 Jahre und mehr</li>
+    <li>nur eine Behandlung nötig, ab 40 Jahren empfohlen</li>
+    <li>
+      Ergebnis: 20 % sofort sichtbar, danach verjüngt sich die Haut allmählich in den
+      nächsten 6 Monaten
+    </li>
+    <li>schmerzfrei, keine Ausfallzeiten</li>
+    <li>ausführliche Beratung in der Praxis</li>
+  </ul>
+
+  <ImageGallery variant="facelift">
+    <Image
+      src={wrinkleKiller1Image}
+      alt="Faltenkiller: Bild einer jungen Frau"
+      width={262}
+      height={274}
+    />
+    <Image
+      src={wrinkleKiller2Image}
+      alt="Faltenkiller: frischer und verschrumpelter Apfel"
+      width={344}
+      height={240}
+    />
+    <Image
+      src={wrinkleKiller3Image}
+      alt="Faltenkiller: Bild einer jungen Frau"
+      width={266}
+      height={276}
+    />
+  </ImageGallery>
+</FacialTreatmentCard>

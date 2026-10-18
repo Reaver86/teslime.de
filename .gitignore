@@ -8,6 +8,8 @@ dist/
 # local browser artifacts
 .playwright-cli/
 output/
+.playwright-mcp/
+.deploy/
 
 # dependencies
 node_modules/

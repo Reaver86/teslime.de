@@ -1,10 +1,14 @@
 ---
 import { Image } from "astro:assets";
 
+import { prices, removalFees, treatments } from "../../data/prices";
+
 import ImageGallery from "../ImageGallery.astro";
-import PriceRow from "../PriceRow.astro";
+import PriceList from "../PriceList.astro";
 import SectionAnchor from "../SectionAnchor.astro";
+import TreatmentMeta from "../TreatmentMeta.astro";
 import TreatmentCard from "../TreatmentCard.astro";
+
 import footCarePracticeImage from "../../images/teslime-willkommen.webp";
 import footBeforeLeftImage from "../../images/fusspilz-3.webp";
 import footBeforeRightImage from "../../images/fusspilz-1.webp";
@@ -21,7 +25,7 @@ import nailFungusStagesImage from "../../images/nagelpilz-erkrankungsstadien.jpg
   <TreatmentCard>
     <h3>Medizinische Fachfußpflege</h3>
     <p class="compact-copy">(auch für Diabetiker)</p>
-    <div class="treatment-meta"><span>ca. 45 min</span><span>52,00&nbsp;€</span></div>
+    <TreatmentMeta {...treatments.footCare} />
 
     <ul class="checklist treatment-list">
       <li>Nägel schneiden, Nägel verschönern</li>
@@ -40,16 +44,7 @@ import nailFungusStagesImage from "../../images/nagelpilz-erkrankungsstadien.jpg
     />
 
     <p>Zusatzleistungen</p>
-    <PriceRow price="45,00 €" duration="ca. 30 min">
-      Fußreflexzonenmassage,<br />nach Hanne Marquardt
-    </PriceRow>
-    <PriceRow price="23,00 €" duration="ca. 15 min">
-      Relax-/Wellnessfußmassage
-    </PriceRow>
-    <PriceRow price="je 10,00 €">
-      Hühneraugen entfernen <small>, zwei und mehr</small>
-    </PriceRow>
-    <PriceRow price="10,00 €">Nägel lackieren</PriceRow>
+    <PriceList items={prices.footCareExtras} />
 
     <ImageGallery variant="foot-care">
       <figure>
@@ -70,8 +65,8 @@ import nailFungusStagesImage from "../../images/nagelpilz-erkrankungsstadien.jpg
       </figure>
     </ImageGallery>
 
-    <small>* Entfernung einer früheren Lackierung: 5&nbsp;€</small><br />
-    <small>* Entfernung einer früheren Shellac-Lackierung: 10&nbsp;€</small>
+    <small>* Entfernung einer früheren Lackierung: {removalFees.polish}</small><br />
+    <small>* Entfernung einer früheren Shellac-Lackierung: {removalFees.shellac}</small>
   </TreatmentCard>
 
   <SectionAnchor id="scroll-fuss-nagelpilz" />
@@ -87,7 +82,7 @@ import nailFungusStagesImage from "../../images/nagelpilz-erkrankungsstadien.jpg
       Leichter Pilzbefall wird während der normalen Fachfußpflege einfach mitbehandelt (d.
       h. möglichst viel weggeschliffen).
     </div>
-    <PriceRow price="10,00 €">Mittlerer und schwerer Pilzbefall</PriceRow>
+    <PriceList items={prices.nailFungus} />
     <div class="information-row">
       Nagelpilz tritt ab einem Alter von ca. 60 Jahren leider sehr häufig auf, da das
       Immunsystem schwächer wird.
@@ -128,7 +123,7 @@ import nailFungusStagesImage from "../../images/nagelpilz-erkrankungsstadien.jpg
   <TreatmentCard>
     <h3>Nagelkorrektur mit einer Spange</h3>
     <strong class="sub-heading">Die Schmerzen verschwinden im Normalfall sofort.</strong>
-    <div class="standalone-price">je Nagel 40,00&nbsp;€</div>
+    <div class="standalone-price">{treatments.nailBrace.price}</div>
     <Image
       class="content-image"
       src={nailBraceImage}
@@ -156,21 +151,6 @@ import nailFungusStagesImage from "../../images/nagelpilz-erkrankungsstadien.jpg
 <style>
   h3 {
     margin-top: 0.5em;
-  }
-
-  .compact-copy {
-    margin-block: 0;
-  }
-
-  .treatment-meta {
-    display: flex;
-    justify-content: center;
-    opacity: 0.7;
-  }
-
-  .treatment-meta span + span::before {
-    content: "    •    ";
-    white-space: pre;
   }
 
   .treatment-list {
@@ -202,7 +182,6 @@ import nailFungusStagesImage from "../../images/nagelpilz-erkrankungsstadien.jpg
 
   .standalone-price {
     margin-bottom: 1em;
-    opacity: 0.7;
   }
 
   .brace-description {

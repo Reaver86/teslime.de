@@ -1,0 +1,23 @@
+---
+interface Props {
+  price: string;
+  duration: string;
+}
+
+const { price, duration } = Astro.props;
+---
+
+<div class="treatment-meta"><span>{duration}</span><span>{price}</span></div>
+
+<style>
+  .treatment-meta {
+    display: flex;
+    justify-content: center;
+    opacity: 0.7;
+  }
+
+  .treatment-meta span + span::before {
+    content: "    •    ";
+    white-space: pre;
+  }
+</style>

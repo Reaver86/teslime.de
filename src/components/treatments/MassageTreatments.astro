@@ -1,0 +1,39 @@
+---
+import { Image } from "astro:assets";
+
+import { prices } from "../../data/prices";
+
+import PriceList from "../PriceList.astro";
+import SectionAnchor from "../SectionAnchor.astro";
+import TreatmentCard from "../TreatmentCard.astro";
+
+import hotStoneMassageImage from "../../images/hot-stone-massage.png";
+---
+
+<SectionAnchor id="scroll-massagen" />
+<h2>Massagen</h2>
+
+<TreatmentCard>
+  <h3>Von klassischer Massage bis Wellnessmassage</h3>
+  <Image class="hot-stone-image" src={hotStoneMassageImage} alt="Hot-Stone-Massage" />
+  <ul class="checklist benefits-list">
+    <li>Entspannung der Muskulatur</li>
+    <li>lokale Verbesserung der Durchblutung</li>
+    <li>Senkung des Blutdrucks und des Pulses</li>
+    <li>Verbesserung des Zellstoffwechsels</li>
+    <li>Stressabbau</li>
+    <li>psychische und physische Entspannung u. a.</li>
+  </ul>
+  <PriceList items={prices.massage} />
+</TreatmentCard>
+
+<style>
+  .hot-stone-image {
+    width: 95%;
+    max-width: 350px;
+  }
+
+  .benefits-list {
+    text-align: left;
+  }
+</style>

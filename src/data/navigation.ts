@@ -1,3 +1,5 @@
+import { withBasePath } from "./site";
+
 export interface NavigationItem {
   label: string;
   href: string;
@@ -13,7 +15,7 @@ export const navigationGroups: NavigationGroup[] = [
   {
     label: "Bereich Kosmetik",
     items: [
-      { label: "NiSV-VERORDNUNG", href: "/nisv-verordnung.jpeg", newTab: true },
+      { label: "NiSV-VERORDNUNG", href: withBasePath("/nisv-verordnung.jpeg"), newTab: true },
       {
         label: "Bildbasierte Hautanalyse (ich liebe dieses Gerät)",
         href: "#scroll-hautanalyse",

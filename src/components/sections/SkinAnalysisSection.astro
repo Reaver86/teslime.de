@@ -1,8 +1,11 @@
 ---
 import { Image } from "astro:assets";
 
+import { treatments } from "../../data/prices";
+
 import SectionAnchor from "../SectionAnchor.astro";
 import TreatmentCard from "../TreatmentCard.astro";
+
 import analysisExampleImage from "../../images/gesichtsanalyse-stern.webp";
 import analyzerImage from "../../images/gesichtsanalyse.webp";
 import skinOverviewImage from "../../images/hautanalyse.webp";
@@ -19,7 +22,7 @@ import skinOverviewImage from "../../images/hautanalyse.webp";
       mit Alterssimulation 5–7 Jahre in die Zukunft und ausführlicher Besprechung der
       Ergebnisse und Handlungsempfehlungen
     </p>
-    <div class="analysis-card__price">50,00&nbsp;€</div>
+    <div class="analysis-card__price">{treatments.skinAnalysis.price}</div>
 
     <div class="analysis-card__devices">
       <Image

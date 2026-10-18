@@ -1,0 +1,17 @@
+---
+import type { PriceItem } from "../data/prices";
+import PriceRow from "./PriceRow.astro";
+
+interface Props {
+  items: readonly PriceItem[];
+}
+
+const { items } = Astro.props;
+---
+
+{items.map(({ description, price, duration, note }) => (
+  <PriceRow {price} {duration}>
+    {description.map((line, index) => <>{index > 0 && <br />}{line}</>)}
+    {note && <small>{note}</small>}
+  </PriceRow>
+))}

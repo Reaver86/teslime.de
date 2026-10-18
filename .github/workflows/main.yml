@@ -1,51 +1,44 @@
-name: Deploy Astro site to Netcup via FTP
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: ["main"]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
   contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
   build:
-    name: Build
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Install, test, build, and upload site
+        uses: withastro/action@v6
         with:
-          node-version: "24"
-          cache: npm
-          cache-dependency-path: package-lock.json
-      - name: Install dependencies
-        run: npm ci
-      - name: Verify and build with Astro
-        run: npm run verify
+          node-version: 24
+          build-cmd: npm run verify
         env:
-          PUBLIC_GOOGLE_MAPS_API_KEY: ${{ secrets.PUBLIC_GOOGLE_MAPS_API_KEY }}
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          path: dist
+          SITE_URL: https://reaver86.github.io
+          BASE_PATH: /teslime.de
+          # Use the Maps link fallback on the preview domain.
+          PUBLIC_GOOGLE_MAPS_API_KEY: ""
 
   deploy:
-    name: Deploy
     needs: build
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v4
-        with:
-          path: dist
-      - name: Sync files via ftp
-        uses: SamKirkland/FTP-Deploy-Action@4.3.0
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: dist/artifact/
-          protocol: ftp
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

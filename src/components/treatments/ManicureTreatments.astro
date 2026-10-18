@@ -1,0 +1,26 @@
+---
+import { prices, removalFees } from "../../data/prices";
+
+import PriceList from "../PriceList.astro";
+import SectionAnchor from "../SectionAnchor.astro";
+import TreatmentCard from "../TreatmentCard.astro";
+---
+
+<TreatmentCard>
+  <h3>Klassische Maniküre</h3>
+  <PriceList items={prices.manicure} />
+  <small>* Entfernung einer früheren Lackierung: {removalFees.polish}</small>
+</TreatmentCard>
+
+<SectionAnchor id="scroll-shellac" />
+<TreatmentCard>
+  <h3>Shellac</h3>
+  <strong class="sub-heading">Der Nagellack der Stars</strong>
+  <p>
+    Auftragbar wie Nagellack, haltbar wie Gel, mindestens 14 Tage haltbar, kein
+    Abblättern, absolut kratzfester, widerstandsfähiger, UV-gehärteter Hochglanz. Keine
+    Trocknungszeit erforderlich.
+  </p>
+  <PriceList items={prices.shellac} />
+  <small>* Entfernung einer früheren Shellac-Lackierung: {removalFees.shellac}</small>
+</TreatmentCard>

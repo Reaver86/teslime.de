@@ -1,3 +1,7 @@
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+export const withBasePath = (path: string): string => `${basePath}${path}`;
+
 export const site = {
   title: "Teslime Kosmetik und medizinische Fachfußpflege",
   description:

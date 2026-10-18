@@ -1,0 +1,19 @@
+---
+import TreatmentCard from "../TreatmentCard.astro";
+---
+
+<TreatmentCard class="facial-card"><slot /></TreatmentCard>
+
+<style>
+  .facial-card > :global(h3) {
+    margin-top: 0.5em;
+  }
+
+  .facial-card > :global(h4) {
+    font-size: 0.9em;
+  }
+
+  .facial-card > :global(ul) {
+    text-align: left;
+  }
+</style>

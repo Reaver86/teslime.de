@@ -1,0 +1,83 @@
+---
+import { Image } from "astro:assets";
+
+import { treatments } from "../../data/prices";
+
+import FacialTreatmentCard from "./FacialTreatmentCard.astro";
+import ImageGallery from "../ImageGallery.astro";
+import SectionAnchor from "../SectionAnchor.astro";
+import TreatmentMeta from "../TreatmentMeta.astro";
+
+import microneedlingProcessImage from "../../images/microneedling-ablauf.webp";
+import microneedlingFaceImage from "../../images/microneedling-ergebnis.webp";
+import microneedlingDeviceImage from "../../images/microneedling-rf-geraet.webp";
+---
+
+<FacialTreatmentCard>
+  <h3>Microneedling</h3>
+  <TreatmentMeta {...treatments.microneedling} />
+  <p>
+    Das Microneedling mittels Needling-Pen ist ein neues und sehr erfolgreiches Verfahren
+    im Bereich der Anti-Aging- und Problemhautbehandlungen. Durch die gezielte Perforation
+    der Haut (Needling-Pen mit 24 feinen Nadeln) setzen die Zellen unmittelbar nach der
+    Anwendung Wachstumsfaktoren frei, welche die Produktion von Kollagen und Elastin und
+    die Ausschüttung von Hyaluronsäure stimulieren.<br />
+    Die Aufnahmefähigkeit der aufgetragenen Wirkstoffe wird erheblich gesteigert, was zu
+    einem deutlich verbesserten Hautergebnis führt. Anwendungsbereiche: Gesicht, Augen,
+    Lippen, Hals, Dekolleté, Körper und Hände.
+  </p>
+  <p>Sensationelle Ergebnisse im Bereich:</p>
+  <ul class="checklist">
+    <li>Porenverkleinerung und Verfeinerung des Hautbilds</li>
+    <li>Hautfestigung, Hautstraffung, Augenringe</li>
+    <li>Faltenreduktion</li>
+    <li>Hautverjüngung von sonnengeschädigter Haut</li>
+    <li>Aufhellung von Pigmentstörungen</li>
+    <li>Akne</li>
+    <li>Narben verschiedener Art (besonders Aknenarben)</li>
+    <li>Dehnungs- und Schwangerschaftsstreifen</li>
+  </ul>
+</FacialTreatmentCard>
+
+<SectionAnchor id="scroll-microneedling" />
+<FacialTreatmentCard>
+  <h3>Gold-Microneedling<br />mit Radiofrequenzstrom</h3>
+  <p class="compact-copy">Gesicht, Hals und Dekolleté</p>
+  <TreatmentMeta {...treatments.goldMicroneedling} />
+  <p>
+    Es ist die Weiterentwicklung des normalen Microneedlings. Durch den zusätzlichen
+    Stromimpuls mit Radiofrequenz (5 MHz), der individuell eingestellt wird, werden die
+    Ergebnisse erheblich verstärkt und die Wirkdauer verlängert.
+  </p>
+  <ul class="checklist">
+    <li>Empfohlen für jedes Alter</li>
+    <li>Ergebnis nach ca. 2 Monaten voll sichtbar</li>
+    <li>Wirkdauer: ca. 2 Jahre und länger</li>
+    <li>Ausfallzeiten: keine</li>
+  </ul>
+  <p>
+    Teslime arbeitet mit der Stempeltechnik. Das Gerät führt die darauffolgenden drei
+    Schritte automatisch aus.
+  </p>
+
+  <ImageGallery variant="microneedling">
+    <Image
+      src={microneedlingProcessImage}
+      alt="Microneedling-Schaubild: Nadeln dringen in die Haut und geben Radiofrequenzenergie ab"
+      width={1013}
+      height={393}
+    />
+    <Image
+      src={microneedlingDeviceImage}
+      alt="Microneedling-Gerät"
+      width={639}
+      height={462}
+    />
+    <Image
+      src={microneedlingFaceImage}
+      alt="Beispielergebnis des Microneedlings im Gesicht"
+      width={534}
+      height={642}
+    />
+  </ImageGallery>
+</FacialTreatmentCard>

@@ -53,11 +53,20 @@ npm run preview  # den letzten Produktions-Build lokal anzeigen
 - `src/pages/` enthält den Einstiegspunkt der Website.
 - `src/layouts/` enthält die HTML-Dokumenthülle.
 - `src/components/` enthält Layout-, Inhalts- und wiederverwendbare Komponenten.
-- `src/data/` enthält gemeinsame Kontakt- und Navigationsdaten.
+- `src/data/` enthält gemeinsame Kontakt- und Navigationsdaten sowie den typisierten Preiskatalog.
 - `src/images/` enthält alle von Astro optimierten Bilder.
 - `src/styles/` enthält die wenigen globalen Grundlagen.
 - `tests/` prüft das generierte HTML ohne zusätzliche Testbibliothek.
 
 ## Produktion und Deployment
 
-`npm run build` erzeugt die vollständige statische Website in `dist/`. Pushes auf `main` werden durch `.github/workflows/main.yml` mit Node.js 24 geprüft, gebaut und anschließend per FTP zu Netcup übertragen. Die Zugangsdaten und der optionale Maps-Schlüssel werden als GitHub-Secrets verwaltet.
+`npm run build` erzeugt die vollständige statische Website in `dist/`.
+`.github/workflows/main.yml` prüft Pushes auf `main` und veröffentlicht die
+[GitHub-Pages-Vorschau](https://reaver86.github.io/teslime.de/). Die Vorschau nutzt
+einen normalen Maps-Link. Die Produktionsseite bei Netcup wird nur auf ausdrücklichen
+Auftrag per verschlüsseltem FTP aktualisiert. Anleitung und Zugangsdaten-Verweis:
+[docs/deploy.md](docs/deploy.md).
+
+Weitere Projektregeln stehen in [AGENTS.md](AGENTS.md), die aktuelle Architektur
+und Konventionen für Inhaltsänderungen in [docs/architecture.md](docs/architecture.md),
+die Abnahmeprüfungen in [docs/verification.md](docs/verification.md).
