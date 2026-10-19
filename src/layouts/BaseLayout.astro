@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import { analyticsEnabled } from "../data/analytics";
 
 import { site, withBasePath } from "../data/site";
 
@@ -19,6 +20,7 @@ const { title = site.title, description = site.description } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href={withBasePath("/favicon.svg")} />
     <meta name="generator" content={Astro.generator} />
+    {analyticsEnabled && <script is:inline defer src="/metrics/tracker.js" data-site="teslime.de"></script>}
     <title>{title}</title>
   </head>
   <body>

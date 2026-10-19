@@ -3,8 +3,8 @@
 This is a German, single-page website for Teslime Schuster's cosmetics and foot
 care studio. Keep documentation proportionate: this page covers structure and
 conventions; [verification.md](verification.md) covers acceptance;
-[deploy.md](deploy.md) covers production. There is no API, database, or external
-component library to document.
+[deploy.md](deploy.md) covers production. Optional analytics uses a same-origin PHP endpoint and a shared MySQL database;
+see [analytics.md](analytics.md).
 
 ## Current architecture
 
@@ -68,7 +68,7 @@ is no client-side UI framework.
 When configured, the footer embeds Google Maps; otherwise it renders a normal
 Maps link. `.env` is ignored. Preserve the intended production value when building;
 changing it requires a rebuild. The key should have the appropriate Google Cloud
-domain restrictions. This repository has no Umami integration to copy or configure.
+domain restrictions. Analytics is configured separately through PUBLIC_ANALYTICS_ENABLED.
 
 ## Refactoring boundaries
 

@@ -4,6 +4,7 @@ import { Image } from "astro:assets";
 
 import { site } from "../data/site";
 import instagramIcon from "../images/instagram-icon.png";
+import { analyticsEnabled } from "../data/analytics";
 import SectionAnchor from "./SectionAnchor.astro";
 
 const mapsSearchUrl = new URL("https://www.google.com/maps/search/");
@@ -31,7 +32,7 @@ if (PUBLIC_GOOGLE_MAPS_API_KEY) {
       FACHFUSSPFLEGE TESLIME SCHUSTER<br />
       ({site.qualification})<br />
       {site.address.street}, {site.address.city}<br />
-      ✆ <a href={site.mobile.whatsappUrl} target="_blank" rel="noopener noreferrer">
+      ✆ <a data-analytics-event="contact-whatsapp" href={site.mobile.whatsappUrl} target="_blank" rel="noopener noreferrer">
         {site.mobile.display} (WhatsApp)
       </a>,
       ☎ {site.telephone}<br />
@@ -44,7 +45,7 @@ if (PUBLIC_GOOGLE_MAPS_API_KEY) {
         <Image src={instagramIcon} alt="" />{site.instagram.label} (Instagram)
       </a>,<br />
       <a href={site.websiteUrl} target="_blank" rel="noopener noreferrer">www.teslime.de</a>,
-      ✉ <a href={`mailto:${site.email}`}>{site.email}</a>
+      ✉ <a data-analytics-event="contact-email" href={`mailto:${site.email}`}>{site.email}</a>
     </address>
 
     <h3 class="contact__label">Öffnungszeiten:</h3>
@@ -99,6 +100,12 @@ if (PUBLIC_GOOGLE_MAPS_API_KEY) {
       )
     }
 
+    {analyticsEnabled && <section aria-labelledby="analytics-privacy" class="max-width-700">
+      <h3 id="analytics-privacy">Datenschutz: Besuchsstatistik</h3>
+      <p>Verantwortlich ist Teslime Schuster, erreichbar unter den oben genannten Kontaktdaten. Wir erfassen Seitenaufrufe und ausgewählte Kontaktklicks zur Verbesserung dieser Website auf unserem Hosting bei netcup in Deutschland. Gespeichert werden Tag, Seitenpfad, verweisende Domain und Gerätekategorie. Keine Cookies, Browserspeicher, Nachrichteninhalte oder Sitzungsaufzeichnungen werden verwendet; URL-Abfrageparameter werden nicht erfasst.</p>
+      <p>IP-Adresse und Browserkennung werden technisch verarbeitet und für eine täglich wechselnde, nur für diese Website gültige pseudonyme Besucherkennung verwendet. Die Rohwerte werden nicht in der Statistik gespeichert. Do Not Track und Global Privacy Control werden berücksichtigt. Einzelereignisse werden nach 90 Tagen gelöscht; zusammengefasste Berichte werden per E-Mail versandt. Technische Serverprotokolle bestehen unabhängig davon.</p>
+      <p>Die Verarbeitung dient unserem berechtigten Interesse an einer datensparsamen Verbesserung unseres Angebots (Art. 6 Abs. 1 lit. f DSGVO). Sie können der Verarbeitung widersprechen und Ihre gesetzlichen Rechte auf Auskunft, Berichtigung, Löschung und Einschränkung sowie Beschwerde bei einer Datenschutzaufsichtsbehörde geltend machen. Wenden Sie sich dazu an uns oder aktivieren Sie Do Not Track in Ihrem Browser.</p>
+    </section>}
     <p>Eröffnung der Praxis: März 2016</p>
 
     <p>
