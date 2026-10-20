@@ -26,3 +26,10 @@ No third-party tracking implementation is used. Only `/metrics/tracker.js` and
 `/metrics/collect.php` are public. The shared PHP application and credentials
 remain outside both document roots. Do not restore older tracking snippets or
 the temporary private demo runner. Production deployment still follows deploy.md.
+
+Production backend verified on **20 October 2026** using PHP 8.4.24. Collection
+starts on **2026-10-20**; the first report on November 1 covers October 20–31.
+Live collector and database tests passed, and their specific probe rows were
+removed. No Umami code remains in source or the backed-up live website. Temporary
+demo and installation helpers were removed. The pre-release backup and manifests
+are in ignored `output/deploy/2026-10-19-analytics/` in each repository.
