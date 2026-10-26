@@ -98,6 +98,9 @@ are `https://www.teslime.de` and `/`. Use `withBasePath` from `src/data/site.ts`
 for files in `public/`; Astro prefixes imported images and generated assets.
 Fragment links remain relative to the current page.
 
+Local development and preview default to port 4322, keeping this site's browser
+origin separate from the sister site's default port 4321 and its cached redirects.
+
 `.github/workflows/main.yml` verifies and publishes the GitHub Pages preview on
 pushes to `main` and manual runs, using the same Astro action and Pages deployment
 as `ottoschuster.de`. The preview is at

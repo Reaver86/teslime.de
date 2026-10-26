@@ -9,6 +9,23 @@ durations), local HTML/CSS asset references, and ARIA label/control targets.
 Node 24 imports the typed price catalogue directly; no test framework is needed.
 These checks do not replace browser verification.
 
+## Local development server
+
+Run `npm run dev` and open `http://localhost:4322/`. Development and preview
+default to port 4322 to keep Teslime separate from the sister site
+`ottoschuster.de` on port 4321. The sister site redirects its root to `/de/`,
+while Teslime serves its German page directly at `/`. Browsers can cache the
+sister site's permanent redirect when both projects share the same origin.
+
+Always use the URL printed by Astro: if the configured port is occupied,
+Astro selects another port.
+
+If the wrong site appears, run `npx astro dev status` and
+`npx astro preview status` in the relevant project directories. Stop an unused
+server with `npx astro dev stop` or `npx astro preview stop` from its own project
+directory, then restart Teslime. If the browser still applies an old redirect,
+clear cached data for that local origin or check in a private window.
+
 ## Appearance and interactions
 
 For every change affecting appearance or interaction, verify the affected areas
