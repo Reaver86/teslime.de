@@ -77,6 +77,24 @@ and refactored build. Local checks can verify its URL and iframe, but cannot
 confirm a working live map. Verify it on the intended domain during an explicitly
 requested deployment. Do not change the production key to make a local check pass.
 
+## Hydra-Face announcement
+
+At 320, 390, and 1440 px, clear
+`teslime:hydra-face-october-2026:dismissed` from local storage and reload. Check
+that the complete poster, caption and centered close icon fit the viewport. The
+panel should hug its content on mobile too, with narrow side gutters and no
+large empty bands above or below the image. Check that clicking the poster or
+activating its link with Enter closes the modal and navigates to `#scroll-gesicht`,
+with the treatment heading focused and visible below the fixed header. Repeat
+when the URL already has that hash. Backdrop, caption, close-button clicks and
+Escape must only dismiss, preserving the current scroll position and hash.
+Check keyboard focus containment/restoration and scroll restoration. Reload
+and revisit to confirm dismissal persists. With storage access blocked, verify
+that opening and closing still work without errors. With JavaScript disabled,
+verify that the modal stays hidden and the permanent treatment poster and text
+remain available. Inspect the replacement poster and expanded treatment list at
+all three widths.
+
 ## GitHub Pages preview
 
 Verify both deployment prefixes when changing asset paths or the workflow:

@@ -33,6 +33,20 @@ shared foundations and CSS custom properties; do not move all CSS into one file
 merely to match the sister website. Existing tokens include colors, header height,
 sidebar width, content width, and tile borders.
 
+`HydraFaceAnnouncement.astro` shows the October 2026 poster in a native modal
+on first visit: a centered, content-height panel at every screen size, with a
+4 px image inset and a separate caption. On narrow screens it leaves at least
+6 px at each side; its width also adapts to viewport height to fit the whole poster.
+The poster is a keyboard-accessible link: activating it dismisses the modal,
+focuses the treatment heading, and navigates to `#scroll-gesicht`, the same anchor
+as the Hydra-Face navigation item. Other clicks and Escape only dismiss the modal,
+restoring prior focus and page scrolling. Dismissal is stored
+under `teslime:hydra-face-october-2026:dismissed` in local storage. If storage is
+blocked, dismissal still works but the announcement may reappear on a later visit.
+Change that campaign key for a future announcement that returning visitors should
+see. The same Astro-optimized source image appears permanently in
+`HydraFaceTreatments.astro`, where treatment details remain editable markup.
+
 `SiteHeader.astro` owns mobile menu state, Escape/focus behavior, responsive menu
 reset, and dynamic header-height measurement. The desktop sidebar starts at
 700 px. `HairRemovalSection.astro` controls seasonal imagery using the visitor's
@@ -85,8 +99,9 @@ add new framework features solely because they exist. Global `compact-copy` and
 sections. Keep gallery variants and source image dimensions unchanged unless an
 intentional appearance change has been requested.
 
-All source images are referenced, including the CSS background and list marker;
-retain them. Remove unused code and assets only after checking both imports and
+The earlier Hydra-Face device and analysis images are retained as source assets,
+although the October 2026 poster replaces their former gallery. Retain the CSS
+background and list marker as well. Remove unused code and assets only after checking both imports and
 CSS URLs. Update these docs and verification instructions alongside future code
 changes, as required by `AGENTS.md`.
 

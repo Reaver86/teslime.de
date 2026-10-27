@@ -7,94 +7,63 @@ import FacialTreatmentCard from "./FacialTreatmentCard.astro";
 import ImageGallery from "../ImageGallery.astro";
 import TreatmentMeta from "../TreatmentMeta.astro";
 
-import analysisExampleImage from "../../images/gesichtsanalyse-stern.webp";
-import analyzerImage from "../../images/gesichtsanalyse.webp";
 import classicTreatment1Image from "../../images/gesichtsbehandlung-1.png";
 import classicTreatment2Image from "../../images/gesichtsbehandlung-2.png";
 import classicTreatment3Image from "../../images/gesichtsbehandlung-3.png";
+import hydraFaceAnnouncementImage from "../../images/hydra-face-oktober-2026.jpeg";
 import hydraFaceAfterImage from "../../images/hydra-face-nachher.webp";
-import hydraFaceDevice1Image from "../../images/hydra-face-geraet-1.webp";
-import hydraFaceDevice2Image from "../../images/hydra-face-geraet-2.webp";
 import hydraFaceBeforeImage from "../../images/hydra-face-vorher.webp";
 ---
 
 <FacialTreatmentCard>
-  <h3>Grundprogramm für gesunde Haut</h3>
-  <h4>Hydra-Face</h4>
-
-  <p>
-    Teslimes Hollywoodbehandlung in drei Schritten:<br />
-    (1) Hautanalyse + (2) Behandlung + (3) Glow-Effekt<br />
-    <em>Empfohlen für jedes Alter</em><br />
-    <em>Ausfallzeiten: keine</em>
-  </p>
-
-  <ImageGallery>
-    <Image
-      class="round-image"
-      src={analyzerImage}
-      alt="Gerät für die bildbasierte Gesichtsanalyse"
-      width={698}
-      height={737}
-    />
-    <Image
-      class="contained-image"
-      src={analysisExampleImage}
-      alt="Beispielauswertung einer Gesichtsanalyse"
-      width={584}
-      height={554}
-    />
-    <Image
-      src={hydraFaceDevice1Image}
-      alt="Hydra-Face-Gerät"
-      width={674}
-      height={643}
-    />
-    <Image
-      src={hydraFaceDevice2Image}
-      alt="Hydra-Face-Gerät bei einer Beispielanwendung"
-      width={516}
-      height={643}
-    />
-  </ImageGallery>
-
-  <div class="comment">
-    <h4>Teslimes Kommentar:</h4>
-    <em>
-      Regelmäßige Anwendung alle 6–8 Wochen führt zu einer <span
-        class="underlined">dauerhaft strahlenden und gesunden Haut</span
-      > und verlangsamt den Alterungsprozess der Haut erheblich. Es ist die perfekte
-      Gesichtspflege für jedes Alter. Mit dem Hautanalysegerät dokumentiere ich jedes
-      Mal den Zustand der Haut.
-    </em>
-  </div>
+  <Image
+    class="hydra-poster"
+    src={hydraFaceAnnouncementImage}
+    alt="Seit Oktober 2026: neues 10-in-1-Hydra-Face-Gerät mit Hydra-Dermabrasion, Kalt-/Warm-Hammer, Sauerstoff, Ultraschall, Radiofrequenz, Skin-Scrubber, Augen-RF-Lifting, Desinfektion, EMS und LED-Lichttherapie"
+    widths={[390, 700, 1055]}
+    sizes="(max-width: 699px) 90vw, 700px"
+  />
 
   <h3>Hydra-Face-Luxusbehandlung</h3>
   <TreatmentMeta {...treatments.hydraFace} />
 
-  <p class="underlined">Schritt 1:</p>
+  <h4>Inhalt der Hydra-Face Behandlung by Teslime</h4>
   <ul class="checklist">
+    <li>Vorbereitung, manuelle Gesichtsreinigung</li>
+    <li>Bedampfung</li>
+    <li>Skin-Scrubber (28.000 Vibrationen/Sek.). Hautglättung, Entfernen von abgestorbenen Hautzellen und Unreinheiten</li>
+    <li>Je nach Bedarf zusätzlich manuelle Ausreinigung</li>
+    <li>Hydra-Reinigung, Hydra-Dermabrasion, Beseitigung von Verhornungen (Wirkstoff S1)</li>
+    <li>Hydro Fruit Acid Peeling (Wirkstoff S2)</li>
+    <li>Hyaluron Booster (Wirkstoff S3)</li>
+    <li>Bipolare Radiofrequenzbehandlung (6 MHz). Hautstraffung und Faltenverringerung</li>
+    <li>Augen-RF-Lifting (0,5–1 MHz). Stimulation von Kollagenwachstum</li>
+    <li>Ultraschall. Wirkstoffeinschleusung</li>
+    <li>Kalt-/Heiß-Hammer (0–47 °C einstellbar). Porenschließung und Beruhigung der Haut</li>
+    <li>Oxigen-Spray-Gun. Feiner Sprühnebel für intensive Feuchtigkeit</li>
     <li>
-      Aufnahme des Hautzustands mit dem professionellen Hautanalysegerät, mit
-      Alterssimulation 5–7 Jahre in die Zukunft
+      Wirkstoffeinschleusung mit Nanokristall-Chip und EMS.
+      <p>Wirkstoffe: Lachs-DNA-Complex. Lachs-DNA ist der absolute Profi-Tipp zur Geweberegeneration. Sie repariert beschädigte Hautstrukturen und regt die hauteigene Kollagenbildung massiv an. Bringt müde, fahle Haut (z. B. Raucherhaut) sofort wieder zum Strahlen.</p>
+      <p>Oder Botanical Stem Cell, maximale Hautstraffung und Faltenglättung: Es regt die Zellerneuerung reifer Haut tiefenwirksam an und gibt schlaffem Gewebe seine Spannkraft zurück.</p>
     </li>
-  </ul>
-  <p class="underlined">Schritt 2: (auf Sie abgestimmt)</p>
-  <ul class="checklist">
     <li>
-      Hydra-Reinigung, Hydra-/Diamant-Dermabrasion, Peeling, ggf. Bedampfung,
-      Skin-Scrubber, Reinigung mit Vakuumhandstücken, Sauerstoffpistole
+      LED-Lichttherapie plus Hyaluronmaske
+      <ul>
+        <li>Rotes Licht fördert die Kollagenregeneration und wirkt Anti-Aging.</li>
+        <li>Grünes Licht verbessert Rötungen und Pigmentierung.</li>
+        <li>Blaues Licht beseitigt Bakterien und repariert geschädigte Haut.</li>
+        <li>Weißes Licht beschleunigt den Gewebestoffwechsel und verbessert feine Linien.</li>
+      </ul>
     </li>
-    <li>Hyaluron + Wirkstoffkomplex</li>
-    <li>Bipolare und tripolare Radiofrequenzbehandlung</li>
-    <li>Mikrostrom-Handschuh</li>
-    <li>PDT-Lichttherapie</li>
     <li>Abschlusspflege/-massage</li>
   </ul>
-  <p class="underlined">Schritt 3 = Ergebnis:</p>
+
+  <h4>Ergebnis:</h4>
   <ul class="checklist">
-    <li>Glow-Effekt: saubere + strahlende Haut für mehrere Wochen</li>
+    <li>Glow-Effekt: saubere plus strahlende Haut für mehrere Wochen</li>
+    <li>Regelmäßige Behandlung alle zwei Monate führt zu frischer, strahlender, gesunder Haut.</li>
   </ul>
+  <p>Die Wirkstoffe S1, S2 und S3 sind von Wellcotec, vollständig in Deutschland hergestellt, vegan und frei von Tierversuchen, kein Konzentrat – absolut hochwertig und wirksam.</p>
 
   <p class="underlined">Ergebnisbeispiel:</p>
   <ImageGallery>
@@ -154,16 +123,11 @@ import hydraFaceBeforeImage from "../../images/hydra-face-vorher.webp";
 </FacialTreatmentCard>
 
 <style>
-  .round-image {
-    border-radius: 50%;
-  }
-
-  .contained-image {
-    object-fit: contain;
-  }
-
-  .comment {
-    margin-block: 2em;
+  .hydra-poster {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto 1.5em;
   }
 
   .classic-examples {

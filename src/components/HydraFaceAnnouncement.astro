@@ -1,0 +1,153 @@
+---
+import { Image } from "astro:assets";
+import announcementImage from "../images/hydra-face-oktober-2026.jpeg";
+---
+
+<dialog id="hydra-announcement" aria-labelledby="hydra-announcement-title">
+  <div class="announcement">
+    <header>
+      <h2 id="hydra-announcement-title">Neues Gerät: Hydra Face Luxusbehandlung.</h2>
+      <button type="button" aria-label="Ankündigung schließen" autofocus>
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="m6 6 12 12M18 6 6 18" />
+        </svg>
+      </button>
+    </header>
+    <a class="poster-link" href="#scroll-gesicht" aria-label="Zur Hydra-Face-Gesichtsbehandlung">
+      <Image
+        src={announcementImage}
+        alt="Seit Oktober 2026: neues professionelles 10-in-1-Hydra-Face-Hautpflegesystem. Alle Funktionen finden Sie auch im Abschnitt Hydra-Face."
+        widths={[390, 700, 1055]}
+        sizes="(max-width: 699px) 100vw, 600px"
+        loading="eager"
+      />
+    </a>
+  </div>
+</dialog>
+
+<script>
+  const announcement = document.querySelector<HTMLDialogElement>("#hydra-announcement");
+  const storageKey = "teslime:hydra-face-october-2026:dismissed";
+
+  if (announcement) {
+    let dismissed = false;
+    try {
+      dismissed = localStorage.getItem(storageKey) === "true";
+    } catch {
+      // The announcement remains usable when browser storage is unavailable.
+    }
+
+    if (!dismissed) {
+      const previousOverflow = document.documentElement.style.overflow;
+      const previousFocus = document.activeElement;
+      let navigateToTreatment = false;
+      announcement.querySelector<HTMLAnchorElement>(".poster-link")?.addEventListener("click", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        navigateToTreatment = true;
+        announcement.close();
+      });
+      announcement.addEventListener("click", () => announcement.close());
+      announcement.addEventListener("close", () => {
+        document.documentElement.style.overflow = previousOverflow;
+        try {
+          localStorage.setItem(storageKey, "true");
+        } catch {
+          // A blocked storage write must never prevent dismissal.
+        }
+        if (navigateToTreatment) {
+          window.location.hash = "scroll-gesicht";
+          const heading = document.getElementById("facial-treatments-heading");
+          heading?.setAttribute("tabindex", "-1");
+          heading?.focus({ preventScroll: true });
+          heading?.addEventListener("blur", () => heading.removeAttribute("tabindex"), { once: true });
+          document.getElementById("scroll-gesicht")?.scrollIntoView();
+          return;
+        }
+        if (previousFocus instanceof HTMLElement && previousFocus !== document.body) {
+          previousFocus.focus({ preventScroll: true });
+        } else {
+          document.querySelector<HTMLElement>(".logo-link, header a, header button")?.focus({ preventScroll: true });
+        }
+      });
+      announcement.showModal();
+      document.documentElement.style.overflow = "hidden";
+    }
+  }
+</script>
+
+<style>
+  dialog {
+    padding: 4px;
+    border: 0;
+    border-radius: 12px;
+    width: min(600px, calc(100vw - 12px), calc((100dvh - 92px) * 1055 / 1491 + 8px));
+    max-width: none;
+    max-height: calc(100dvh - 24px);
+    background: var(--color-surface);
+    color: var(--color-text);
+    box-shadow: 0 16px 64px #0006;
+  }
+
+  dialog::backdrop { background: #000a; }
+
+  .announcement { cursor: pointer; }
+
+  .poster-link { display: block; }
+
+  .poster-link:focus-visible { outline-offset: -3px; }
+
+  header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 4px 4px;
+  }
+
+  h2 {
+    flex: 1;
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.25;
+    text-transform: none;
+  }
+
+  button {
+    display: grid;
+    place-items: center;
+    flex: 0 0 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+  }
+
+  button:focus-visible { outline-offset: 1px; }
+
+  svg {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0 0 8px 8px;
+  }
+
+  @media (max-width: 699px) {
+    h2 { font-size: 16px; }
+  }
+
+  @media (max-height: 500px) {
+    h2 { font-size: 14px; }
+  }
+</style>
