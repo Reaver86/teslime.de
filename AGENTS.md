@@ -1,5 +1,8 @@
 # Project instructions
 
+- For **WhatsApp + a timeframe**, read [docs/whatsapp.md](docs/whatsapp.md):
+  instructions from Dad (Otto Schuster) in the open WhatsApp app.
+
 - Update the relevant documentation in the same change whenever architecture,
   content editing conventions, dependencies, checks, or delivery procedures change.
   Keep docs accurate descriptions of the current site, not stale refactor plans.
