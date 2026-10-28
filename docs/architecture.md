@@ -47,6 +47,12 @@ Change that campaign key for a future announcement that returning visitors shoul
 see. The same Astro-optimized source image appears permanently in
 `HydraFaceTreatments.astro`, where treatment details remain editable markup.
 
+The introduction collage uses its own `hydra-face-top-oktober-2026.jpeg` image,
+showing the new device alongside a treatment. Its full image and embedded caption
+link to `#scroll-gesicht`; this tile is separate from the announcement poster.
+The source image is cropped to its embedded blue border (1099 × 1302 px), removing
+the outer white margins while preserving the border and caption.
+
 `SiteHeader.astro` owns mobile menu state, Escape/focus behavior, responsive menu
 reset, and dynamic header-height measurement. The desktop sidebar starts at
 700 px. `HairRemovalSection.astro` controls seasonal imagery using the visitor's
