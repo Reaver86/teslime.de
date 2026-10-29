@@ -91,13 +91,10 @@ test("keeps important external links and protects new tabs", () => {
 
 test("renders review images with their source dimensions", () => {
   const expectedImages = [
-    ["4,9 Sterne Bewertung bei Google", 403, 370],
-    ["Google-Rezension 1", 415, 508],
-    ["Google-Rezension 2", 417, 581],
-    ["Google-Rezension 3", 426, 582],
-    ["Google-Rezension 4", 418, 550],
-    ["Google-Rezension 5", 421, 699],
-    ["Google-Rezension 6", 425, 697],
+    ["Google-Bewertung: 4,8 Sterne bei 46 Rezensionen und Rezension von Beyza Butun", 446, 719],
+    ["Google-Rezensionen von Annette Flaig und Gabi S.", 446, 813],
+    ["Google-Rezension von Anna „Annalina“", 446, 581],
+    ["Google-Rezension von Claudia Kaiser", 446, 414],
   ];
   const imageTags = html.match(/<img\b[^>]*>/g) ?? [];
 
